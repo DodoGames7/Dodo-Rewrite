@@ -25,7 +25,7 @@ $let[devbuild;$if[$getVar[pre_release_mode]==on;{footer:Testing is recommended:h
     code: `
     $interactionUpdate[{newEmbed:{title:Bug Fixes}{description:
 * Internal fix for a private command has been added
-* Bot's name in some places now consistently states "Dodo-Bot" rather than "Dodo Bot" to avoid confusion
+* (Source Code) bot's name on console now consistently states "Dodo-Bot" rather than "Dodo Bot" to avoid confusion
 * Handling API errors for text commands should now actually work this time (hopefully).
     }{color:$getVar[embedcolor]}$nonEscape[$get[devbuild]]}{actionRow:{button:Home:2:homebutton_$authorID:false:🏠}{button:Changes:2:versionchanges_$authorID:false}{button:Bug Fixes:2:versionbugfixes_$authorID:true}{button:Other:2:versionother_$authorID:false}}{actionRow:{button:Changelog history:5:https#COLON#//github.com/DodoGames7/Dodo-Bot/releases:false:📜}}]
 
