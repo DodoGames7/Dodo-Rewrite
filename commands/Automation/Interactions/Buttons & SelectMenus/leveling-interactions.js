@@ -91,7 +91,10 @@ $interactionUpdate[The current progress for all members will remain then.]
 **Level up channel#COLON#** $get[levelupchannel]
 **Level up message#COLON#** \`$get[levelupmessage]\`
 
-    }{color:$getVar[embedcolor]}}{actionRow:{button:Home:2:levelinghomepage_$authorID:false:🏠}{button:Message:2:levelingsettingmessage_$authorID:false}{button:Placeholders:2:levelingmsgplaceholder_$authorID:false}{button:Reset on leave:2:levelingrestonleave_$authorID:false}}]
+    }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:levelingotheroptionsmenu_$authorID:Other options:1:1:false:{stringInput:Reset on Leave:resetonleave:Reset user's progress when they leave:false}{stringInput:Exclusions:exclusions:Choose what to exclude from allowing xp:false}}}
+
+    {actionRow:{button:Home:2:levelinghomepage_$authorID:false:🏠}{button:Message:2:levelingsettingmessage_$authorID:false}{button:Placeholders:2:levelingmsgplaceholder_$authorID:false}}
+]
     
     
 
@@ -319,7 +322,7 @@ $interactionUpdate[The current progress for all members will remain then.]
     `
     },{
         type: "interaction",
-        prototype: "button",
+        prototype: "selectMenu",
         code: `$interactionUpdate[{newEmbed:{title:Reset on Leave}{description:This option let's you reset User's current level whenever they leave the server. 
     
     By default, this is disabled but you can choose to enable it if you want to do so.
@@ -333,8 +336,8 @@ $interactionUpdate[The current progress for all members will remain then.]
     {ephemeral}
     {interaction}
     ]
-    
-    $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==levelingrestonleave;]`
+    $onlyIf[$getSelectMenuValues[all]==resetonleave;]
+    $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==levelingotheroptionsmenu;]`
     },{
         type: "interaction",
         prototype: "button",
