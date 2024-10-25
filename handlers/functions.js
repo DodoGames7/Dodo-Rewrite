@@ -1,10 +1,3 @@
-/*
-This is a unused file, which means you can delete it safely (until you uncomment it's handler setup in index.js).
-It will be certainly used in the future (no ETA).
-You can do some modifications to enable it if you want.
-HOWEVER, the functions will be broken because of aoi versions prior to 6.9.0 not having them fixed sadly.
-*/
-
 module.exports = [{
     name: "$clientAvatar",
     type: "aoi.js",
@@ -24,27 +17,20 @@ module.exports = [{
     name: "$8ballanswers",
     type: "aoi.js",
     params: [],
-    code: `$randomText[Yes;No;Yes definitely;You may rely on it;Without a doubt;It is decidedly so;Ask again later;Better not tell you now;Cannot predict now;Concentrate and ask again;My reply is no;My sources say no;Outlook not so good;Very doubtful;Most likely;As I see it, yes;Signs point to yes;Reply hazy, try again;Don’t count on it]
-
-`
+    code: `$randomText[Yes;No;Yes definitely;You may rely on it;Without a doubt;It is decidedly so;Ask again later;Better not tell you now;Cannot predict now;Concentrate and ask again;My reply is no;My sources say no;Outlook not so good;Very doubtful;Most likely;As I see it, yes;Signs point to yes;Reply hazy, try again;Don’t count on it]`
   },{
     name: "$hasUserTag",
     type: "aoi.js",
     params: ["userID"],
-    code: `
-$checkCondition[$charCount[$discriminator[$get[userInput]]]!=1]
+    code: `$checkCondition[$charCount[$discriminator[$get[userInput]]]!=1]
 
-$let[userInput;{userID}]
-    `
+$let[userInput;{userID}]`
   },{
    name: "$userURL",
    type: "aoi.js",
    params: ["userID"],
-   code: `https://discord.com/users/$get[userInput]
-
-   $let[userInput;{userID}]
-   `
-  },{
+   code: `https://discord.com/users/{userID}`
+  },{ // Not used yet
     name: "$fallbackAttachment",
     type: "aoi.js",
     params: ["url", "fallbacktoUse"],
@@ -54,27 +40,16 @@ $let[FallbackInput;{fallbacktoUse}]
 $let[Input;{url}]
 
     `
-  },{
+  },{ // Temporarily used for testing purposes
     name: "$autoList",
     type: "aoi.js",
-    params: ["variable", "separator", "type"],
-    code: `
-        $comment[Let's return the result.]
-        $arrayJoin[result;\n]
+    params: ["text", "seperator", "type"],
+    code: `$arrayMap[returnlist;{type};
+;{}]
 
-        $comment[Loop to map between each array element.]
-        $loop[10;{};{type}]
-
-        $comment[Number that controls the current iteration element.]
-        $let[i;0]
-
-        $comment[Creating the array that holds the result.]
-        $createArray[result;]
-
-        $comment[Creating the array to split the given elements.]
-        $createArray[totalList;$nonEscape[$djsEval["$get[{variable}]".split("{separator}").join(";");true]]]
-    `.trim(),
-},{
+$createArray[returnlist;$nonEscape[$get[createlist]]]
+$let[createlist;$advancedReplaceText[{text};{seperator};#SEMI#]]`
+  },{
   name: "$createProgressBar",
   type: "djs",
   code: async d => {
@@ -82,7 +57,7 @@ $let[Input;{url}]
     const [value, max, barLength = 15] = data.inside.splits;
 
     function createBar(value, max, barLength) {
-      const progress = Math.round((value / max) * barLength);
+      const progress = Math.round((Math.max(value, 0) / max) * barLength);
       const progressText = "=".repeat(progress) + "-".repeat(barLength- progress);
       return progressText;
     }
@@ -92,4 +67,27 @@ $let[Input;{url}]
       code: d.util.setCode(data)
     }
   }
+},{
+  name: "$excludeSpecialChars",
+  type: "aoi.js",
+  params: ["text"],
+  code: `$removeContains[{text};+;-;/;%;&;!;?;@;^;*;<;>;$;#;.;_;=;~]`
+},{
+  name: "$randomColor", // Exclusive to user apps for now
+  type: "djs",
+  code: async (d) => {
+    const data = d.util.aoiFunc(d);
+
+    const hex = Math.floor(Math.random() * 16777215).toString(16);
+    data.result = `#${hex.padStart(6, "0")}`;
+
+    return {
+      code: d.util.setCode(data)
+    }
+  }
+},{
+  name: "$owoify",
+  type: "aoi.js",
+  params: ["text"],
+  code: `$replaceTextWithRegex[$replaceTextWithRegex[{text};/r|l/;g;w];/R|L/;g;W]`
 }]

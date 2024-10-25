@@ -1,6 +1,7 @@
 const config = require("../config.json");
 
 module.exports = {
+  "main": {
   // Games variables
   trivia_type: "multiple",
   trivia_difficulty: "medium",
@@ -10,16 +11,16 @@ module.exports = {
   // Bot variables (do not touch)
   autopingreply: "off",
   includebots: "on",
-  version: "2.1.9",
-  versionCodename: "Star Moon",
+  version: "2.2.0",
+  versionCodename: "Iron",
   libraryversiondevcheck: "off",
   buildStatus: "Complete",
-  buildDate: "1728156256412",
+  buildDate: "1729838491478",
   buildType: "Official Stable",
   buildBranch: "v2",
   buildRevision: "0",
   showbuildinfo: "off",
-  buildNumber: "2164",
+  buildNumber: "2178",
   embedcolor: config.Embedcolor,
   originalembedcolor: config.Embedcolor,
   release_type: "Stable",
@@ -50,7 +51,7 @@ module.exports = {
   previouslevel: "0",
   xp: "0",
   xpLimit: "10",
-  levelmessage: "<username> has leveled UP! Their new level is now <newlevel>!",
+  levelmessage: "<username> has leveled UP! Their level is now <newlevel>!",
   levelingmessagechannel: "none",
   levelmessagefeature: "off",
   levelleaveonreset: "off",
@@ -61,6 +62,10 @@ module.exports = {
   startupchannel: "none",
   startupchannelsystem: "off",
   pre_release_mode: "off",
-  botinvitationmessage: "on"
-  
+  botinvitationmessage: "on",
+  servermemberrequirement: "0",
+  userapps: config.EnableUserAppSupport,
+  isuserappsalreadysetup: "no",
+  errorsdisabled: config.DisableAllErrors
+  }
 }

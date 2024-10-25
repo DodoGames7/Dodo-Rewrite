@@ -5,12 +5,13 @@ module.exports = {
     perms: ["`SendMessages`"]
 },
   aliases: ["av","userav"],
-  code: `$title[$get[usernamechecker]'s Avatar]
-  $image[$userAvatar[$findUser[$message;true]]]
-  $color[$getVar[embedcolor]]
-  $addButton[1;Download;5;$nonEscape[$userAvatar[$findUser[$message;true]]];false]
-  $let[usernamechecker;$advancedReplaceText[$checkCondition[$charCount[$discriminator[$findUser[$message;true]]]==1];true;$username[$findUser[$message;true]];false;$userTag[$findUser[$message;true]]]]
-  $cooldown[3s; Slow down! Don't spam the command!
+  code: `$title[$get[username]'s Avatar]
+$image[$userAvatar[$get[user]]]
+$color[$getVar[embedcolor]]
+$addButton[1;Download;5;$nonEscape[$userAvatar[$get[user]]];false]
+$let[username;$advancedReplaceText[$checkCondition[$hasUserTag[$get[user]]==false];true;$username[$get[user]];false;$userTag[$get[user]]]]
+$let[user;$findUser[$message[1];true]]
+$cooldown[3s; Slow down! Don't spam the command!
 Time remaining: <t:$truncate[$divide[$sum[$getCooldownTime[3s;user;avatar;$authorID];$dateStamp];1000]]:R>]
   `
 }

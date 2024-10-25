@@ -3,14 +3,15 @@ module.exports = [{
     prototype: "button",
     code: `
     $interactionUpdate[{newEmbed:{title:Changes}{description:
-* Welcomer and Leave messages can now be tested without enabling them first
-* Removed Beta commands feature in favor of pre-release builds
-* \`settings\` command has been redesigned to directly include options instead of categories
-* Added alias \`guildsettings\` and \`serversettings\` for \`settings\`
-* Added 2 new image commands called \`uncover\` and \`invert\`
-    }{color:$getVar[embedcolor]}$nonEscape[$get[devbuild]]}{actionRow:{button:Home:2:homebutton_$authorID:false:🏠}{button:Changes:2:versionchanges_$authorID:true}{button:Bug Fixes:2:versionbugfixes_$authorID:false}{button:Other:2:versionother_$authorID:false}}{actionRow:{button:Version history:5:https#COLON#//github.com/DodoGames7/Dodo-Bot/releases:false:🔎}}]
+* Bumped aoi.js to version \`6.9.0\`
+* Refreshed icons has been introduced
+* Added support for running commands by message edit
+* Added a new text command called \`owoify\` and replaced \`uncover\` command with \`drip\`
+* Added support for user apps
+* More changes such as new progress bar for \`rank\` command with slight design changes
+    }{color:$getVar[embedcolor]}$nonEscape[$get[devbuild]]}{actionRow:{button:Home:2:homebutton_$authorID:false:🏠}{button:Changes:2:versionchanges_$authorID:true}{button:Bug Fixes:2:versionbugfixes_$authorID:false}{button:Other:2:versionother_$authorID:false}}{actionRow:{button:Changelog history:5:https#COLON#//github.com/DodoGames7/Dodo-Bot/releases:false:📜}}]
 
-$let[devbuild;$if[$getVar[pre_release_mode]==on;{footer:Testing is recommended:https#COLON#//us-east-1.tixte.net/uploads/dodogames.wants.solutions/warning.png}]]
+$let[devbuild;$if[$getVar[pre_release_mode]==on;{footer:Testing is recommended:https#COLON#//us-east-1.tixte.net/uploads/dodogames.wants.solutions/warningsign.png};  ]]
 
     $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
   {ephemeral}
@@ -23,12 +24,12 @@ $let[devbuild;$if[$getVar[pre_release_mode]==on;{footer:Testing is recommended:h
     prototype: "button",
     code: `
     $interactionUpdate[{newEmbed:{title:Bug Fixes}{description:
-* Spelling fixes to \`about\` command regarding first sentence
-* Fixed a leftover code during 2.1.8 Beta being still present
-* Spelling fixes to \`credits\` command's "Use of source code" page regarding first sentence
-    }{color:$getVar[embedcolor]}$nonEscape[$get[devbuild]]}{actionRow:{button:Home:2:homebutton_$authorID:false:🏠}{button:Changes:2:versionchanges_$authorID:false}{button:Bug Fixes:2:versionbugfixes_$authorID:true}{button:Other:2:versionother_$authorID:false}}{actionRow:{button:Version history:5:https#COLON#//github.com/DodoGames7/Dodo-Bot/releases:false:🔎}}]
+* Internal fix for a private command has been added
+* Bot's name in some places now consistently states "Dodo-Bot" rather than "Dodo Bot" to avoid confusion
+* Handling API errors for text commands should now actually work this time (hopefully).
+    }{color:$getVar[embedcolor]}$nonEscape[$get[devbuild]]}{actionRow:{button:Home:2:homebutton_$authorID:false:🏠}{button:Changes:2:versionchanges_$authorID:false}{button:Bug Fixes:2:versionbugfixes_$authorID:true}{button:Other:2:versionother_$authorID:false}}{actionRow:{button:Changelog history:5:https#COLON#//github.com/DodoGames7/Dodo-Bot/releases:false:📜}}]
 
-    $let[devbuild;$if[$getVar[pre_release_mode]==on;{footer:Testing is recommended:https#COLON#//us-east-1.tixte.net/uploads/dodogames.wants.solutions/warning.png}]]
+$let[devbuild;$if[$getVar[pre_release_mode]==on;{footer:Testing is recommended:https#COLON#//us-east-1.tixte.net/uploads/dodogames.wants.solutions/warningsign.png};  ]]
 
     $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
    {ephemeral}
@@ -40,15 +41,15 @@ $let[devbuild;$if[$getVar[pre_release_mode]==on;{footer:Testing is recommended:h
       type: "interaction",
     prototype: "button",
     code: `$interactionUpdate[{newEmbed:{title:Other}{description:
-* "Api Latency" section for \`ping\` has been renamed to simply say "Ping"
-* "Users" section in \`stats\` command has been updated to use separator for large numbers
-* "Database ping" section (used to be included in 2.0.0) for \`ping\` has been re-added
-* The button to open a bug report in \`report\` command now redirects to a Github template
-* Slight wording changes to \`report\` command
-* (Pre-release only) Recolored the warning sign icon in \`version\` command back to orange
- }{color:$getVar[embedcolor]}$nonEscape[$get[devbuild]]}{actionRow:{button:Home:2:homebutton_$authorID:false:🏠}{button:Changes:2:versionchanges_$authorID:false}{button:Bug Fixes:2:versionbugfixes_$authorID:false}{button:Other:2:versionother_$authorID:true}}{actionRow:{button:Version history:5:https#COLON#//github.com/DodoGames7/Dodo-Bot/releases:false:🔎}}]
+* Version Revision now appears in \`version\` command on main page if there any
+* (Source Code) Added support for disabling non-custom errors from the bot
+* Updated main credits for \`credits\` (they're no longer tied to discord usernames anymore)
+* The bot can now leave for new servers that didn't meet the amount of members needed
+* Added a button to \`perms\` command explaining on why it exists
+* Added Internal improvements to the source code
+ }{color:$getVar[embedcolor]}$nonEscape[$get[devbuild]]}{actionRow:{button:Home:2:homebutton_$authorID:false:🏠}{button:Changes:2:versionchanges_$authorID:false}{button:Bug Fixes:2:versionbugfixes_$authorID:false}{button:Other:2:versionother_$authorID:true}}{actionRow:{button:Changelog history:5:https#COLON#//github.com/DodoGames7/Dodo-Bot/releases:false:📜}}]
 
-  $let[devbuild;$if[$getVar[pre_release_mode]==on;{footer:Testing is recommended:https#COLON#//us-east-1.tixte.net/uploads/dodogames.wants.solutions/warning.png}]]
+$let[devbuild;$if[$getVar[pre_release_mode]==on;{footer:Testing is recommended:https#COLON#//us-east-1.tixte.net/uploads/dodogames.wants.solutions/warningsign.png};  ]]
 
  $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
  {ephemeral}
@@ -62,13 +63,14 @@ $let[devbuild;$if[$getVar[pre_release_mode]==on;{footer:Testing is recommended:h
       type: "interaction",
     prototype: "button",
     code: `$interactionUpdate[{newEmbed:{title:Dodo-Bot version}{description:
-* **Version**#COLON# $getVar[version]
+* **Version**#COLON# $getVar[version]$get[Revision]
 * **Release type**#COLON# $getVar[release_type]
 * **$get[releasedatetype]**#COLON# <t:$truncate[$divide[$getVar[buildDate];1000]]:f>
- }{color:$getVar[embedcolor]}$nonEscape[$get[devbuild]]}{actionRow:{button:Changes:2:versionchanges_$authorID:false}{button:Bug Fixes:2:versionbugfixes_$authorID:false}{button:Other:2:versionother_$authorID:false}}{actionRow:{button:Version history:5:https#COLON#//github.com/DodoGames7/Dodo-Bot/releases:false:🔎}}]
+ }{color:$getVar[embedcolor]}$nonEscape[$get[devbuild]]}{actionRow:{button:Changes:2:versionchanges_$authorID:false}{button:Bug Fixes:2:versionbugfixes_$authorID:false}{button:Other:2:versionother_$authorID:false}}{actionRow:{button:Changelog history:5:https#COLON#//github.com/DodoGames7/Dodo-Bot/releases:false:📜}}]
 
+ $let[Revision;$advancedReplaceText[$checkCondition[$getVar[buildRevision]!=0];true; (Revision $getVar[buildRevision]);false; ]]
  $let[releasedatetype;$advancedReplaceText[$checkCondition[$getVar[pre_release_mode]==on];true;Build created on;false;Released on]]
- $let[devbuild;$if[$getVar[pre_release_mode]==on;{footer:Testing is recommended:https#COLON#//us-east-1.tixte.net/uploads/dodogames.wants.solutions/warning.png}]]
+ $let[devbuild;$if[$getVar[pre_release_mode]==on;{footer:Testing is recommended:https#COLON#//us-east-1.tixte.net/uploads/dodogames.wants.solutions/warningsign.png};  ]]
 
  $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
  {ephemeral}
