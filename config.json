@@ -6,7 +6,7 @@
     "DBsecurityKey": "a-32-characters-long-string-here",
     "EnableUserAppSupport": false,
     "DisableAllErrors": false,
-    "respondOnEdit": true,
+    "respondOnEdit": false,
     "EnableDebugMode": false,
     "LogCommands": false
 }

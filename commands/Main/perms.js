@@ -12,7 +12,7 @@ For safety reasons, do not give the bot administrator permission under any circu
 ]
 $addField[\`ViewAuditLog\`;Required for logs such as moderation and Integration.]
 $addField[\`AttachFiles\`;Required for image commands such as \`gun\`.]
-$addField[\`AddReactions\`;Required for \`suggest\` and \`poll\` command.]
+$addField[\`AddReactions\`;Required for commands that use reactions.]
 $addField[\`SendMessages\`;The most basic permission needed.]
 $addField[\`ViewChannel\`;Required so the bot can read the user's messages executing it's command.]
 $color[$getVar[embedcolor]]

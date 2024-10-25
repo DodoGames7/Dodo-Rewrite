@@ -17,27 +17,20 @@ module.exports = [{
     name: "$8ballanswers",
     type: "aoi.js",
     params: [],
-    code: `$randomText[Yes;No;Yes definitely;You may rely on it;Without a doubt;It is decidedly so;Ask again later;Better not tell you now;Cannot predict now;Concentrate and ask again;My reply is no;My sources say no;Outlook not so good;Very doubtful;Most likely;As I see it, yes;Signs point to yes;Reply hazy, try again;Don’t count on it]
-
-`
+    code: `$randomText[Yes;No;Yes definitely;You may rely on it;Without a doubt;It is decidedly so;Ask again later;Better not tell you now;Cannot predict now;Concentrate and ask again;My reply is no;My sources say no;Outlook not so good;Very doubtful;Most likely;As I see it, yes;Signs point to yes;Reply hazy, try again;Don’t count on it]`
   },{
     name: "$hasUserTag",
     type: "aoi.js",
     params: ["userID"],
-    code: `
-$checkCondition[$charCount[$discriminator[$get[userInput]]]!=1]
+    code: `$checkCondition[$charCount[$discriminator[$get[userInput]]]!=1]
 
-$let[userInput;{userID}]
-    `
+$let[userInput;{userID}]`
   },{
    name: "$userURL",
    type: "aoi.js",
    params: ["userID"],
-   code: `https://discord.com/users/$get[userInput]
-
-   $let[userInput;{userID}]
-   `
-  },{ // not used yet
+   code: `https://discord.com/users/{userID}`
+  },{ // Not used yet
     name: "$fallbackAttachment",
     type: "aoi.js",
     params: ["url", "fallbacktoUse"],
@@ -47,22 +40,16 @@ $let[FallbackInput;{fallbacktoUse}]
 $let[Input;{url}]
 
     `
-  },{ // not used yet
+  },{ // Temporarily used for testing purposes
     name: "$autoList",
     type: "aoi.js",
-    params: ["variable", "separator"],
-    code: `
+    params: ["text", "seperator", "type"],
+    code: `$arrayMap[returnlist;{type};
+;{}]
 
-        $comment[Map between each array element.]
-        $arrayMap[totalList;autoListIterator;{separator};{"index": "0"}]
-
-        $comment[Creating the array that holds the result.]
-        $createArray[result;]
-
-        $comment[Creating the array to split the given elements.]
-        $createArray[totalList;$nonEscape[$djsEval["{variable}".split("{separator}").join(";");true]]]
-    `.trim(),
-},{
+$createArray[returnlist;$nonEscape[$get[createlist]]]
+$let[createlist;$advancedReplaceText[{text};{seperator};#SEMI#]]`
+  },{
   name: "$createProgressBar",
   type: "djs",
   code: async d => {

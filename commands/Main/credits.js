@@ -5,7 +5,7 @@ module.exports = {
         perms: ["`SendMessages`"]
     },
     code: `$title[Dodo-Bot Credits]
-    $description[
+$description[
 * $username[632607624742961153] - Developer of the bot
 * $username[431749535656837130] - Inspiration to improve some commands
 * $username[738856854892839022] - For Leveling setup

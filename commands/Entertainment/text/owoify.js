@@ -1,7 +1,7 @@
 module.exports = {
     name: "owoify",
     info: {
-        description: "Adds owoify style to your text.",
+        description: "Makes text OWOifed.",
         perms: ["`SendMessages`"]
     },
     code: `$owoify[$message]
