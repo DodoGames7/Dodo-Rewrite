@@ -323,6 +323,243 @@ $interactionUpdate[The current progress for all members will remain then.]
     },{
         type: "interaction",
         prototype: "selectMenu",
+        code: `$interactionUpdate[{newEmbed:{title:Exclusions}{description:This category is dedicated to choosing on what should be blacklisted from allowing xp!
+
+To manage a specific setting, use any of the buttons below to do so!
+    }{color:$getVar[embedcolor]}}{actionRow:{button:Go back:2:levelingsetting_$authorID:false:↩️}{button:Roles:2:levelingexcluderolessetting_$authorID:false}{button:Channels:2:levelingexcludechannelssetting_$authorID:false}{button:Categories:2:levelingexcludecategoriessetting_$authorID:false}}]
+
+
+    $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
+    {ephemeral}
+    {interaction}
+    ]
+    $onlyIf[$getSelectMenuValues[all]==exclusions;]
+    $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==levelingotheroptionsmenu;]`
+    },{
+        type: "interaction",
+        prototype: "button",
+        code: `$interactionUpdate[{newEmbed:{title:Roles}{description:Use the dropdown menu below to select roles to exclude from xp. (You can exclude up to 10)!
+
+    **Current Role(s)**
+    $autoList[$getGuildVar[levelingexcludedroles];, ;autoListRoles]
+
+    **Tip#COLON#** Unable to find the role you're looking for? Try typing the role name instead!
+
+    }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:levelingexcluderolemenusetup_$authorID:Select roles.:1:10:false:{roleInput}}}{actionRow:{button:Go back:2:levelingsettingmessage_$authorID:false:↩️}{button:Reset:2:levelingexcluderolesreset_$authorID:false}}]
+
+
+    $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
+    {ephemeral}
+    {interaction}
+    ]
+
+    $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==levelingexcluderolessetting;]
+    `
+    },{
+        type: "interaction",
+        prototype: "selectMenu",
+        code: `$interactionFollowUp[Successfully added the excluded roles!;true]
+
+    $interactionUpdate[{newEmbed:{title:Roles}{description:Use the dropdown menu below to select roles to exclude from xp. (You can exclude up to 10)!
+
+    **Current Role(s)**
+    $autoList[$getGuildVar[levelingexcludedroles];, ;autoListRoles]
+
+    **Tip#COLON#** Unable to find the role you're looking for? Try typing the role name instead!
+
+    }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:levelingexcluderolemenusetup_$authorID:Select roles.:1:10:false:{roleInput}}}{actionRow:{button:Go back:2:levelingsettingmessage_$authorID:false:↩️}{button:Reset:2:levelingexcluderolesreset_$authorID:false}}]
+
+    $setGuildVar[levelingexcludedroles;$getSelectMenuValues[all;, ]]
+
+    $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
+    {ephemeral}
+    {interaction}
+    ]
+
+    $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==levelingexcluderolemenusetup;]
+
+    `
+    },{
+        type: "interaction",
+        prototype: "button",
+        code: `$interactionFollowUp[Successfully reset the current list!;true]
+
+    $interactionUpdate[{newEmbed:{title:Roles}{description:Use the dropdown menu below to select roles to exclude from xp. (You can exclude up to 10)!
+
+    **Current Role(s)**
+    $autoList[$getGuildVar[levelingexcludedroles];, ;autoListRoles]
+
+    **Tip#COLON#** Unable to find the role you're looking for? Try typing the role name instead!
+
+    }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:levelingexcluderolemenusetup_$authorID:Select roles.:1:10:false:{roleInput}}}{actionRow:{button:Go back:2:levelingsettingmessage_$authorID:false:↩️}{button:Reset:2:levelingexcluderolesreset_$authorID:false}}]
+
+    $deleteVar[levelingexcludedroles;$guildID;main]
+
+    $onlyIf[$getGuildVar[levelingexcludedroles]!=none;
+    There's nothing to reset.
+    {ephemeral}
+    {interaction}
+    ]
+
+    $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
+    {ephemeral}
+    {interaction}
+    ]
+
+    $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==levelingexcluderolesreset;]
+
+    `
+    },{
+        type: "interaction",
+        prototype: "button",
+        code: `$interactionUpdate[{newEmbed:{title:Channels}{description:Use the dropdown menu below to select channels to exclude from xp. (You can exclude up to 10)!
+
+    **Current Channel(s)**
+    $autoList[$getGuildVar[levelingexcludedchannels];, ;autoListChannels]
+
+    **Tip#COLON#** Unable to find the channel you're looking for? Try typing the channel name instead!
+
+    }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:levelingexcludechannelmenusetup_$authorID:Select channels.:1:10:false:{channelInput:Text}}}{actionRow:{button:Go back:2:levelingsettingmessage_$authorID:false:↩️}{button:Reset:2:levelingexcludechannelreset_$authorID:false}}]
+
+
+    $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
+    {ephemeral}
+    {interaction}
+    ]
+
+    $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==levelingexcludechannelssetting;]
+    `
+    },{
+        type: "interaction",
+        prototype: "selectMenu",
+        code: `$interactionFollowUp[Successfully added the excluded channels!;true]
+
+    $interactionUpdate[{newEmbed:{title:Channels}{description:Use the dropdown menu below to select channels to exclude from xp. (You can exclude up to 10)!
+
+    **Current Channel(s)**
+    $autoList[$getGuildVar[levelingexcludedchannels];, ;autoListChannels]
+
+    **Tip#COLON#** Unable to find the channel you're looking for? Try typing the channel name instead!
+
+    }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:levelingexcludechannelmenusetup_$authorID:Select channels.:1:10:false:{channelInput:Text}}}{actionRow:{button:Go back:2:levelingsettingmessage_$authorID:false:↩️}{button:Reset:2:levelingexcludechannelreset_$authorID:false}}]
+
+    $setGuildVar[levelingexcludedchannels;$getSelectMenuValues[all;, ]]
+
+    $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
+    {ephemeral}
+    {interaction}
+    ]
+
+    $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==levelingexcludechannelmenusetup;]
+
+    `
+    },{
+        type: "interaction",
+        prototype: "button",
+        code: `$interactionFollowUp[Successfully reset the current list!;true]
+
+    $interactionUpdate[{newEmbed:{title:Channels}{description:Use the dropdown menu below to select channels to exclude from xp. (You can exclude up to 10)!
+
+    **Current Channel(s)**
+    $autoList[$getGuildVar[levelingexcludedchannels];, ;autoListChannels]
+
+    **Tip#COLON#** Unable to find the channel you're looking for? Try typing the channel name instead!
+
+    }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:levelingexcludechannelmenusetup_$authorID:Select channels.:1:10:false:{channelInput:Text}}}{actionRow:{button:Go back:2:levelingsettingmessage_$authorID:false:↩️}{button:Reset:2:levelingexcludechannelreset_$authorID:false}}]
+
+    $deleteVar[levelingexcludedchannels;$guildID;main]
+
+    $onlyIf[$getGuildVar[levelingexcludedchannels]!=none;
+    There's nothing to reset.
+    {ephemeral}
+    {interaction}
+    ]
+
+    $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
+    {ephemeral}
+    {interaction}
+    ]
+
+    $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==levelingexcludechannelreset;]
+
+    `
+    },{
+        type: "interaction",
+        prototype: "button",
+        code: `$interactionUpdate[{newEmbed:{title:Categories}{description:Use the dropdown menu below to select channel categories to exclude from xp. (You can exclude up to 10)!
+
+    **Current Categories**
+    $autoList[$getGuildVar[levelingexcludedcategories];, ;autoListCategories]
+
+    **Tip#COLON#** Unable to find the category you're looking for? Try typing the category name instead!
+
+    }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:levelingexcludecategoriesmenusetup_$authorID:Select categories.:1:10:false:{channelInput:Category}}}{actionRow:{button:Go back:2:levelingsettingmessage_$authorID:false:↩️}{button:Reset:2:levelingexcludecategoriesreset_$authorID:false}}]
+
+
+    $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
+    {ephemeral}
+    {interaction}
+    ]
+
+    $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==levelingexcludecategoriessetting;]
+    `
+    },{
+        type: "interaction",
+        prototype: "selectMenu",
+        code: `$interactionFollowUp[Successfully added the excluded categories!;true]
+
+    $interactionUpdate[{newEmbed:{title:Categories}{description:Use the dropdown menu below to select channel categories to exclude from xp. (You can exclude up to 10)!
+
+    **Current Categories**
+    $autoList[$getGuildVar[levelingexcludedcategories];, ;autoListCategories]
+
+    **Tip#COLON#** Unable to find the category you're looking for? Try typing the category name instead!
+
+    }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:levelingexcludecategoriesmenusetup_$authorID:Select categories.:1:10:false:{channelInput:Category}}}{actionRow:{button:Go back:2:levelingsettingmessage_$authorID:false:↩️}{button:Reset:2:levelingexcludecategoriesreset_$authorID:false}}]
+
+    $setGuildVar[levelingexcludedcategories;$getSelectMenuValues[all;, ]]
+
+    $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
+    {ephemeral}
+    {interaction}
+    ]
+
+    $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==levelingexcludecategoriesmenusetup;]
+
+    `
+    },{
+        type: "interaction",
+        prototype: "button",
+        code: `$interactionFollowUp[Successfully reset the current list!;true]
+
+    $interactionUpdate[{newEmbed:{title:Categories}{description:Use the dropdown menu below to select channel categories to exclude from xp. (You can exclude up to 10)!
+
+    **Current Categories**
+    $autoList[$getGuildVar[levelingexcludedcategories];, ;autoListCategories]
+
+    **Tip#COLON#** Unable to find the category you're looking for? Try typing the category name instead!
+
+    }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:levelingexcludecategoriesmenusetup_$authorID:Select categories.:1:10:false:{channelInput:Category}}}{actionRow:{button:Go back:2:levelingsettingmessage_$authorID:false:↩️}{button:Reset:2:levelingexcludecategoriesreset_$authorID:false}}]
+
+    $deleteVar[levelingexcludedcategories;$guildID;main]
+
+    $onlyIf[$getGuildVar[levelingexcludedcategories]!=none;
+    There's nothing to reset.
+    {ephemeral}
+    {interaction}
+    ]
+
+    $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
+    {ephemeral}
+    {interaction}
+    ]
+
+    $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==levelingexcludecategoriesreset;]
+
+    `
+    },{
+        type: "interaction",
+        prototype: "selectMenu",
         code: `$interactionUpdate[{newEmbed:{title:Reset on Leave}{description:This option let's you reset User's current level whenever they leave the server. 
     
     By default, this is disabled but you can choose to enable it if you want to do so.
