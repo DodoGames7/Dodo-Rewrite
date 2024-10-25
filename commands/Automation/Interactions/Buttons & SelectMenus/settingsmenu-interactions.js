@@ -5,10 +5,8 @@ module.exports = [{
      Having this option enabled will allow the bot to respond by pinging, which will let you know on what prefix it currently uses in this server.
 
 Disable this If It's purposefully used for spamming.
-
-**Current Setting(s)**
-**Auto Reply**#COLON# \`$get[autopingreply]\`
-}{color:$getVar[embedcolor]}}{actionRow:{selectMenu:settingsmenu_$authorID:Select a option:1:1:false:{stringInput:Auto Reply:autoreply:Automatically reply to pings!:false}{stringInput:Include Bots:includebots:Whether or not to include bots in message logs.:false}{stringInput:Anonymous:anonymous:Hide moderator names being revealed:false}}}{actionRow:{button:Toggle:2:autoreplytoggle_$authorID:false}}]
+}{field:**Current Setting(s)**:
+**Auto Reply**#COLON# \`$get[autopingreply]\`}{color:$getVar[embedcolor]}}{actionRow:{selectMenu:settingsmenu_$authorID:Select a option:1:1:false:{stringInput:Auto Reply:autoreply:Automatically reply to pings!:false}{stringInput:Include Bots:includebots:Whether or not to include bots in message logs.:false}{stringInput:Anonymous:anonymous:Hide moderator names being revealed:false}}}{actionRow:{button:Toggle:2:autoreplytoggle_$authorID:false}}]
 
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
    {ephemeral}
@@ -29,10 +27,8 @@ $interactionUpdate[{newEmbed:{title:Auto Reply}{description:
      Having this option enabled will allow the bot to respond by pinging, which will let you know on what prefix it currently uses in this server.
 
 Disable this If It's purposefully used for spamming.
-
-**Current Setting(s)**
-**Auto Reply**#COLON# \`$get[autopingreply]\`
-}{color:$getVar[embedcolor]}}{actionRow:{selectMenu:settingsmenu_$authorID:Select a option:1:1:false:{stringInput:Auto Reply:autoreply:Automatically reply to pings!:false}{stringInput:Include Bots:includebots:Whether or not to include bots in message logs.:false}{stringInput:Anonymous:anonymous:Hide moderator names being revealed:false}}}{actionRow:{button:Toggle:2:autoreplytoggle_$authorID:false}}]
+}{field:**Current Setting(s)**:
+**Auto Reply**#COLON# \`$get[autopingreply]\`}{color:$getVar[embedcolor]}}{actionRow:{selectMenu:settingsmenu_$authorID:Select a option:1:1:false:{stringInput:Auto Reply:autoreply:Automatically reply to pings!:false}{stringInput:Include Bots:includebots:Whether or not to include bots in message logs.:false}{stringInput:Anonymous:anonymous:Hide moderator names being revealed:false}}}{actionRow:{button:Toggle:2:autoreplytoggle_$authorID:false}}]
 
 
   $let[autopingreply;$advancedReplaceText[$getGuildVar[autopingreply];on;Enabled;off;Disabled]]
@@ -53,11 +49,8 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[aut
  code: `$interactionUpdate[{newEmbed:{title:Include Bots}{description:
      This option let's you decide whether or not bots should be included in message logs.
 
-By default, this is enabled but you can choose to disable it for whatever reason.
-
-**Current Setting(s)**
-**Include Bots**#COLON# \`$get[includebots]\`
-}{color:$getVar[embedcolor]}}{actionRow:{selectMenu:settingsmenu_$authorID:Select a option:1:1:false:{stringInput:Auto Reply:autoreply:Automatically reply to pings!:false}{stringInput:Include Bots:includebots:Whether or not to include bots in message logs.:false}{stringInput:Anonymous:anonymous:Hide moderator names being revealed:false}}}{actionRow:{button:Toggle:2:includebotstoggle_$authorID:false}}]
+By default, this is enabled but you can choose to disable it for whatever reason.}{field:**Current Setting(s)**:
+**Include Bots**#COLON# \`$get[includebots]\`}{color:$getVar[embedcolor]}}{actionRow:{selectMenu:settingsmenu_$authorID:Select a option:1:1:false:{stringInput:Auto Reply:autoreply:Automatically reply to pings!:false}{stringInput:Include Bots:includebots:Whether or not to include bots in message logs.:false}{stringInput:Anonymous:anonymous:Hide moderator names being revealed:false}}}{actionRow:{button:Toggle:2:includebotstoggle_$authorID:false}}]
 
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
    {ephemeral}
@@ -76,11 +69,8 @@ $interactionFollowUp[$get[resultmessage];true]
 $interactionUpdate[{newEmbed:{title:Include Bots}{description:
      This option let's you decide whether or not bots should be included in message logs.
 
-By default, this is enabled but you can choose to disable it for whatever reason.
-
-**Current Setting(s)**
-**Include Bots**#COLON# \`$get[includebots]\`
-}{color:$getVar[embedcolor]}}{actionRow:{selectMenu:settingsmenu_$authorID:Select a option:1:1:false:{stringInput:Auto Reply:autoreply:Automatically reply to pings!:false}{stringInput:Include Bots:includebots:Whether or not to include bots in message logs.:false}{stringInput:Anonymous:anonymous:Hide moderator names being revealed:false}}}{actionRow:{button:Toggle:2:includebotstoggle_$authorID:false}}]
+By default, this is enabled but you can choose to disable it for whatever reason.}{field:**Current Setting(s)**:
+**Include Bots**#COLON# \`$get[includebots]\`}{color:$getVar[embedcolor]}}{actionRow:{selectMenu:settingsmenu_$authorID:Select a option:1:1:false:{stringInput:Auto Reply:autoreply:Automatically reply to pings!:false}{stringInput:Include Bots:includebots:Whether or not to include bots in message logs.:false}{stringInput:Anonymous:anonymous:Hide moderator names being revealed:false}}}{actionRow:{button:Toggle:2:includebotstoggle_$authorID:false}}]
 
 
 
@@ -103,15 +93,13 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[aut
       type: "interaction",
       prototype: "selectMenu",
       code: `$interactionUpdate[{newEmbed:{title:Anonymous}{description:
-        This option allows moderator names to not be revealed in Ban logs!
+This option allows moderator names to not be revealed in Ban logs!
 
-        For security reasons, this feature is only exclusive to Ban logs!
-
-**Current Setting(s)**
-**Anonymous**#COLON# \`$get[anonymous]\`
+For security reasons, this feature is only exclusive to Ban logs!
 
 -# This does not apply to bots by default
-      }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:settingsmenu_$authorID:Select a option:1:1:false:{stringInput:Auto Reply:autoreply:Automatically reply to pings!:false}{stringInput:Include Bots:includebots:Whether or not to include bots in message logs.:false}{stringInput:Anonymous:anonymous:Hide moderator names being revealed:false}}}{actionRow:{button:Toggle:2:anonymoustoggle_$authorID:false}}]
+}{field:**Current Setting(s)**:
+**Anonymous**#COLON# \`$get[anonymous]\`}{color:$getVar[embedcolor]}}{actionRow:{selectMenu:settingsmenu_$authorID:Select a option:1:1:false:{stringInput:Auto Reply:autoreply:Automatically reply to pings!:false}{stringInput:Include Bots:includebots:Whether or not to include bots in message logs.:false}{stringInput:Anonymous:anonymous:Hide moderator names being revealed:false}}}{actionRow:{button:Toggle:2:anonymoustoggle_$authorID:false}}]
 
       $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
 {ephemeral}
@@ -128,15 +116,13 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==settingsmenu;]
       code: `
 $interactionFollowUp[$get[resultmessage];true]
 $interactionUpdate[{newEmbed:{title:Anonymous}{description:
-  This option allows moderator names to not be revealed in Ban logs!
+This option allows moderator names to not be revealed in Ban logs!
 
-  For security reasons, this feature is only exclusive to Ban logs!
-
-**Current Setting(s)**
-**Anonymous**#COLON# \`$get[anonymous]\`
+For security reasons, this feature is only exclusive to Ban logs!
 
 -# This does not apply to bots by default
-      }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:settingsmenu_$authorID:Select a option:1:1:false:{stringInput:Auto Reply:autoreply:Automatically reply to pings!:false}{stringInput:Include Bots:includebots:Whether or not to include bots in message logs.:false}{stringInput:Anonymous:anonymous:Hide moderator names being revealed:false}}}{actionRow:{button:Toggle:2:anonymoustoggle_$authorID:false}}]
+}{field:**Current Setting(s)**:
+**Anonymous**#COLON# \`$get[anonymous]\`}{color:$getVar[embedcolor]}}{actionRow:{selectMenu:settingsmenu_$authorID:Select a option:1:1:false:{stringInput:Auto Reply:autoreply:Automatically reply to pings!:false}{stringInput:Include Bots:includebots:Whether or not to include bots in message logs.:false}{stringInput:Anonymous:anonymous:Hide moderator names being revealed:false}}}{actionRow:{button:Toggle:2:anonymoustoggle_$authorID:false}}]
 
 
 

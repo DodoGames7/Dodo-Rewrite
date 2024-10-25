@@ -11,28 +11,19 @@ module.exports = [{
 },{
     name: "autoListChannels",
     type: "awaited",
-    code: `
-  $if[{value}==none;None;$get[channels]]
+    code: `$if[{value}==none;None;$get[channels]]
 
- $let[channels;$if[$guildChannelExists[$guildID;{value}]==true;* <#{value}>;\`Deleted Channel\`]]
-
-`
+$let[channels;$if[$guildChannelExists[$guildID;{value}]==true;* <#{value}>;\`Deleted Channel\`]]`
 },{
     name: "autoListCategories",
     type: "awaited",
-    code: `
-  $if[{value}==none;None;$get[categories]]
+    code: `$if[{value}==none;None;$get[categories]]
 
- $let[categories;$if[$guildChannelExists[$guildID;{value}]==true;* $channelName[{value}];\`Deleted Category\`]]
-
-`
+$let[categories;$if[$guildChannelExists[$guildID;{value}]==true;* $channelName[{value}];\`Deleted Category\`]]`
 },{
     name: "autoListRoles",
     type: "awaited",
-    code: `
- $if[{value}==none;None;$get[roles]]
+    code: `$if[{value}==none;None;$get[roles]]
 
- $let[roles;$if[$roleExists[{value};$guildID]==true;* <@&{value}>;\`Deleted Role\`]]
-
-`
+$let[roles;$if[$roleExists[{value};$guildID]==true;* <@&{value}>;\`Deleted Role\`]]`
 }]

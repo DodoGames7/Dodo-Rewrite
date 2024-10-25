@@ -46,7 +46,6 @@ $let[Input;{url}]
     params: ["text", "seperator", "type"],
     code: `$arrayMap[returnlist;{type};
 ;{}]
-
 $createArray[returnlist;$nonEscape[$get[createlist]]]
 $let[createlist;$advancedReplaceText[{text};{seperator};#SEMI#]]`
   },{
