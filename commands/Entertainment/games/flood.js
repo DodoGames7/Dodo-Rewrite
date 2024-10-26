@@ -39,13 +39,12 @@ Game.startGame();
   name: "floodsettings",
   type: "awaited",
   code: `$title[Flood Settings]
-  $description[Welcome to Flood settings! To select a option to change, use the dropdown menu below!
-
-  **Current Setting(s)**
-  **Difficulty#COLON#** \`$get[type]\`
-  ]
-  $color[$getVar[embedcolor]]
-  $addSelectMenu[1;string;floodsettings_$authorID;Select a option;1;1;false;Difficulty:How hard the game will be?:flooddifficulty:false]
-  $let[type;$advancedReplaceText[$getGlobalUserVar[flood_difficulty];18;\`Hard\`;13;\`Normal\`;8;\`Easy\`]]
+$description[Welcome to Flood settings! To select a option to change, use the dropdown menu below!]
+$addField[**Current Setting(s)**;
+**Difficulty#COLON#** \`$get[type]\`
+]
+$color[$getVar[embedcolor]]
+$addSelectMenu[1;string;floodsettings_$authorID;Select a option;1;1;false;Difficulty:How hard the game will be?:flooddifficulty:false]
+$let[type;$advancedReplaceText[$getGlobalUserVar[flood_difficulty];18;\`Hard\`;13;\`Normal\`;8;\`Easy\`]]
   `
 }]

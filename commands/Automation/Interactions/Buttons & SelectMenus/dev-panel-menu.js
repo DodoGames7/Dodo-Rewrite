@@ -17,11 +17,9 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[aut
     When Dodo-Bot gets added to a new server, it will greet members there with it's features including telling them it's default prefix. When this is disabled, the bot won't say anything when it gets added to new servers.
 
     By default, this is enabled to let people know the prefix easily instead of just guessing randomly to figure out.
-
-**Current setting(s)**
+}{field:**Current setting(s)**:
 **Bot Invitation Message**#COLON# \`$get[botinvitationconfig]\`
-
-    }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:botgreettoggle_$authorID:false:🔄}}]
+}{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:botgreettoggle_$authorID:false:🔄}}]
 
 
 $let[botinvitationconfig;$advancedReplaceText[$checkCondition[$getVar[botinvitationmessage]==on];true;Enabled;false;Disabled]]
@@ -41,11 +39,9 @@ $interactionUpdate[{newEmbed:{title:Bot Invitation Message}{description:
     When Dodo-Bot gets added to a new server, it will greet members there with it's features including telling them it's default prefix. When this is disabled, the bot won't say anything when it gets added to new servers.
 
     By default, this is enabled to let people know the prefix easily instead of just guessing randomly to figure out.
-
-**Current setting(s)**
+}{field:**Current setting(s)**:
 **Bot Invitation Message**#COLON# \`$get[botinvitationconfig]\`
-
-    }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:botgreettoggle_$authorID:false:🔄}}]
+}{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:botgreettoggle_$authorID:false:🔄}}]
 
 
 $let[botinvitationconfig;$advancedReplaceText[$checkCondition[$getVar[botinvitationmessage]==on];true;Enabled;false;Disabled]]
@@ -66,11 +62,10 @@ $let[newtoggledsetting;$advancedReplaceText[$checkCondition[$getVar[botinvitatio
     Often, you get frustrated not knowing whether or not, your bot has errors. This setting is dedicated to send errors caused by a broken command to a specific channel depending on your choice. There's also an option to enable it.
 
 When an error occurs, information such as the server name, it's id, alongside with the command name and the error will be included in logs to help the bot owners with some useful information regarding where does the error come from.
-
-**Current Setting(s)**
+}{field:**Current Setting(s)**:
 **Error log**#COLON# \`$get[errorsystem]\`
 **Error Channel**#COLON# $get[errorchannel]
-    }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:errorlogtoggle_$authorID:false:🔄}{button:Set channel:2:errorlogsetupchannel_$authorID:false}}]
+}{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:errorlogtoggle_$authorID:false:🔄}{button:Set channel:2:errorlogsetupchannel_$authorID:false}}]
 
     $let[errorsystem;$advancedReplaceText[$checkCondition[$getVar[errorsystem]==on];true;Enabled;false;Disabled]]
     $let[errorchannel;$advancedReplaceText[$checkCondition[$getVar[errorchannel]==none];true;none;false;<#$getVar[errorchannel]> (\`$getVar[errorchannel]\`)]]
@@ -90,15 +85,14 @@ $onlyIf[$getVar[errorsdisabled]==false;To configure this option, you need to dis
         code: `
 
 $interactionFollowUp[$get[resultmessage];true]
-$interactionUpdate[;{newEmbed:{title:Error Logging}{description:
+$interactionUpdate[{newEmbed:{title:Error Logging}{description:
     Often, you get frustrated not knowing whether or not, your bot has errors. This setting is dedicated to send errors caused by a broken command to a specific channel depending on your choice. There's also an option to enable it.
 
 When an error occurs, information such as the server name, it's id, alongside with the command name and the error will be included in logs to help the bot owners with some useful information regarding where does the error come from.
-
-**Current Setting(s)**
+}{field:**Current Setting(s)**:
 **Error log**#COLON# \`$get[errorsystem]\`
 **Error Channel**#COLON# $get[errorchannel]
-    }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:errorlogtoggle_$authorID:false:🔄}{button:Set channel:2:errorlogsetupchannel_$authorID:false}}]
+}{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:errorlogtoggle_$authorID:false:🔄}{button:Set channel:2:errorlogsetupchannel_$authorID:false}}]
 
     $let[errorsystem;$advancedReplaceText[$checkCondition[$getVar[errorsystem]==on];true;Enabled;false;Disabled]]
     $let[errorchannel;$advancedReplaceText[$checkCondition[$getVar[errorchannel]==none];true;none;false;<#$getVar[errorchannel]> (\`$getVar[errorchannel]\`)]]
@@ -118,13 +112,11 @@ $let[newtoggledsetting;$advancedReplaceText[$checkCondition[$getVar[errorsystem]
         code: `
 
 $interactionUpdate[{newEmbed:{title:Channel Setup}{description:Choose a channel for Error messages to be sent in. Use the select menu below for the channel to use!
-    
-**Current Setting(s)**
-**Channel#COLON#** $get[errorchannel]
-    
+
 **Tip#COLON#** Unable to find the channel you're looking for? Try typing the channel name instead!
-    
-    }{color:Red}}{actionRow:{selectMenu:errorlogchannelmenusetup_$authorID:Select a channel to use.:1:1:false:{channelInput:Text}}}{actionRow:{button:Go back:2:errorlogpage_$authorID:false:↩️}{button:Reset:2:errorresetchannel_$authorID:false}}]
+}{field:**Current Setting(s)**:
+**Channel#COLON#** $get[errorchannel]
+}{color:Red}}{actionRow:{selectMenu:errorlogchannelmenusetup_$authorID:Select a channel to use.:1:1:false:{channelInput:Text}}}{actionRow:{button:Go back:2:errorlogpage_$authorID:false:↩️}{button:Reset:2:errorresetchannel_$authorID:false}}]
     
     $let[errorchannel;$advancedReplaceText[$checkCondition[$getVar[errorchannel]==none];true;none;false;<#$getVar[errorchannel]> (\`$getVar[errorchannel]\`)]]
 
@@ -140,13 +132,11 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[aut
 
 $interactionFollowUp[Successfully set <#$getSelectMenuValues[all]> as the error log channel!;true]
 $interactionUpdate[{newEmbed:{title:Channel Setup}{description:Choose a channel for Error messages to be sent in. Use the select menu below for the channel to use!
-    
-**Current Setting(s)**
-**Channel#COLON#** $get[errorchannel]
-    
+
 **Tip#COLON#** Unable to find the channel you're looking for? Try typing the channel name instead!
-    
-    }{color:Red}}{actionRow:{selectMenu:errorlogchannelmenusetup_$authorID:Select a channel to use.:1:1:false:{channelInput:Text}}}{actionRow:{button:Go back:2:errorlogpage_$authorID:false:↩️}{button:Reset:2:errorresetchannel_$authorID:false}}]
+}{field:**Current Setting(s)**:
+**Channel#COLON#** $get[errorchannel]
+}{color:Red}}{actionRow:{selectMenu:errorlogchannelmenusetup_$authorID:Select a channel to use.:1:1:false:{channelInput:Text}}}{actionRow:{button:Go back:2:errorlogpage_$authorID:false:↩️}{button:Reset:2:errorresetchannel_$authorID:false}}]
     
     $let[errorchannel;$advancedReplaceText[$checkCondition[$getVar[errorchannel]==none];true;none;false;<#$getVar[errorchannel]> (\`$getVar[errorchannel]\`)]]
 
@@ -190,12 +180,10 @@ $onlyIf[$hasPermsInChannel[$getSelectMenuValues[all];$clientID;sendmessages;view
         code: `$interactionFollowUp[Channel has been reset!;true]
 $interactionUpdate[{newEmbed:{title:Channel Setup}{description:Choose a channel for Error messages to be sent in. Use the select menu below for the channel to use!
 
-**Current Setting(s)**
-**Channel#COLON#** $get[errorchannel]
-
 **Tip#COLON#** Unable to find the channel you're looking for? Try typing the channel name instead!
-
-    }{color:Red}}{actionRow:{selectMenu:errorlogchannelmenusetup_$authorID:Select a channel to use.:1:1:false:{channelInput:Text}}}{actionRow:{button:Go back:2:errorlogpage_$authorID:false:↩️}{button:Reset:2:errorresetchannel_$authorID:false}}]
+}{field:**Current Setting(s)**:
+**Channel#COLON#** $get[errorchannel]
+}{color:Red}}{actionRow:{selectMenu:errorlogchannelmenusetup_$authorID:Select a channel to use.:1:1:false:{channelInput:Text}}}{actionRow:{button:Go back:2:errorlogpage_$authorID:false:↩️}{button:Reset:2:errorresetchannel_$authorID:false}}]
 
     $let[errorchannel;$advancedReplaceText[$checkCondition[$getVar[errorchannel]==none];true;none;false;<#$getVar[errorchannel]> (\`$getVar[errorchannel]\`)]]
 
@@ -224,11 +212,10 @@ $interactionUpdate[{newEmbed:{title:Error Logging}{description:
     Often, you get frustrated not knowing whether or not, your bot has errors. This setting is dedicated to send errors caused by a broken command to a specific channel depending on your choice. There's also an option to enable it.
 
 When an error occurs, information such as the server name, it's id, alongside with the command name and the error will be included in logs to help the bot owners with some useful information regarding where does the error come from.
-
-**Current Setting(s)**
+}{field:**Current Setting(s)**:
 **Error log**#COLON# \`$get[errorsystem]\`
 **Error Channel**#COLON# $get[errorchannel]
-    }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:errorlogtoggle_$authorID:false:🔄}{button:Set channel:2:errorlogsetupchannel_$authorID:false}}]
+}{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:errorlogtoggle_$authorID:false:🔄}{button:Set channel:2:errorlogsetupchannel_$authorID:false}}]
 
     $let[errorsystem;$advancedReplaceText[$checkCondition[$getVar[errorsystem]==on];true;Enabled;false;Disabled]]
     $let[errorchannel;$advancedReplaceText[$checkCondition[$getVar[errorchannel]==none];true;none;false;<#$getVar[errorchannel]> (\`$getVar[errorchannel]\`)]]
@@ -244,10 +231,9 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[aut
         prototype: "selectMenu",
         code: `$interactionUpdate[{newEmbed:{title:Embed color}{description:
    This option allows you to change the current embed color used across commands of Dodo-Bot. To change the current used embed color, you will need to have a valid hex code of a color in order to proceed.
-
-**Current Setting(s)**
+}{field:**Current Setting(s)**:
 **Hex code**#COLON# \`$getVar[embedcolor]\`
-    }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Set Color:2:setbotembedcolor_$authorID:false}{button:Preview:2:embedcolorpreview_$authorID:false}{button:Reset:2:resetembedcolor_$authorID:false}}]
+}{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Set Color:2:setbotembedcolor_$authorID:false}{button:Preview:2:embedcolorpreview_$authorID:false}{button:Reset:2:resetembedcolor_$authorID:false}}]
 
 
     $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];You're not the author of this command! {ephemeral}
@@ -276,10 +262,9 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[aut
         code: `$interactionFollowUp[\`$textInputValue[hexInput]\` will now be used as the new embed color!;true]
 $interactionUpdate[{newEmbed:{title:Embed color}{description:
    This option allows you to change the current embed color used across commands of Dodo-Bot. To change the current used embed color, you will need to have a valid hex code of a color in order to proceed.
-
-**Current Setting(s)**
+}{field:**Current Setting(s)**:
 **Hex code**#COLON# \`$getVar[embedcolor]\`
-    }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Set Color:2:setbotembedcolor_$authorID:false}{button:Preview:2:embedcolorpreview_$authorID:false}{button:Reset:2:resetembedcolor_$authorID:false}}]
+}{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Set Color:2:setbotembedcolor_$authorID:false}{button:Preview:2:embedcolorpreview_$authorID:false}{button:Reset:2:resetembedcolor_$authorID:false}}]
 
 $setVar[embedcolor;$textInputValue[hexInput]]
 
@@ -302,10 +287,9 @@ Your hex code must start with a \`#\`! Please, try again.{ephemeral}
         code: `$interactionFollowUp[Embed color has been reset!;true]
 $interactionUpdate[{newEmbed:{title:Embed color}{description:
    This option allows you to change the current embed color used across commands of Dodo-Bot. To change the current used embed color, you will need to have a valid hex code of a color in order to proceed.
-
-**Current Setting(s)**
+}{field:**Current Setting(s)**:
 **Hex code**#COLON# \`$getVar[embedcolor]\`
-    }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Set Color:2:setbotembedcolor_$authorID:false}{button:Preview:2:embedcolorpreview_$authorID:false}{button:Reset:2:resetembedcolor_$authorID:false}}]
+}{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Set Color:2:setbotembedcolor_$authorID:false}{button:Preview:2:embedcolorpreview_$authorID:false}{button:Reset:2:resetembedcolor_$authorID:false}}]
 
     $deleteVar[embedcolor;;main]
 
@@ -342,10 +326,9 @@ $interactionUpdate[{newEmbed:{title:Embed color}{description:
    This option allows you on whether or not the current build used should be marked as development build. By default, it is commonly enabled for development builds as expected.
 
 Disabling this will cause the build to identify itself as a "Stable" build with development build warnings being absent as well!
-
-**Current Setting(s)**
+}{field:**Current Setting(s)**:
 **Pre-release**#COLON# \`$get[pre-release]\`
-    }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:togglebotdevmode_$authorID:false}}]
+}{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:togglebotdevmode_$authorID:false}}]
 
 
 $let[pre-release;$advancedReplaceText[$getVar[pre_release_mode];on;Enabled;off;Disabled]]
@@ -362,10 +345,9 @@ $interactionUpdate[{newEmbed:{title:Pre-release}{description:
    This option allows you on whether or not the current build used should be marked as development build. By default, it is commonly enabled for development builds as expected.
 
 Disabling this will cause the build to identify itself as a "Stable" build with development build warnings being absent as well!
-
-**Current Setting(s)**
+}{field:**Current Setting(s)**:
 **Pre-release**#COLON# \`$get[pre-release]\`
-    }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:togglebotdevmode_$authorID:false}}]
+}{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:togglebotdevmode_$authorID:false}}]
 
 
 $let[pre-release;$advancedReplaceText[$getVar[pre_release_mode];on;Enabled;off;Disabled]]
@@ -383,12 +365,11 @@ $let[newtoggledsetting;$advancedReplaceText[$checkCondition[$getVar[pre_release_
             type: "interaction",
             prototype: "selectMenu",
             code: `$interactionUpdate[{newEmbed:{title:Startup}{description:
-       This option let's you set a channel for the bot to inform users that it became online to use.
-    
-**Current Setting(s)**
+This option let's you set a channel for the bot to inform users that it became online to use.
+}{field:**Current Setting(s)**:
 **Startup**#COLON# \`$get[startupfeature]\`
 **Startup channel**#COLON# $get[startupchannel]
-        }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:botstartuptoggle_$authorID:false:🔄}{button:Set Channel:2:setbotstartupchannel_$authorID:false}}]
+}{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:botstartuptoggle_$authorID:false:🔄}{button:Set Channel:2:setbotstartupchannel_$authorID:false}}]
     
     
     $let[startupfeature;$advancedReplaceText[$checkCondition[$getVar[startupchannelsystem]==on];true;Enabled;false;Disabled]]
@@ -404,12 +385,11 @@ $let[newtoggledsetting;$advancedReplaceText[$checkCondition[$getVar[pre_release_
             prototype: "button",
             code: `$interactionFollowUp[$get[resultmessage];true]
     $interactionUpdate[{newEmbed:{title:Startup}{description:
-       This option let's you set a channel for the bot to inform users that it became online to use.
-    
-**Current Setting(s)**
+This option let's you set a channel for the bot to inform users that it became online to use.
+}{field:**Current Setting(s)**:
 **Startup**#COLON# \`$get[startupfeature]\`
 **Startup channel**#COLON# $get[startupchannel]
-        }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:botstartuptoggle_$authorID:false:🔄}{button:Set Channel:2:setbotstartupchannel_$authorID:false}}]
+}{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:botstartuptoggle_$authorID:false:🔄}{button:Set Channel:2:setbotstartupchannel_$authorID:false}}]
     
     
     $let[startupfeature;$advancedReplaceText[$checkCondition[$getVar[startupchannelsystem]==on];true;Enabled;false;Disabled]]
@@ -427,14 +407,12 @@ $let[newtoggledsetting;$advancedReplaceText[$checkCondition[$getVar[pre_release_
             prototype: "button",
             code: `
     
-    $interactionUpdate[{newEmbed:{title:Channel Setup}{description:Choose a channel for Startup messages to be sent in. Use the select menu below for the channel to use!
-        
-**Current Setting(s)**
-**Channel#COLON#** $get[startupchannel]
+$interactionUpdate[{newEmbed:{title:Channel Setup}{description:Choose a channel for Startup messages to be sent in. Use the select menu below for the channel to use!
         
 **Tip#COLON#** Unable to find the channel you're looking for? Try typing the channel name instead!
-        
-        }{color:Red}}{actionRow:{selectMenu:botstartupchannelmenusetup_$authorID:Select a channel to use.:1:1:false:{channelInput:Text}}}{actionRow:{button:Go back:2:startupbotpage_$authorID:false:↩️}{button:Reset:2:startupresetchannel_$authorID}}]
+}{field:**Current Setting(s)**:
+**Channel#COLON#** $get[startupchannel]
+}{color:Red}}{actionRow:{selectMenu:botstartupchannelmenusetup_$authorID:Select a channel to use.:1:1:false:{channelInput:Text}}}{actionRow:{button:Go back:2:startupbotpage_$authorID:false:↩️}{button:Reset:2:startupresetchannel_$authorID}}]
         
         $let[startupchannel;$advancedReplaceText[$checkCondition[$getVar[startupchannel]==none];true;none;false;<#$getVar[startupchannel]> (\`$getVar[startupchannel]\`)]]
     
@@ -449,14 +427,12 @@ $let[newtoggledsetting;$advancedReplaceText[$checkCondition[$getVar[pre_release_
             code: `
     
     $interactionFollowUp[Successfully set <#$getSelectMenuValues[all]> as the startup channel!;true]
-    $interactionUpdate[{newEmbed:{title:Channel Setup}{description:Choose a channel for Startup messages to be sent in. Use the select menu below for the channel to use!
-        
-**Current Setting(s)**
-**Channel#COLON#** $get[startupchannel]
-        
+$interactionUpdate[{newEmbed:{title:Channel Setup}{description:Choose a channel for Startup messages to be sent in. Use the select menu below for the channel to use!
+
 **Tip#COLON#** Unable to find the channel you're looking for? Try typing the channel name instead!
-        
-        }{color:Red}}{actionRow:{selectMenu:botstartupchannelmenusetup_$authorID:Select a channel to use.:1:1:false:{channelInput:Text}}}{actionRow:{button:Go back:2:startupbotpage_$authorID:false:↩️}{button:Reset:2:startupresetchannel_$authorID}}]
+}{field:**Current Setting(s)**:
+**Channel#COLON#** $get[startupchannel]
+}{color:Red}}{actionRow:{selectMenu:botstartupchannelmenusetup_$authorID:Select a channel to use.:1:1:false:{channelInput:Text}}}{actionRow:{button:Go back:2:startupbotpage_$authorID:false:↩️}{button:Reset:2:startupresetchannel_$authorID}}]
         
         $let[startupchannel;$advancedReplaceText[$checkCondition[$getVar[startupchannel]==none];true;none;false;<#$getVar[startupchannel]> (\`$getVar[startupchannel]\`)]]
     
@@ -498,14 +474,12 @@ $let[newtoggledsetting;$advancedReplaceText[$checkCondition[$getVar[pre_release_
         type: "interaction",
         prototype: "button",
         code: `$interactionFollowUp[Channel has been reset!;true]
-    $interactionUpdate[{newEmbed:{title:Channel Setup}{description:Choose a channel for Startup messages to be sent in. Use the select menu below for the channel to use!
-
-**Current Setting(s)**
-**Channel#COLON#** $get[startupchannel]
+$interactionUpdate[{newEmbed:{title:Channel Setup}{description:Choose a channel for Startup messages to be sent in. Use the select menu below for the channel to use!
 
 **Tip#COLON#** Unable to find the channel you're looking for? Try typing the channel name instead!
-
-        }{color:Red}}{actionRow:{selectMenu:botstartupchannelmenusetup_$authorID:Select a channel to use.:1:1:false:{channelInput:Text}}}{actionRow:{button:Go back:2:startupbotpage_$authorID:false:↩️}{button:Reset:2:startupresetchannel_$authorID}}]
+}{field:**Current Setting(s)**:
+**Channel#COLON#** $get[startupchannel]
+}{color:Red}}{actionRow:{selectMenu:botstartupchannelmenusetup_$authorID:Select a channel to use.:1:1:false:{channelInput:Text}}}{actionRow:{button:Go back:2:startupbotpage_$authorID:false:↩️}{button:Reset:2:startupresetchannel_$authorID}}]
 
         $let[startupchannel;$advancedReplaceText[$checkCondition[$getVar[startupchannel]==none];true;none;false;<#$getVar[startupchannel]> (\`$getVar[startupchannel]\`)]]
 
@@ -529,12 +503,11 @@ $let[newtoggledsetting;$advancedReplaceText[$checkCondition[$getVar[pre_release_
             type: "interaction",
             prototype: "button",
             code: `$interactionUpdate[{newEmbed:{title:Startup}{description:
-       This option let's you set a channel for the bot to inform users that it became online to use.
-    
-**Current Setting(s)**
+    This option let's you set a channel for the bot to inform users that it became online to use.
+}{field:**Current Setting(s)**:
 **Startup**#COLON# \`$get[startupfeature]\`
 **Startup channel**#COLON# $get[startupchannel]
-        }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:botstartuptoggle_$authorID:false:🔄}{button:Set Channel:2:setbotstartupchannel_$authorID:false}}]
+}{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:botstartuptoggle_$authorID:false:🔄}{button:Set Channel:2:setbotstartupchannel_$authorID:false}}]
     
     
     $let[startupfeature;$advancedReplaceText[$checkCondition[$getVar[startupchannelsystem]==on];true;Enabled;false;Disabled]]
@@ -550,11 +523,9 @@ $let[newtoggledsetting;$advancedReplaceText[$checkCondition[$getVar[pre_release_
     This option allows you to either enable or disable "Build Info" button seen in \`stats\` command.
 
 When enabled, information such as branch, version codename, it's current progress, etc will be shown.
-
-**Current setting(s)**
+}{field:**Current setting(s)**:
 **Show build info**#COLON# \`$get[showbuildinfo]\`
-
-    }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:showbuildinfotoggle_$authorID:false:🔄}}]
+}{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:showbuildinfotoggle_$authorID:false:🔄}}]
 
 
 $let[showbuildinfo;$advancedReplaceText[$checkCondition[$getVar[showbuildinfo]==on];true;Enabled;false;Disabled]]
@@ -574,11 +545,9 @@ $interactionUpdate[{newEmbed:{title:Show build info}{description:
     This option allows you to either enable or disable "Build Info" button seen in \`stats\` command.
 
 When enabled, information such as branch, version codename, it's current progress, etc will be shown.
-
-**Current setting(s)**
+}{field:**Current setting(s)**:
 **Show build info**#COLON# \`$get[showbuildinfo]\`
-
-    }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:showbuildinfotoggle_$authorID:false:🔄}}]
+}{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:showbuildinfotoggle_$authorID:false:🔄}}]
 
 
 $let[showbuildinfo;$advancedReplaceText[$checkCondition[$getVar[showbuildinfo]==on];true;Enabled;false;Disabled]]
@@ -599,10 +568,9 @@ $let[newtoggledsetting;$advancedReplaceText[$checkCondition[$getVar[showbuildinf
    This option let's you configure how many members are needed for a server so that the bot can join there.
 
 When the requirement is not met, the bot will simply leave the server.
-
-**Current Setting(s)**
+}{field:**Current Setting(s)**:
 **Member requirement**#COLON# \`$getVar[servermemberrequirement]\`
-    }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Set requirement:2:setmemberrequirement_$authorID:false}{button:Reset:2:resetmemberrequirement_$authorID:false}}]
+}{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Set requirement:2:setmemberrequirement_$authorID:false}{button:Reset:2:resetmemberrequirement_$authorID:false}}]
 
 
     $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];You're not the author of this command! {ephemeral}
@@ -630,13 +598,12 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[aut
         prototype: "modal",
         code: `$interactionFollowUp[\`$get[input]\` will now be used as the new requirement for new servers!;true]
 $interactionUpdate[{newEmbed:{title:Member requirement}{description:
-  This option let's you configure how many members are needed for a server so that the bot can join there.
+   This option let's you configure how many members are needed for a server so that the bot can join there.
 
 When the requirement is not met, the bot will simply leave the server.
-
-**Current Setting(s)**
+}{field:**Current Setting(s)**:
 **Member requirement**#COLON# \`$getVar[servermemberrequirement]\`
-    }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Set requirement:2:setmemberrequirement_$authorID:false}{button:Reset:2:resetmemberrequirement_$authorID:false}}]
+}{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Set requirement:2:setmemberrequirement_$authorID:false}{button:Reset:2:resetmemberrequirement_$authorID:false}}]
 
 $setVar[servermemberrequirement;$get[input]]
 
@@ -661,13 +628,12 @@ $let[input;$excludeSpecialChars[$textInputValue[numberInput]]]
         prototype: "button",
         code: `$interactionFollowUp[Requirement has been reset!;true]
 $interactionUpdate[{newEmbed:{title:Member requirement}{description:
- This option let's you configure how many members are needed for a server so that the bot can join there.
+   This option let's you configure how many members are needed for a server so that the bot can join there.
 
 When the requirement is not met, the bot will simply leave the server.
-
-**Current Setting(s)**
+}{field:**Current Setting(s)**:
 **Member requirement**#COLON# \`$getVar[servermemberrequirement]\`
-    }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Set requirement:2:setmemberrequirement_$authorID:false}{button:Reset:2:resetmemberrequirement_$authorID:false}}]
+}{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Set requirement:2:setmemberrequirement_$authorID:false}{button:Reset:2:resetmemberrequirement_$authorID:false}}]
 
     $deleteVar[servermemberrequirement;;main]
 

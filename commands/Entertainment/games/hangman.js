@@ -39,11 +39,10 @@ Game.startGame();
   name: "hangmansettings",
   type: "awaited",
   code: `$title[Hangman Settings]
-  $description[Welcome to Hangman Settings! To select a theme to use, use the dropdown menu below!
-
-**Current Setting(s)**
+$description[Welcome to Hangman Settings! To select a theme to use, use the dropdown menu below!]
+$addField[**Current Setting(s)**;
 **Theme#COLON#** \`$toLocaleUpperCase[$getGlobalUserVar[hangman_theme]]\`
-  ]
-  $color[$getVar[embedcolor]]
-  $addSelectMenu[1;string;hangmansettings_$authorID;Select a theme;1;1;false;Nature:Sets the theme to Nature-related:nature:false;Sport:Sets the theme to Sport-related:sport:false;Color:Sets the theme to Color-related:color:false;Camp:Sets the theme to Camp-related:camp:false;Fruit:Sets the theme to Fruit-related:fruit:false;Discord:Sets the theme to Discord-related:discord:false;Winter:Sets the theme to Winter-related:winter:false;Pokemon:Sets the theme to Pokemon-related:pokemon:false]`
+]
+$color[$getVar[embedcolor]]
+$addSelectMenu[1;string;hangmansettings_$authorID;Select a theme;1;1;false;Nature:Sets the theme to Nature-related:nature:false;Sport:Sets the theme to Sport-related:sport:false;Color:Sets the theme to Color-related:color:false;Camp:Sets the theme to Camp-related:camp:false;Fruit:Sets the theme to Fruit-related:fruit:false;Discord:Sets the theme to Discord-related:discord:false;Winter:Sets the theme to Winter-related:winter:false;Pokemon:Sets the theme to Pokemon-related:pokemon:false]`
 }]
