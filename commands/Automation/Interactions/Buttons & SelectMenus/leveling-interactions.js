@@ -467,7 +467,7 @@ $autoList[$nonEscape[$getGuildVar[levelingexcludedchannels]];, ;autoListChannels
         code: `$interactionUpdate[{newEmbed:{title:Categories}{description:Use the dropdown menu below to select channel categories to exclude from xp. (You can exclude up to 10)!
 
 **Tip#COLON#** Unable to find the category you're looking for? Try typing the category name instead!
-}{field:**Current Categories**
+}{field:**Current Categories**:
 $autoList[$nonEscape[$getGuildVar[levelingexcludedcategories]];, ;autoListCategories]
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:levelingexcludecategoriesmenusetup_$authorID:Select categories.:1:10:false:{channelInput:Category}}}{actionRow:{button:Go back:2:levelingsettingmessage_$authorID:false:↩️}{button:Reset:2:levelingexcludecategoriesreset_$authorID:false}}]
 
@@ -487,7 +487,7 @@ $autoList[$nonEscape[$getGuildVar[levelingexcludedcategories]];, ;autoListCatego
     $interactionUpdate[{newEmbed:{title:Categories}{description:Use the dropdown menu below to select channel categories to exclude from xp. (You can exclude up to 10)!
 
 **Tip#COLON#** Unable to find the category you're looking for? Try typing the category name instead!
-}{field:**Current Categories**
+}{field:**Current Categories**:
 $autoList[$nonEscape[$getGuildVar[levelingexcludedcategories]];, ;autoListCategories]
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:levelingexcludecategoriesmenusetup_$authorID:Select categories.:1:10:false:{channelInput:Category}}}{actionRow:{button:Go back:2:levelingsettingmessage_$authorID:false:↩️}{button:Reset:2:levelingexcludecategoriesreset_$authorID:false}}]
 
@@ -509,7 +509,7 @@ $autoList[$nonEscape[$getGuildVar[levelingexcludedcategories]];, ;autoListCatego
     $interactionUpdate[{newEmbed:{title:Categories}{description:Use the dropdown menu below to select channel categories to exclude from xp. (You can exclude up to 10)!
 
 **Tip#COLON#** Unable to find the category you're looking for? Try typing the category name instead!
-}{field:**Current Categories**
+}{field:**Current Categories**:
 $autoList[$nonEscape[$getGuildVar[levelingexcludedcategories]];, ;autoListCategories]
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:levelingexcludecategoriesmenusetup_$authorID:Select categories.:1:10:false:{channelInput:Category}}}{actionRow:{button:Go back:2:levelingsettingmessage_$authorID:false:↩️}{button:Reset:2:levelingexcludecategoriesreset_$authorID:false}}]
 
