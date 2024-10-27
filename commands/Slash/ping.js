@@ -13,5 +13,10 @@ Last Restart: <t:$truncate[$divide[$readyTimestamp;1000]]:f>
 ]
 $wait[3s]
 $interactionReply[Pong! 🏓;all;true]
+
+$onlyIf[$getVar[userapps]==true;User apps are currently disabled.
+{ephemeral}
+{interaction}
+]
 `
 }

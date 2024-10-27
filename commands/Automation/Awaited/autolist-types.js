@@ -13,7 +13,7 @@ module.exports = [{
     type: "awaited",
     code: `$if[{value}==none;none;$get[channels]]
 
-$let[channels;$if[$guildChannelExists[$guildID;{value}]==true;* <#{value}>;\`Deleted Channel\`]]`
+$let[channels;$if[$guildChannelExists[$guildID;{value}]==true;* <#{value}>;* \`Deleted Channel\`]]`
 },{
     name: "autoListCategories",
     $if: "old",
@@ -22,7 +22,10 @@ $let[channels;$if[$guildChannelExists[$guildID;{value}]==true;* <#{value}>;\`Del
     $if[{value}==none]
     none
     $else
-    $advancedReplaceText[$checkCondition[$guildChannelExists[$guildID;{value}]==true];$channelName[{value}];\`Deleted Category\`]
+    $advancedReplaceText[$checkCondition[$guildChannelExists[$guildID;{value}]==true];true;* **$djsEval[const data = d.util.aoiFunc(d);
+const channel = d.util.getChannel(d, "{value}",true)
+channel.name
+;true]**;false;* \`Deleted Category\`]
     $endif
 `
 },{
@@ -30,5 +33,5 @@ $let[channels;$if[$guildChannelExists[$guildID;{value}]==true;* <#{value}>;\`Del
     type: "awaited",
     code: `$if[{value}==none;none;$get[roles]]
 
-$let[roles;$if[$roleExists[{value};$guildID]==true;* <@&{value}>;\`Deleted Role\`]]`
+$let[roles;$if[$roleExists[{value};$guildID]==true;* <@&{value}>;* \`Deleted Role\`]]`
 }]
