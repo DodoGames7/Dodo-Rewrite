@@ -1,7 +1,3 @@
-/*
-This is mainly used for testing for now
-*/
-
 module.exports = [{
     name: "autoListText",
     type: "awaited",

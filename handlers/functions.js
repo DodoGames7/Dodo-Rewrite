@@ -37,7 +37,7 @@ $let[userInput;{userID}]`
     code: `$advancedReplaceText[$checkCondition[$IsValidImageLink[$get[Input]]==true];true;$get[Input];false;$get[FallbackInput]]
 $let[FallbackInput;{fallbacktoUse}]
 $let[Input;{url}]`
-  },{ // Temporarily used for testing purposes
+  },{
     name: "$autoList",
     type: "aoi.js",
     params: ["text", "seperator", "type"],
