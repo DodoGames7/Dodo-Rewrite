@@ -34,12 +34,9 @@ $let[userInput;{userID}]`
     name: "$fallbackAttachment",
     type: "aoi.js",
     params: ["url", "fallbacktoUse"],
-    code: `
-$advancedReplaceText[$checkCondition[$IsValidImageLink[$get[Input]]==true];true;$get[Input];false;$get[FallbackInput]]
+    code: `$advancedReplaceText[$checkCondition[$IsValidImageLink[$get[Input]]==true];true;$get[Input];false;$get[FallbackInput]]
 $let[FallbackInput;{fallbacktoUse}]
-$let[Input;{url}]
-
-    `
+$let[Input;{url}]`
   },{ // Temporarily used for testing purposes
     name: "$autoList",
     type: "aoi.js",

@@ -234,12 +234,14 @@ Your hex code must start with a \`#\`! Please, try again.{ephemeral}
 },{
     type: "interaction",
     prototype: "button",
-    code: `$interactionUpdate[{newEmbed:{title:Message type}{description:In Welcomer, there're two types#COLON#
+    code: `$interactionUpdate[{newEmbed:{title:Message type}{description:There're two types#COLON#
 
 * **Text**
 * **Embed**
 
-\`Text\` is the default type used for Welcomer messages. \`Embed\` will cause the Welcomer messages to use embeds. It's worth noting that if the Welcomer message is over 2000 characters then the \`Embed\` mode will be enforced as a result due to Discord's character limits for general messages!
+\`Text\` is the default type used for Welcomer messages. \`Embed\` will use embeds for the messages.
+
+-# If the message contains over 2000 characters, \`Embed\` will be used to avoid problems.
 }{field:**Current Setting(s)**:
 **Type#COLON#** \`$toLocaleUpperCase[$getGuildVar[welcometype]]\`
 }{color:$getVar[embedcolor]}}{actionRow:{button:Go back:2:welcomermessagebutton_$authorID:false:↩️}{button:Toggle:2:togglewelcomermessagetype_$authorID:false:🔄}}]
@@ -256,12 +258,14 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==welcomermessagetypeb
     type: "interaction",
     prototype: "button",
     code: `$interactionFollowUp[$get[resultmessage];true]
-$interactionUpdate[{newEmbed:{title:Message type}{description:In Welcomer, there're two types#COLON#
+$interactionUpdate[{newEmbed:{title:Message type}{description:There're two types#COLON#
 
 * **Text**
 * **Embed**
 
-\`Text\` is the default type used for Welcomer messages. \`Embed\` will cause the Welcomer messages to use embeds. It's worth noting that if the Welcomer message is over 2000 characters then the \`Embed\` mode will be enforced as a result due to Discord's character limits for general messages!
+\`Text\` is the default type used for Welcomer messages. \`Embed\` will use embeds for the messages.
+
+-# If the message contains over 2000 characters, \`Embed\` will be used to avoid problems.
 }{field:**Current Setting(s)**:
 **Type#COLON#** \`$toLocaleUpperCase[$getGuildVar[welcometype]]\`
 }{color:$getVar[embedcolor]}}{actionRow:{button:Go back:2:welcomermessagebutton_$authorID:false:↩️}{button:Toggle:2:togglewelcomermessagetype_$authorID:false:🔄}}]

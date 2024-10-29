@@ -313,7 +313,7 @@ Press the "Toggle" button to enable/disable the Level up Message or use the othe
     },{
         type: "interaction",
         prototype: "selectMenu",
-        code: `$interactionUpdate[{newEmbed:{title:Exclusions}{description:This category is dedicated to choosing on what should be blacklisted from allowing xp!
+        code: `$interactionUpdate[{newEmbed:{title:Exclusions}{description:This category is dedicated to choosing on what should be excluded from allowing xp!
 
 To manage a specific setting, use any of the buttons below to do so!
     }{color:$getVar[embedcolor]}}{actionRow:{button:Go back:2:levelingsettings_$authorID:false:↩️}{button:Roles:2:levelingexcluderolessetting_$authorID:false}{button:Channels:2:levelingexcludechannelssetting_$authorID:false}{button:Categories:2:levelingexcludecategoriessetting_$authorID:false}}]
@@ -328,7 +328,7 @@ To manage a specific setting, use any of the buttons below to do so!
     },{
         type: "interaction",
         prototype: "button",
-        code: `$interactionUpdate[{newEmbed:{title:Exclusions}{description:This category is dedicated to choosing on what should be blacklisted from allowing xp!
+        code: `$interactionUpdate[{newEmbed:{title:Exclusions}{description:This category is dedicated to choosing on what should be excluded from allowing xp!
 
 To manage a specific setting, use any of the buttons below to do so!
     }{color:$getVar[embedcolor]}}{actionRow:{button:Go back:2:levelingsettings_$authorID:false:↩️}{button:Roles:2:levelingexcluderolessetting_$authorID:false}{button:Channels:2:levelingexcludechannelssetting_$authorID:false}{button:Categories:2:levelingexcludecategoriessetting_$authorID:false}}]

@@ -15,7 +15,7 @@ module.exports = {
   versionCodename: "Cards",
   libraryversiondevcheck: "off",
   buildStatus: "Incomplete",
-  buildDate: "1730032535434",
+  buildDate: "1730200757385",
   buildType: "Pre-release",
   buildBranch: "gitbuilds",
   buildRevision: "0",
@@ -67,7 +67,7 @@ module.exports = {
   pre_release_mode: "on",
   botinvitationmessage: "on",
   servermemberrequirement: "0",
-  userapps: config.EnableUserAppSupport,
+  userapps: config.EnableUserApps,
   isuserappsalreadysetup: "no",
   errorsdisabled: config.DisableAllErrors
   }
