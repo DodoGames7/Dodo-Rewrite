@@ -17,11 +17,11 @@ $addField[**General**;
 **ID:** $get[user]
 ;true]
 $color[$getVar[embedcolor]]
+$thumbnail[$userAvatar[$get[user]]]
 $if[$memberExists[$findUser[$message[1;true]];$guildID]==true]
 $addButton[1;Member's Server info;2;memberservinfo_$authorID_$get[user];false]
 $addButton[1;General info;2;mainmeminfo_$authorID_$get[user];true]
 $endif
-$thumbnail[$userAvatar[$get[user]]]
 
 $let[username;$advancedReplaceText[$checkCondition[$hasUserTag[$get[user]]==false];true;$username[$get[user]];false;$userTag[$get[user]]]]
 $let[botchecker;$advancedReplaceText[$checkCondition[$isBot[$get[user]]==true];true;Yes;false;No]]
