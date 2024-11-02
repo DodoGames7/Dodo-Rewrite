@@ -1,5 +1,5 @@
 module.exports = [{
-name: "Bot Invitation Message"
+name: "Bot Invitation Message",
 type: "guildCreate",
 code: `$onlyIf[$getGlobalVar[botinvitationmessage]==on;]
 $let[channelselector;$advancedReplace[$checkCondition[$guildSystemChannelID[$newGuild[id]]==];true;$randomGuildChannelID[$newGuild[id];GuildText];false;$guildSystemChannelID[$newGuild[id]]]]
