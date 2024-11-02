@@ -10,12 +10,10 @@ $ephemeral
 $interactionUpdate[
 $title[Changes]
 $description[
-* "Users" section in \`stats\` command has been updated to use separator for large numbers
-* Added a button in \`perms\` command dedicated to explaining why the command exists
-* Added 2 new image commands called \`invert\` and \`jokeoverhead\`
+*No changes has been added yet*
 ]
 $if[$getGlobalVar[pre_release]==on;
-$attachment[./handlers/assets/warning.png;warning.png]
+$attachment[./assets/warning.png;warning.png]
 $footer[Testing is recommended;attachment://warning.png]
 ]
 $color[$getGlobalVar[embedcolor]]
@@ -39,11 +37,10 @@ $ephemeral
 $interactionUpdate[
 $title[Bug Fixes]
 $description[
-* Spelling fixes to \`about\` command regarding first sentence
-* Fixed a non-existent placeholder being mentioned in \`leveling\` when setting message
+*No Bug fixes has been added yet*
 ]
 $if[$getGlobalVar[pre_release]==on;
-$attachment[./handlers/assets/warning.png;warning.png]
+$attachment[./assets/warning.png;warning.png]
 $footer[Testing is recommended;attachment://warning.png]
 ]
 $color[$getGlobalVar[embedcolor]]
@@ -67,14 +64,12 @@ $ephemeral
 $interactionUpdate[
 $title[Other]
 $description[
-* "Latency" section for \`ping\` has been renamed to simply say "Ping"
-* Slight wording change to \`report\` command regarding first sentence
-* (Pre-release only) The warning icon in \`version\` command has been refreshed
-* Renamed \`report\` command's embed title to simply say "Reporting bugs"
-* "Version History" button in this command has been renamed to "Changelog History"
+* \`version\` command will now display the Revision if there any
+* (Source Code) changed the placing for local assets used in the bot
+* (Source Code) Revision will now also appear on startup message (for consoles)
 ]
 $if[$getGlobalVar[pre_release]==on;
-$attachment[./handlers/assets/warning.png;warning.png]
+$attachment[./assets/warning.png;warning.png]
 $footer[Testing is recommended;attachment://warning.png]
 ]
 $color[$getGlobalVar[embedcolor]]
@@ -100,12 +95,12 @@ $let[releasedatetype;$advancedReplace[$checkCondition[$getGlobalVar[pre_release]
 $interactionUpdate[
 $title[Dodo-Bot Version]
     $description[
-* **Version**: $getGlobalVar[version]
+* **Version**: $getGlobalVar[version]$if[$getGlobalVar[buildRevision]!=0; (Revision $getGlobalVar[buildRevision])]
 * **Release type**: $getGlobalVar[release_type]
 * **$get[releasedatetype]**: <t:$trunc[$divide[$getGlobalVar[buildDate];1000]]:f>
     ]
 $if[$getGlobalVar[pre_release]==on;
-$attachment[./handlers/assets/warning.png;warning.png]
+$attachment[./assets/warning.png;warning.png]
 $footer[Testing is recommended;attachment://warning.png]
 ]
     $color[$getGlobalVar[embedcolor]]

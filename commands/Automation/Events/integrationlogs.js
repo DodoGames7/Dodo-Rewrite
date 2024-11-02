@@ -1,4 +1,5 @@
 module.exports = [{
+    name: "Integration logs",
     type: "guildMemberAdd",
     allowBots: true,
     code: `

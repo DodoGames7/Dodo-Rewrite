@@ -15,7 +15,7 @@ This command requires you to have \`ManageGuild\` permission!
 
 $title[Settings]
 $description[Welcome to Settings! Select a option to change using the dropdown menu below!]
-$attachment[./handlers/assets/gear.png;settings.png]
+$attachment[./assets/gear.png;settings.png]
 $thumbnail[attachment://settings.png]
 $color[$getGlobalVar[embedcolor]]
 $addActionRow

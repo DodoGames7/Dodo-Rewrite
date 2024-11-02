@@ -14,7 +14,7 @@ $arrayLoad[amountofroles;/;$memberRoles[$guildID;$get[user];/]]
 
 $let[highestrole;$advancedReplace[$checkCondition[$memberHighestRoleID[$guildID;$get[user]]==$guildID];true;none;false;$roleName[$guildID;$memberHighestRoleID[$guildID;$get[user]]]]]
 $let[lowestrole;$advancedReplace[$checkCondition[$memberLowestRoleID[$guildID;$get[user]]==$guildID];true;none;false;$roleName[$guildID;$memberLowestRoleID[$guildID;$get[user]]]]]
-$let[booster;$advancedReplace[$checkContains[$guildBoosterIDs;$authorID];true;Yes;false;No]]
+$let[booster;$advancedReplace[$checkCondition[$isBoosting[$guildID;$get[user]]==true];true;Yes;false;No]]
 
 
 $onlyIf[$memberExists[$guildID;$get[user]]==true;

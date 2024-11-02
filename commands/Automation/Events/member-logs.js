@@ -1,4 +1,5 @@
 module.exports = [{
+    name: "Welcomer",
     type: "guildMemberAdd",
     allowBots: true,
     code: `
@@ -21,6 +22,7 @@ $disableRoleMentions
     ;$get[content]]
     ]`
 },{
+    name: "Leave",
     type: "guildMemberRemove",
     allowBots: true,
     code: `

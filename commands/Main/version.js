@@ -14,12 +14,12 @@ $let[releasedatetype;$advancedReplace[$checkCondition[$getGlobalVar[pre_release]
 
 $title[Dodo-Bot Version]
     $description[
-* **Version**: $getGlobalVar[version]
+* **Version**: $getGlobalVar[version]$if[$getGlobalVar[buildRevision]!=0; (Revision $getGlobalVar[buildRevision])]
 * **Release type**: $getGlobalVar[release_type]
 * **$get[releasedatetype]**: <t:$trunc[$divide[$getGlobalVar[buildDate];1000]]:f>
     ]
 $if[$getGlobalVar[pre_release]==on;
-$attachment[./handlers/assets/warning.png;warning.png]
+$attachment[./assets/warning.png;warning.png]
 $footer[Testing is recommended;attachment://warning.png]
 ]
     $color[$getGlobalVar[embedcolor]]

@@ -1,4 +1,5 @@
 module.exports = [{
+    name: "Message delete logs",
     type: "messageDelete",
     allowBots: true,
     code: `
@@ -20,6 +21,7 @@ $author[Message deleted!;$userAvatar[$oldMessage[authorID]]]
 ]
 `
 },{
+    name: "Message edit logs",
     type: "messageUpdate",
     allowBots: true,
     code: `

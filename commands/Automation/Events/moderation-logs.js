@@ -1,4 +1,5 @@
 module.exports = [{
+    name: "Ban logs",
     type: "guildBanAdd",
     allowBots: true,
     code: `
@@ -22,6 +23,7 @@ $let[accounttype;$advancedReplace[$checkCondition[$isBot==false];true;Member;fal
     ]
     `
     },{
+    name: "un-Ban logs",
     type: "guildBanRemove",
     allowBots: true,
     code: `

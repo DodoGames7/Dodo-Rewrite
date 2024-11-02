@@ -20,7 +20,7 @@ $let[aliases;$advancedReplace[$checkCondition[$callFunction[commandaliases;$toLo
 $let[actualname;$commandInfo[messageCreate;$toLowerCase[$message];name]]
 $onlyIf[$commandInfo[messageCreate;$toLowerCase[$message];info;dev]==;Viewing developer commands is unsupported.]
 
-$attachment[./handlers/assets/magnifying-glass-tilted-left.png;magnifying-glass.png]
+$attachment[./assets/magnifying-glass-tilted-left.png;magnifying-glass.png]
 $author[Command info looker;attachment://magnifying-glass.png]
 $title[$get[actualname]]
 $description[$env[cmdinfo;description]]
