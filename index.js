@@ -6,7 +6,7 @@ const functions = require("./handlers/functions.js");
 const vars = require('./handlers/variables.js');
 
 
-// Client Setup
+// Setting up Client
 const client = new AoiClient({
   token: process.env.BotToken || config.BotToken, // Token with either env or config
   prefix: "$getGuildVar[prefix]", // By default, it uses custom prefix system (default prefix used: d!).
