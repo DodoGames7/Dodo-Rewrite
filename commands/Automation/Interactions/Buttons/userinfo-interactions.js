@@ -66,7 +66,9 @@ $addField[**General**;
 **ID:** $get[user]
 ;true]
 $addField[**Other**;
-**Avatar:** $hyperlink[link;$userAvatar[$get[user]]]
+**Avatar:** $hyperlink[link;$userAvatar[$get[user]]]$if[$userBanner[$get[user]]!=;
+**Banner:** $hyperlink[link;$userBanner[$get[user]]]
+]
 **DMS:** $get[dmsstatus]
 ;true]
 $thumbnail[$userAvatar[$get[user]]]

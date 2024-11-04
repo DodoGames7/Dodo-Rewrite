@@ -10,7 +10,7 @@ $ephemeral
 $interactionUpdate[
 $title[Changes]
 $description[
-*No changes has been added yet*
+* Support for returning banner link has been added to \`user\` command
 ]
 $if[$getGlobalVar[pre_release]==on;
 $attachment[./assets/warning.png;warning.png]
