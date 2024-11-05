@@ -27,6 +27,8 @@ $let[devbuild;$if[$getVar[pre_release_mode]==on;{footer:Testing is recommended:h
 * Internal fix for a private command has been added
 * (Source Code) bot's name on console now consistently states "Dodo-Bot" rather than "Dodo Bot" to avoid confusion
 * Handling API errors for text commands should now actually work this time (hopefully).
+* Another internal fix for a private command has been added (Revision 1)
+* Fixed unfitting cooldown for \`welcomer\` and \`leave\` (Revision 1)
     }{color:$getVar[embedcolor]}$nonEscape[$get[devbuild]]}{actionRow:{button:Home:2:homebutton_$authorID:false:🏠}{button:Changes:2:versionchanges_$authorID:false}{button:Bug Fixes:2:versionbugfixes_$authorID:true}{button:Other:2:versionother_$authorID:false}}{actionRow:{button:Changelog history:5:https#COLON#//github.com/DodoGames7/Dodo-Bot/releases:false:📜}}]
 
 $let[devbuild;$if[$getVar[pre_release_mode]==on;{footer:Testing is recommended:https#COLON#//us-east-1.tixte.net/uploads/dodogames.wants.solutions/warningsign.png};  ]]

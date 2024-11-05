@@ -90,7 +90,7 @@ $onlyIf[$getVar[errorsdisabled]==false;To configure this option, you need to dis
         code: `
 
 $interactionFollowUp[$get[resultmessage];true]
-$interactionUpdate[;{newEmbed:{title:Error Logging}{description:
+$interactionUpdate[{newEmbed:{title:Error Logging}{description:
     Often, you get frustrated not knowing whether or not, your bot has errors. This setting is dedicated to send errors caused by a broken command to a specific channel depending on your choice. There's also an option to enable it.
 
 When an error occurs, information such as the server name, it's id, alongside with the command name and the error will be included in logs to help the bot owners with some useful information regarding where does the error come from.
