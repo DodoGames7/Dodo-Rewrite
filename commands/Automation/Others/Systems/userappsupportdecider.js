@@ -42,7 +42,7 @@ $createApplicationCommand[global;8ball;Ask a question to 8ball;sendmessages;user
 
 $djsEval[const chalk = require('chalk')
 
-console.log(chalk.green("Successfully created user apps! Restart your Discord to see them"))
+console.log(chalk.green("Successfully created user apps! Restart your Discord to see them!"))
 ]
 
 $setVar[isuserappsalreadysetup;yes]
