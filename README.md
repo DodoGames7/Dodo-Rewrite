@@ -14,12 +14,12 @@ v2 was supposed to be based on discord.js, but due to some issues, it has been m
 This version of the bot is likely made for you to learn as well as enjoy it; it's probably the first aoi.js v6 bot to be open-sourced here. Note that I'm trying my best to make this a stable release as much as possible, but at least you get to try the new stuff v2 has in store for you!
 
 # Versions
-* **[V1](https://github.com/DodoGames7/Dodo-Bot/tree/v1)**: The discontinued version of Dodo-Bot. It had a bad start with bunch of bugs due to me being newbie in aoi.js at the time.
-* **[V2 (current)](https://github.com/DodoGames7/Dodo-Bot/tree/v2)**: The current version of the bot, maintained with lot of bug fixes and has alright features.
-* **[V3](https://github.com/DodoGames7/Dodo-Bot/tree/v3)**: Intended to try out aoi.js v7. Currently on pause
-* **[gitbuilds](https://github.com/DodoGames7/Dodo-Bot/tree/gitbuilds)**: Development builds of v2. Not recommended for public use. More information can be found [here](https://dodogames7.github.io/dodo-bot-site/advanced/gitbuilds/).
-* **[gitbuilds-rebase](https://github.com/DodoGames7/Dodo-Bot/tree/gitbuilds-rebase)**: Development builds of Rebase. Not recommended for public use just like pre-release builds of v2.
-* **[rebase](https://github.com/DodoGames7/Dodo-Bot/tree/rebase)**: ForgeScript version of the bot. It's mostly made as a emergency build.
+* **[V1](https://github.com/ddodogames/Dodo-Bot/tree/v1)**: The discontinued version of Dodo-Bot. It had a bad start with bunch of bugs due to me being newbie in aoi.js at the time.
+* **[V2 (current)](https://github.com/ddodogames/Dodo-Bot/tree/v2)**: The current version of the bot, maintained with lot of bug fixes and has alright features.
+* **[V3](https://github.com/ddodogames/Dodo-Bot/tree/v3)**: Intended to try out aoi.js v7. Currently on pause
+* **[gitbuilds](https://github.com/ddodogames/Dodo-Bot/tree/gitbuilds)**: Development builds of v2. Not recommended for public use. More information can be found [here](https://dodogames7.github.io/dodo-bot-site/advanced/gitbuilds/).
+* **[gitbuilds-rebase](https://github.com/ddodogames/Dodo-Bot/tree/gitbuilds-rebase)**: Development builds of Rebase. Not recommended for public use just like pre-release builds of v2.
+* **[rebase](https://github.com/ddodogames/Dodo-Bot/tree/rebase)**: ForgeScript version of the bot. It's mostly made as a emergency build.
 # Requirements
 You can host Dodo-Bot on any hosting as long as you meet the following Requirements:
 * Node.js v20 is required as older versions are not supported

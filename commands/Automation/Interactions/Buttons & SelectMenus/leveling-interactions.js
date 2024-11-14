@@ -183,8 +183,8 @@ Press the "Toggle" button to enable/disable the Level up Message or use the othe
         code: `$interactionUpdate[{newEmbed:{title:Channel Setup}{description:Choose a channel for Level up messages to be sent in. Use the select menu below for the channel to use!
     
 **Tip#COLON#** Unable to find the channel you're looking for? Try typing the channel name instead!
-}{field:**Current Setting(s)**:
-**Channel#COLON#** $get[levelupchannel]
+}{field:**Current Channel**:
+* $get[levelupchannel]
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:levelingchannelmenusetup_$authorID:Select a channel to use.:1:1:false:{channelInput:Text:Announcement}}}{actionRow:{button:Go back:2:levelingsettingmessage_$authorID:false:↩️}{button:Reset:2:levelingresetchannel_$authorID:false}}]
     
     $let[levelupchannel;$advancedReplaceText[$checkCondition[$getGuildVar[levelingmessagechannel]==none];true;none;false;<#$getGuildVar[levelingmessagechannel]> (\`$getGuildVar[levelingmessagechannel]\`)]]
@@ -204,8 +204,8 @@ Press the "Toggle" button to enable/disable the Level up Message or use the othe
     $interactionUpdate[{newEmbed:{title:Channel Setup}{description:Choose a channel for Level up messages to be sent in. Use the select menu below for the channel to use!
 
 **Tip#COLON#** Unable to find the channel you're looking for? Try typing the channel name instead!
-}{field:**Current Setting(s)**:
-**Channel#COLON#** $get[levelupchannel]
+}{field:**Current Channel**:
+* $get[levelupchannel]
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:levelingchannelmenusetup_$authorID:Select a channel to use.:1:1:false:{channelInput:Text:Announcement}}}{actionRow:{button:Go back:2:levelingsettingmessage_$authorID:false:↩️}{button:Reset:2:levelingresetchannel_$authorID:false}}]
     
     $let[levelupchannel;$advancedReplaceText[$checkCondition[$getGuildVar[levelingmessagechannel]==none];true;none;false;<#$getGuildVar[levelingmessagechannel]> (\`$getGuildVar[levelingmessagechannel]\`)]]
@@ -247,8 +247,8 @@ Press the "Toggle" button to enable/disable the Level up Message or use the othe
     $interactionUpdate[{newEmbed:{title:Channel Setup}{description:Choose a channel for Level up messages to be sent in. Use the select menu below for the channel to use!
 
 **Tip#COLON#** Unable to find the channel you're looking for? Try typing the channel name instead!
-}{field:**Current Setting(s)**:
-**Channel#COLON#** $get[levelupchannel]
+}{field:**Current Channel**:
+* $get[levelupchannel]
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:levelingchannelmenusetup_$authorID:Select a channel to use.:1:1:false:{channelInput:Text:Announcement}}}{actionRow:{button:Go back:2:levelingsettingmessage_$authorID:false:↩️}{button:Reset:2:levelingresetchannel_$authorID:false}}]
 
     $let[levelupchannel;$advancedReplaceText[$checkCondition[$getGuildVar[levelingmessagechannel]==none];true;none;false;<#$getGuildVar[levelingmessagechannel]> (\`$getGuildVar[levelingmessagechannel]\`)]]

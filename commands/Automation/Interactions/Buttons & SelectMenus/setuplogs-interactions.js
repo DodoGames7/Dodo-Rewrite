@@ -20,8 +20,8 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==setuplogshomebutton;
     code: `$interactionUpdate[{newEmbed:{author:Message Delete:$clientAvatar}{title:Channel Setup}{description:Select a channel using the menu below for this log type.
 
 **Tip#COLON#** Can't find the channel you're looking for? Try typing the channel name into the menu instead.
-}{field:**Current Setting(s)**:
-**Channel#COLON#** $get[msgdeletelogchannel]
+}{field:**Current Channel**:
+* $get[msgdeletelogchannel]
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:msgdeletelogchannelsetupmenu_$authorID:Select a channel to use:1:1:false:{channelInput:Text}}}{actionRow:{button:Home:2:setuplogshomebutton_$authorID:false:🏠}{button:Reset:2:msgdeletelogresetchannel_$authorID:false}}]
 
 
@@ -43,8 +43,8 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==setuplogsmenu;]
 $interactionUpdate[{newEmbed:{author:Message Delete:$clientAvatar}{title:Channel Setup}{description:Select a channel using the menu below for this log type.
 
 **Tip#COLON#** Can't find the channel you're looking for? Try typing the channel name into the menu instead.
-}{field:**Current Setting(s)**:
-**Channel#COLON#** $get[msgdeletelogchannel]
+}{field:**Current Channel**:
+* $get[msgdeletelogchannel]
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:msgdeletelogchannelsetupmenu_$authorID:Select a channel to use:1:1:false:{channelInput:Text}}}{actionRow:{button:Home:2:setuplogshomebutton_$authorID:false:🏠}{button:Reset:2:msgdeletelogresetchannel_$authorID:false}}]
 
     $let[msgdeletelogchannel;$advancedReplaceText[$checkCondition[$getGuildVar[msglogdeletedchannel]==none];true;none;false;<#$getGuildVar[msglogdeletedchannel]> (\`$getGuildVar[msglogdeletedchannel]\`)]]
@@ -92,8 +92,8 @@ $interactionUpdate[{newEmbed:{author:Message Delete:$clientAvatar}{title:Channel
 $interactionUpdate[{newEmbed:{author:Message Delete:$clientAvatar}{title:Channel Setup}{description:Select a channel using the menu below for this log type.
 
 **Tip#COLON#** Can't find the channel you're looking for? Try typing the channel name into the menu instead.
-}{field:**Current Setting(s)**:
-**Channel#COLON#** $get[msgdeletelogchannel]
+}{field:**Current Channel**:
+* $get[msgdeletelogchannel]
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:msgdeletelogchannelsetupmenu_$authorID:Select a channel to use:1:1:false:{channelInput:Text}}}{actionRow:{button:Home:2:setuplogshomebutton_$authorID:false:🏠}{button:Reset:2:msgdeletelogresetchannel_$authorID:false}}]
 
     $let[msgdeletelogchannel;$advancedReplaceText[$checkCondition[$getGuildVar[msglogdeletedchannel]==none];true;none;false;<#$getGuildVar[msglogdeletedchannel]> (\`$getGuildVar[msglogdeletedchannel]\`)]]
@@ -120,8 +120,8 @@ $interactionUpdate[{newEmbed:{author:Message Delete:$clientAvatar}{title:Channel
     code: `$interactionUpdate[{newEmbed:{author:Message Edit:$clientAvatar}{title:Channel Setup}{description:Select a channel using the menu below for this log type.
 
 **Tip#COLON#** Can't find the channel you're looking for? Try typing the channel name into the menu instead.
-}{field:**Current Setting(s)**:
-**Channel#COLON#** $get[msglogeditchannel]
+}{field:**Current Channel**:
+* $get[msglogeditchannel]
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:msgeditloglogchannelsetupmenu_$authorID:Select a channel to use:1:1:false:{channelInput:Text}}}{actionRow:{button:Home:2:setuplogshomebutton_$authorID:false:🏠}{button:Reset:2:msgeditlogresetchannel_$authorID:false}}]
 
 
@@ -143,8 +143,8 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==setuplogsmenu;]
 $interactionUpdate[{newEmbed:{author:Message Edit:$clientAvatar}{title:Channel Setup}{description:Select a channel using the menu below for this log type.
 
 **Tip#COLON#** Can't find the channel you're looking for? Try typing the channel name into the menu instead.
-}{field:**Current Setting(s)**:
-**Channel#COLON#** $get[msglogeditchannel]
+}{field:**Current Channel**:
+* $get[msglogeditchannel]
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:msgeditloglogchannelsetupmenu_$authorID:Select a channel to use:1:1:false:{channelInput:Text}}}{actionRow:{button:Home:2:setuplogshomebutton_$authorID:false:🏠}{button:Reset:2:msgeditlogresetchannel_$authorID:false}}]
 
     $let[msglogeditchannel;$advancedReplaceText[$checkCondition[$getGuildVar[msglogeditchannel]==none];true;none;false;<#$getGuildVar[msglogeditchannel]> (\`$getGuildVar[msglogeditchannel]\`)]]
@@ -192,8 +192,8 @@ $interactionUpdate[{newEmbed:{author:Message Edit:$clientAvatar}{title:Channel S
 $interactionUpdate[{newEmbed:{author:Message Edit:$clientAvatar}{title:Channel Setup}{description:Select a channel using the menu below for this log type.
 
 **Tip#COLON#** Can't find the channel you're looking for? Try typing the channel name into the menu instead.
-}{field:**Current Setting(s)**:
-**Channel#COLON#** $get[msglogeditchannel]
+}{field:**Current Channel**:
+* $get[msglogeditchannel]
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:msgeditloglogchannelsetupmenu_$authorID:Select a channel to use:1:1:false:{channelInput:Text}}}{actionRow:{button:Home:2:setuplogshomebutton_$authorID:false:🏠}{button:Reset:2:msgeditlogresetchannel_$authorID:false}}]
 
     $let[msglogeditchannel;$advancedReplaceText[$checkCondition[$getGuildVar[msglogeditchannel]==none];true;none;false;<#$getGuildVar[msglogeditchannel]> (\`$getGuildVar[msglogeditchannel]\`)]]
@@ -220,8 +220,8 @@ $interactionUpdate[{newEmbed:{author:Message Edit:$clientAvatar}{title:Channel S
     code: `$interactionUpdate[{newEmbed:{author:Ban:$clientAvatar}{title:Channel Setup}{description:Select a channel using the menu below for this log type.
 
 **Tip#COLON#** Can't find the channel you're looking for? Try typing the channel name into the menu instead.
-}{field:**Current Setting(s)**:
-**Channel#COLON#** $get[banneduserschannel]
+}{field:**Current Channel**:
+* $get[banneduserschannel]
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:banlogchannelsetupmenu_$authorID:Select a channel to use:1:1:false:{channelInput:Text}}}{actionRow:{button:Home:2:setuplogshomebutton_$authorID:false:🏠}{button:Reset:2:banlogresetchannel_$authorID:false}}]
 
 
@@ -243,8 +243,8 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==setuplogsmenu;]
 $interactionUpdate[{newEmbed:{author:Ban:$clientAvatar}{title:Channel Setup}{description:Select a channel using the menu below for this log type.
 
 **Tip#COLON#** Can't find the channel you're looking for? Try typing the channel name into the menu instead.
-}{field:**Current Setting(s)**:
-**Channel#COLON#** $get[banneduserschannel]
+}{field:**Current Channel**:
+* $get[banneduserschannel]
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:banlogchannelsetupmenu_$authorID:Select a channel to use:1:1:false:{channelInput:Text}}}{actionRow:{button:Home:2:setuplogshomebutton_$authorID:false:🏠}{button:Reset:2:banlogresetchannel_$authorID:false}}]
 
     $let[banneduserschannel;$advancedReplaceText[$checkCondition[$getGuildVar[banneduserschannel]==none];true;none;false;<#$getGuildVar[banneduserschannel]> (\`$getGuildVar[banneduserschannel]\`)]]
@@ -292,8 +292,8 @@ $interactionUpdate[{newEmbed:{author:Ban:$clientAvatar}{title:Channel Setup}{des
 $interactionUpdate[{newEmbed:{author:Ban:$clientAvatar}{title:Channel Setup}{description:Select a channel using the menu below for this log type.
 
 **Tip#COLON#** Can't find the channel you're looking for? Try typing the channel name into the menu instead.
-}{field:**Current Setting(s)**:
-**Channel#COLON#** $get[banneduserschannel]
+}{field:**Current Channel**:
+* $get[banneduserschannel]
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:banlogchannelsetupmenu_$authorID:Select a channel to use:1:1:false:{channelInput:Text}}}{actionRow:{button:Home:2:setuplogshomebutton_$authorID:false:🏠}{button:Reset:2:banlogresetchannel_$authorID:false}}]
 
     $let[banneduserschannel;$advancedReplaceText[$checkCondition[$getGuildVar[banneduserschannel]==none];true;none;false;<#$getGuildVar[banneduserschannel]> (\`$getGuildVar[banneduserschannel]\`)]]
@@ -320,8 +320,8 @@ $interactionUpdate[{newEmbed:{author:Ban:$clientAvatar}{title:Channel Setup}{des
     code: `$interactionUpdate[{newEmbed:{author:Unban:$clientAvatar}{title:Channel Setup}{description:Select a channel using the menu below for this log type.
 
 **Tip#COLON#** Can't find the channel you're looking for? Try typing the channel name into the menu instead.
-}{field:**Current Setting(s)**:
-**Channel#COLON#** $get[unbanneduserschannel]
+}{field:**Current Channel**:
+* $get[unbanneduserschannel]
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:unbanlogchannelsetupmenu_$authorID:Select a channel to use:1:1:false:{channelInput:Text}}}{actionRow:{button:Home:2:setuplogshomebutton_$authorID:false:🏠}{button:Reset:2:unbanlogresetchannel_$authorID:false}}]
 
 
@@ -343,8 +343,8 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==setuplogsmenu;]
 $interactionUpdate[{newEmbed:{author:Unban:$clientAvatar}{title:Channel Setup}{description:Select a channel using the menu below for this log type.
 
 **Tip#COLON#** Can't find the channel you're looking for? Try typing the channel name into the menu instead.
-}{field:**Current Setting(s)**:
-**Channel#COLON#** $get[unbanneduserschannel]
+}{field:**Current Channel**:
+* $get[unbanneduserschannel]
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:unbanlogchannelsetupmenu_$authorID:Select a channel to use:1:1:false:{channelInput:Text}}}{actionRow:{button:Home:2:setuplogshomebutton_$authorID:false:🏠}{button:Reset:2:unbanlogresetchannel_$authorID:false}}]
 
     $let[unbanneduserschannel;$advancedReplaceText[$checkCondition[$getGuildVar[unbanneduserschannel]==none];true;none;false;<#$getGuildVar[unbanneduserschannel]> (\`$getGuildVar[unbanneduserschannel]\`)]]
@@ -392,8 +392,8 @@ $interactionUpdate[{newEmbed:{author:Unban:$clientAvatar}{title:Channel Setup}{d
 $interactionUpdate[{newEmbed:{author:Unban:$clientAvatar}{title:Channel Setup}{description:Select a channel using the menu below for this log type.
 
 **Tip#COLON#** Can't find the channel you're looking for? Try typing the channel name into the menu instead.
-}{field:**Current Setting(s)**:
-**Channel#COLON#** $get[unbanneduserschannel]
+}{field:**Current Channel**:
+* $get[unbanneduserschannel]
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:unbanlogchannelsetupmenu_$authorID:Select a channel to use:1:1:false:{channelInput:Text}}}{actionRow:{button:Home:2:setuplogshomebutton_$authorID:false:🏠}{button:Reset:2:unbanlogresetchannel_$authorID:false}}]
 
     $let[unbanneduserschannel;$advancedReplaceText[$checkCondition[$getGuildVar[unbanneduserschannel]==none];true;none;false;<#$getGuildVar[unbanneduserschannel]> (\`$getGuildVar[unbanneduserschannel]\`)]]
@@ -420,8 +420,8 @@ $interactionUpdate[{newEmbed:{author:Unban:$clientAvatar}{title:Channel Setup}{d
     code: `$interactionUpdate[{newEmbed:{author:Integration:$clientAvatar}{title:Channel Setup}{description:Select a channel using the menu below for this log type.
 
 **Tip#COLON#** Can't find the channel you're looking for? Try typing the channel name into the menu instead.
-}{field:**Current Setting(s)**:
-**Channel#COLON#** $get[Integrationchannel]
+}{field:**Current Channel**:
+* $get[Integrationchannel]
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:Integrationlogchannelsetupmenu_$authorID:Select a channel to use:1:1:false:{channelInput:Text}}}{actionRow:{button:Home:2:setuplogshomebutton_$authorID:false:🏠}{button:Reset:2:Integrationlogresetchannel_$authorID:false}}]
 
 
@@ -443,8 +443,8 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==setuplogsmenu;]
 $interactionUpdate[{newEmbed:{author:Integration:$clientAvatar}{title:Channel Setup}{description:Select a channel using the menu below for this log type.
 
 **Tip#COLON#** Can't find the channel you're looking for? Try typing the channel name into the menu instead.
-}{field:**Current Setting(s)**:
-**Channel#COLON#** $get[Integrationchannel]
+}{field:**Current Channel**:
+* $get[Integrationchannel]
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:Integrationlogchannelsetupmenu_$authorID:Select a channel to use:1:1:false:{channelInput:Text}}}{actionRow:{button:Home:2:setuplogshomebutton_$authorID:false:🏠}{button:Reset:2:Integrationlogresetchannel_$authorID:false}}]
 
     $let[Integrationchannel;$advancedReplaceText[$checkCondition[$getGuildVar[Integrationchannel]==none];true;none;false;<#$getGuildVar[Integrationchannel]> (\`$getGuildVar[Integrationchannel]\`)]]
@@ -492,8 +492,8 @@ $interactionUpdate[{newEmbed:{author:Integration:$clientAvatar}{title:Channel Se
 $interactionUpdate[{newEmbed:{author:Integration:$clientAvatar}{title:Channel Setup}{description:Select a channel using the menu below for this log type.
 
 **Tip#COLON#** Can't find the channel you're looking for? Try typing the channel name into the menu instead.
-}{field:**Current Setting(s)**:
-**Channel#COLON#** $get[Integrationchannel]
+}{field:**Current Channel**:
+* $get[Integrationchannel]
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:Integrationlogchannelsetupmenu_$authorID:Select a channel to use:1:1:false:{channelInput:Text}}}{actionRow:{button:Home:2:setuplogshomebutton_$authorID:false:🏠}{button:Reset:2:Integrationlogresetchannel_$authorID:false}}]
 
     $let[Integrationchannel;$advancedReplaceText[$checkCondition[$getGuildVar[Integrationchannel]==none];true;none;false;<#$getGuildVar[Integrationchannel]> (\`$getGuildVar[Integrationchannel]\`)]]

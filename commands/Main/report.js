@@ -11,7 +11,7 @@ $description[Even though the bot might not appear to be buggy, it is worth notin
 To get started, be sure to have a Github account first, then press the button below to open an issue.
 ]
 $color[$getVar[embedcolor]]
-$addButton[1;Open a issue;5;https://github.com/DodoGames7/Dodo-Bot/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=%5BBUG%5D;false]
+$addButton[1;Open a issue;5;https://github.com/ddodogames/Dodo-Bot/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=%5BBUG%5D;false]
 $cooldown[2s; Slow down! Don't spam the command!
 Time remaining: <t:$truncate[$divide[$sum[$getCooldownTime[2s;user;report;$authorID];$dateStamp];1000]]:R>]
     `

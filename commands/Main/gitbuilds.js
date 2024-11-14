@@ -6,7 +6,7 @@ module.exports = {
     },
     aliases: "devbuilds",
     code: `$title[About GitBuilds]
-$addField[How to test?;For those who want to host them on their bots. You can download the files from the [gitbuilds](https://github.com/DodoGames7/Dodo-Bot/tree/gitbuilds) branch on Github.
+$addField[How to test?;For those who want to host them on their bots. You can download the files from the [gitbuilds](https://github.com/ddodogames/Dodo-Bot/tree/gitbuilds) branch on Github.
 
 Alternatively, you can invite Dodo Canary (using the button below) to a server to directly test latest pre-release builds (prefix: \`d?\`).
 ]

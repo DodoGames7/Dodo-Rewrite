@@ -114,8 +114,8 @@ $let[newtoggledsetting;$advancedReplaceText[$checkCondition[$getVar[errorsystem]
 $interactionUpdate[{newEmbed:{title:Channel Setup}{description:Choose a channel for Error messages to be sent in. Use the select menu below for the channel to use!
 
 **Tip#COLON#** Unable to find the channel you're looking for? Try typing the channel name instead!
-}{field:**Current Setting(s)**:
-**Channel#COLON#** $get[errorchannel]
+}{field:**Current Channel**:
+* $get[errorchannel]
 }{color:Red}}{actionRow:{selectMenu:errorlogchannelmenusetup_$authorID:Select a channel to use.:1:1:false:{channelInput:Text}}}{actionRow:{button:Go back:2:errorlogpage_$authorID:false:↩️}{button:Reset:2:errorresetchannel_$authorID:false}}]
     
     $let[errorchannel;$advancedReplaceText[$checkCondition[$getVar[errorchannel]==none];true;none;false;<#$getVar[errorchannel]> (\`$getVar[errorchannel]\`)]]
@@ -134,8 +134,8 @@ $interactionFollowUp[Successfully set <#$getSelectMenuValues[all]> as the error 
 $interactionUpdate[{newEmbed:{title:Channel Setup}{description:Choose a channel for Error messages to be sent in. Use the select menu below for the channel to use!
 
 **Tip#COLON#** Unable to find the channel you're looking for? Try typing the channel name instead!
-}{field:**Current Setting(s)**:
-**Channel#COLON#** $get[errorchannel]
+}{field:**Current Channel**:
+* $get[errorchannel]
 }{color:Red}}{actionRow:{selectMenu:errorlogchannelmenusetup_$authorID:Select a channel to use.:1:1:false:{channelInput:Text}}}{actionRow:{button:Go back:2:errorlogpage_$authorID:false:↩️}{button:Reset:2:errorresetchannel_$authorID:false}}]
     
     $let[errorchannel;$advancedReplaceText[$checkCondition[$getVar[errorchannel]==none];true;none;false;<#$getVar[errorchannel]> (\`$getVar[errorchannel]\`)]]
@@ -181,8 +181,8 @@ $onlyIf[$hasPermsInChannel[$getSelectMenuValues[all];$clientID;sendmessages;view
 $interactionUpdate[{newEmbed:{title:Channel Setup}{description:Choose a channel for Error messages to be sent in. Use the select menu below for the channel to use!
 
 **Tip#COLON#** Unable to find the channel you're looking for? Try typing the channel name instead!
-}{field:**Current Setting(s)**:
-**Channel#COLON#** $get[errorchannel]
+}{field:**Current Channel**:
+* $get[errorchannel]
 }{color:Red}}{actionRow:{selectMenu:errorlogchannelmenusetup_$authorID:Select a channel to use.:1:1:false:{channelInput:Text}}}{actionRow:{button:Go back:2:errorlogpage_$authorID:false:↩️}{button:Reset:2:errorresetchannel_$authorID:false}}]
 
     $let[errorchannel;$advancedReplaceText[$checkCondition[$getVar[errorchannel]==none];true;none;false;<#$getVar[errorchannel]> (\`$getVar[errorchannel]\`)]]
@@ -231,8 +231,8 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[aut
         prototype: "selectMenu",
         code: `$interactionUpdate[{newEmbed:{title:Embed color}{description:
    This option allows you to change the current embed color used across commands of Dodo-Bot. To change the current used embed color, you will need to have a valid hex code of a color in order to proceed.
-}{field:**Current Setting(s)**:
-**Hex code**#COLON# \`$getVar[embedcolor]\`
+}{field:**Current Hex code**:
+* \`$getVar[embedcolor]\`
 }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Set Color:2:setbotembedcolor_$authorID:false}{button:Preview:2:embedcolorpreview_$authorID:false}{button:Reset:2:resetembedcolor_$authorID:false}}]
 
 
@@ -262,8 +262,8 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[aut
         code: `$interactionFollowUp[\`$textInputValue[hexInput]\` will now be used as the new embed color!;true]
 $interactionUpdate[{newEmbed:{title:Embed color}{description:
    This option allows you to change the current embed color used across commands of Dodo-Bot. To change the current used embed color, you will need to have a valid hex code of a color in order to proceed.
-}{field:**Current Setting(s)**:
-**Hex code**#COLON# \`$getVar[embedcolor]\`
+}{field:**Current Hex code**:
+* \`$getVar[embedcolor]\`
 }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Set Color:2:setbotembedcolor_$authorID:false}{button:Preview:2:embedcolorpreview_$authorID:false}{button:Reset:2:resetembedcolor_$authorID:false}}]
 
 $setVar[embedcolor;$textInputValue[hexInput]]
@@ -287,8 +287,8 @@ Your hex code must start with a \`#\`! Please, try again.{ephemeral}
         code: `$interactionFollowUp[Embed color has been reset!;true]
 $interactionUpdate[{newEmbed:{title:Embed color}{description:
    This option allows you to change the current embed color used across commands of Dodo-Bot. To change the current used embed color, you will need to have a valid hex code of a color in order to proceed.
-}{field:**Current Setting(s)**:
-**Hex code**#COLON# \`$getVar[embedcolor]\`
+}{field:**Current Hex code**:
+* \`$getVar[embedcolor]\`
 }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Set Color:2:setbotembedcolor_$authorID:false}{button:Preview:2:embedcolorpreview_$authorID:false}{button:Reset:2:resetembedcolor_$authorID:false}}]
 
     $deleteVar[embedcolor;;main]
@@ -410,8 +410,8 @@ This option let's you set a channel for the bot to inform users that it became o
 $interactionUpdate[{newEmbed:{title:Channel Setup}{description:Choose a channel for Startup messages to be sent in. Use the select menu below for the channel to use!
         
 **Tip#COLON#** Unable to find the channel you're looking for? Try typing the channel name instead!
-}{field:**Current Setting(s)**:
-**Channel#COLON#** $get[startupchannel]
+}{field:**Current Channel**:
+* $get[startupchannel]
 }{color:Red}}{actionRow:{selectMenu:botstartupchannelmenusetup_$authorID:Select a channel to use.:1:1:false:{channelInput:Text}}}{actionRow:{button:Go back:2:startupbotpage_$authorID:false:↩️}{button:Reset:2:startupresetchannel_$authorID}}]
         
         $let[startupchannel;$advancedReplaceText[$checkCondition[$getVar[startupchannel]==none];true;none;false;<#$getVar[startupchannel]> (\`$getVar[startupchannel]\`)]]
@@ -430,8 +430,8 @@ $interactionUpdate[{newEmbed:{title:Channel Setup}{description:Choose a channel 
 $interactionUpdate[{newEmbed:{title:Channel Setup}{description:Choose a channel for Startup messages to be sent in. Use the select menu below for the channel to use!
 
 **Tip#COLON#** Unable to find the channel you're looking for? Try typing the channel name instead!
-}{field:**Current Setting(s)**:
-**Channel#COLON#** $get[startupchannel]
+}{field:**Current Channel**:
+* $get[startupchannel]
 }{color:Red}}{actionRow:{selectMenu:botstartupchannelmenusetup_$authorID:Select a channel to use.:1:1:false:{channelInput:Text}}}{actionRow:{button:Go back:2:startupbotpage_$authorID:false:↩️}{button:Reset:2:startupresetchannel_$authorID}}]
         
         $let[startupchannel;$advancedReplaceText[$checkCondition[$getVar[startupchannel]==none];true;none;false;<#$getVar[startupchannel]> (\`$getVar[startupchannel]\`)]]
@@ -477,8 +477,8 @@ $interactionUpdate[{newEmbed:{title:Channel Setup}{description:Choose a channel 
 $interactionUpdate[{newEmbed:{title:Channel Setup}{description:Choose a channel for Startup messages to be sent in. Use the select menu below for the channel to use!
 
 **Tip#COLON#** Unable to find the channel you're looking for? Try typing the channel name instead!
-}{field:**Current Setting(s)**:
-**Channel#COLON#** $get[startupchannel]
+}{field:**Current Channel**:
+* $get[startupchannel]
 }{color:Red}}{actionRow:{selectMenu:botstartupchannelmenusetup_$authorID:Select a channel to use.:1:1:false:{channelInput:Text}}}{actionRow:{button:Go back:2:startupbotpage_$authorID:false:↩️}{button:Reset:2:startupresetchannel_$authorID}}]
 
         $let[startupchannel;$advancedReplaceText[$checkCondition[$getVar[startupchannel]==none];true;none;false;<#$getVar[startupchannel]> (\`$getVar[startupchannel]\`)]]

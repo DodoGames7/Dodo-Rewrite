@@ -75,8 +75,8 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==leavesettings;]
         code: `$interactionUpdate[{newEmbed:{title:Channel Setup}{description:Choose a channel for Leave messages to be sent in. Use the select menu below for the channel to use!
 
 **Tip#COLON#** Unable to find the channel you're looking for? Try typing the channel name instead!
-}{field:**Current Setting(s)**:
-**Channel#COLON#** $get[leavechannel]
+}{field:**Current Channel**:
+* $get[leavechannel]
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:leavechannelmenusetup_$authorID:Select a channel to use.:1:1:false:{channelInput:Text:Announcement}}}{actionRow:{button:Go back:2:leavesettings_$authorID:false:↩️}{button:Reset:2:leaveresetchannel_$authorID:false}}]
     
     $let[leavechannel;$advancedReplaceText[$checkCondition[$getGuildVar[leavechannel]==none];true;none;false;<#$getGuildVar[leavechannel]> (\`$getGuildVar[leavechannel]\`)]]
@@ -96,8 +96,8 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==leavesettings;]
     $interactionUpdate[{newEmbed:{title:Channel Setup}{description:Choose a channel for Leave messages to be sent in. Use the select menu below for the channel to use!
 
 **Tip#COLON#** Unable to find the channel you're looking for? Try typing the channel name instead!
-}{field:**Current Setting(s)**:
-**Channel#COLON#** $get[leavechannel]
+}{field:**Current Channel**:
+* $get[leavechannel]
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:leavechannelmenusetup_$authorID:Select a channel to use.:1:1:false:{channelInput:Text:Announcement}}}{actionRow:{button:Go back:2:leavesettings_$authorID:false:↩️}{button:Reset:2:leaveresetchannel_$authorID:false}}]
     
     $let[leavechannel;$advancedReplaceText[$checkCondition[$getGuildVar[leavechannel]==none];true;none;false;<#$getGuildVar[leavechannel]> (\`$getGuildVar[leavechannel]\`)]]
@@ -139,8 +139,8 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==leavesettings;]
     $interactionUpdate[{newEmbed:{title:Channel Setup}{description:Choose a channel for Leave messages to be sent in. Use the select menu below for the channel to use!
 
 **Tip#COLON#** Unable to find the channel you're looking for? Try typing the channel name instead!
-}{field:**Current Setting(s)**:
-**Channel#COLON#** $get[leavechannel]
+}{field:**Current Channel**:
+* $get[leavechannel]
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:leavechannelmenusetup_$authorID:Select a channel to use.:1:1:false:{channelInput:Text:Announcement}}}{actionRow:{button:Go back:2:leavesettings_$authorID:false:↩️}{button:Reset:2:leaveresetchannel_$authorID:false}}]
 
     $let[leavechannel;$advancedReplaceText[$checkCondition[$getGuildVar[leavechannel]==none];true;none;false;<#$getGuildVar[leavechannel]> (\`$getGuildVar[leavechannel]\`)]]
@@ -241,8 +241,8 @@ Your hex code must start with a \`#\`! Please, try again.{ephemeral}
 \`Text\` is the default type used for Leave messages. \`Embed\` will use embeds for the messages.
 
 -# If the message contains over 2000 characters, \`Embed\` will be used to avoid problems.
-}{field:**Current Setting(s)**:
-**Type#COLON#** \`$toLocaleUpperCase[$getGuildVar[leavetype]]\`
+}{field:**Current type**:
+* \`$toLocaleUpperCase[$getGuildVar[leavetype]]\`
 }{color:$getVar[embedcolor]}}{actionRow:{button:Go back:2:leavemessagebutton_$authorID:false:↩️}{button:Toggle:2:toggleleavemessagetype_$authorID:false:🔄}}]
 
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
@@ -265,8 +265,8 @@ $interactionUpdate[{newEmbed:{title:Message type}{description:there're two types
 \`Text\` is the default type used for Leave messages. \`Embed\` will use embeds for the messages.
 
 -# If the message contains over 2000 characters, \`Embed\` will be used to avoid problems.
-}{field:**Current Setting(s)**:
-**Type#COLON#** \`$toLocaleUpperCase[$getGuildVar[leavetype]]\`
+}{field:**Current type**:
+* \`$toLocaleUpperCase[$getGuildVar[leavetype]]\`
 }{color:$getVar[embedcolor]}}{actionRow:{button:Go back:2:leavemessagebutton_$authorID:false:↩️}{button:Toggle:2:toggleleavemessagetype_$authorID:false:🔄}}]
 
 $let[resultmessage;$advancedReplaceText[$checkCondition[$getGuildVar[leavetype]==embed];true;Leave message will now be in embeds!;false;Leave message will now be in \`Text\` mode!]]
