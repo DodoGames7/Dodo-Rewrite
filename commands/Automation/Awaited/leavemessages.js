@@ -1,8 +1,9 @@
 module.exports = [{
     name: "leavetextmodetest",
     type: "awaited",
-    code: `**This is a test Leave message! Please, ignore this.**
-    $get[content]
+    code: `
+**This is a test Leave message! Please, ignore this.**
+$get[content]
     
     
     $useChannel[$getGuildVar[leavechannel]]
@@ -11,7 +12,8 @@ module.exports = [{
     },{
     name: "leaveembedmodetest",
     type: "awaited",
-    code: `**This is a test Leave message! Please, ignore this.**
+    code: `
+**This is a test Leave message! Please, ignore this.**
     $author[Member left;$get[serverimage]]
     $description[
     $get[content]

@@ -1,8 +1,9 @@
 module.exports = [{
     name: "welcomertextmodetest",
     type: "awaited",
-    code: `**This is a test welcome message! Please, ignore this.**
-    $get[content]
+    code: `
+**This is a test welcome message! Please, ignore this.**
+$get[content]
     
     
     $useChannel[$getGuildVar[welcomechannel]]
@@ -11,7 +12,8 @@ module.exports = [{
     },{
     name: "welcomerembedmodetest",
     type: "awaited",
-    code: `**This is a test welcome message! Please, ignore this.**
+    code: `
+**This is a test welcome message! Please, ignore this.**
     $author[Member joined;$get[serverimage]]
     $description[
     $get[content]
