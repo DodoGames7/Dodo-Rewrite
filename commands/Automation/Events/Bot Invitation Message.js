@@ -3,7 +3,7 @@ module.exports = [{
     type: "guildJoin",
     channel: "$randomChannelID[$guildID;all]",
     code: `
-    $ifAwaited[$membersCount[$guildID;all;true]>=$getVar[servermemberrequirement];{execute:invitationgreeting};{execute:failedmeetingrequirement}]
+    $ifAwaited[$membersCount[$guildID;all;true]>=$getVar[servermemberrequirement];{execute:invitationgreeting};{execute:failedmeetingmemberrequirement}]
 
     `
     },{
@@ -24,7 +24,7 @@ $onlyIf[$hasPermsInChannel[$get[channelselector];$clientID;sendmessages;viewchan
 $let[channelselector;$advancedReplaceText[$checkCondition[$guildSystemChannelID[$guildID]==];true;$randomChannelID[$guildID;Text];false;$guildSystemChannelID[$guildID]]]
 $onlyIf[$getVar[botinvitationmessage]==on;]`
     },{
-    name: "failedmeetingrequirement",
+    name: "failedmeetingmemberrequirement",
     type: "awaited",
     code: `$let[hidetext;$clientLeave[$guildID]]`
     }]
