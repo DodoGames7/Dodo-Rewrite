@@ -596,7 +596,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[aut
         name: "memberrequirementsetresult",
         type: "interaction",
         prototype: "modal",
-        code: `$interactionFollowUp[\`$get[input]\` will now be used as the new requirement for new servers!;true]
+        code: `$interactionFollowUp[\`$get[input]\` will now be used as the requirement for new servers!;true]
 $interactionUpdate[{newEmbed:{title:Member requirement}{description:
    This option let's you configure how many members are needed for a server so that the bot can join there.
 
