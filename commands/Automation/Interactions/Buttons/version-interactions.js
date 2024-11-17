@@ -4,6 +4,7 @@ module.exports = [{
     code: `
     $interactionUpdate[{newEmbed:{title:Changes}{description:
 * Updated Github links to use the new username
+* Added full attachment support for message edit logs in embed mode
 * Added a slash command called \`avatar\` for user apps
     }{color:$getVar[embedcolor]}$nonEscape[$get[devbuild]]}{actionRow:{button:Home:2:homebutton_$authorID:false:🏠}{button:Changes:2:versionchanges_$authorID:true}{button:Bug Fixes:2:versionbugfixes_$authorID:false}{button:Other:2:versionother_$authorID:false}}{actionRow:{button:Changelog history:5:https#COLON#//github.com/ddodogames/Dodo-Bot/releases:false:📜}}]
 

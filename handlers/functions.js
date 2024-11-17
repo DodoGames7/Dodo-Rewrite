@@ -86,4 +86,16 @@ $let[createlist;$advancedReplaceText[{text};{seperator};#SEMI#]]`
   type: "aoi.js",
   params: ["text"],
   code: `$replaceTextWithRegex[$replaceTextWithRegex[{text};/r|l/;g;w];/R|L/;g;W]`
+},{ // credits goes to https://github.com/aoijs/aoi.js/pull/678 for the original code
+  name: "$messageAttachments",
+  type: "djs",
+  code: async (d) => {
+    const data = d.util.aoiFunc(d);
+    const [sep = ', '] = data.inside.splits;
+
+    data.result = d.message.attachments.map(x => x?.url).join(sep);
+    return {
+        code: d.util.setCode(data)
+    }
+  }
 }]

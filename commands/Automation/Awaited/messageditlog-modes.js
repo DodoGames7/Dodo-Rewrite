@@ -37,14 +37,14 @@ $useChannel[$getGuildVar[msglogeditchannel]]`
 $description[
 **Member:** <@$authorID>
 **Channel:** <#$channelID>
-**Message:** $messageURL[$messageID;$channelID] ([Jump]($messageURL[$messageID;$channelID]))
+**Message:** $messageURL[$messageID;$channelID] ([Jump]($messageURL[$messageID;$channelID]))$if[$messageAttachments!=;
+**Attachments:** $messageAttachments
+]
 
 **Before**
 $oldMessage
-$messageAttachment[1]
 **After**
 $message
-$messageAttachment[1]
 ]
 $footer[Message ID: $messageID]
 $color[Blue]
