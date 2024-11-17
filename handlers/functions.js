@@ -86,7 +86,7 @@ $let[createlist;$advancedReplaceText[{text};{seperator};#SEMI#]]`
   type: "aoi.js",
   params: ["text"],
   code: `$replaceTextWithRegex[$replaceTextWithRegex[{text};/r|l/;g;w];/R|L/;g;W]`
-},{ // credits goes to https://github.com/aoijs/aoi.js/pull/678 for the original code
+},{ // credit goes to https://github.com/aoijs/aoi.js/pull/678 for the original code
   name: "$messageAttachments",
   type: "djs",
   code: async (d) => {
