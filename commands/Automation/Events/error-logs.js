@@ -14,6 +14,7 @@ Server: \`$guildName\` (\`$guildID\`)
 $color[Yellow]
 $footer[Occurred on]
 $addTimestamp
+
 $let[commandname;$advancedReplaceText[$checkCondition[$handleError[command]==];true;undefined;false;$handleError[command]]]
 $onlyIf[$hasPermsInChannel[$getVar[errorchannel];$clientID;sendmessages;viewchannel]==true;]
 $onlyIf[$channelExists[$getVar[errorchannel]]==true;]

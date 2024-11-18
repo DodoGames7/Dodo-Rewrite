@@ -3,6 +3,8 @@ name: "Welcomer message",
 type: "join",
 channel: "$getGuildVar[welcomechannel]",
 code: `$ifAwaited[$charCount[$getGuildVar[welcomemessage]]>=2000||$getGuildVar[welcometype]==embed;{execute:welcomerembedmode};{execute:welcomertextmode}]
+
+
 $onlyIf[$hasPermsInChannel[$getGuildVar[welcomechannel];$clientID;viewchannel;sendmessages]==true;]
 $onlyIf[$guildChannelExists[$guildID;$getGuildVar[welcomechannel]]==true;]
 $onlyIf[$getGuildVar[welcomechannel]!=none;]
@@ -16,6 +18,8 @@ $onlyIf[$guildID==$guildID;]`
     type: "leave",
     channel: "$getGuildVar[leavechannel]",
     code: `$ifAwaited[$charCount[$getGuildVar[leavemessage]]>=2000||$getGuildVar[leavetype]==embed;{execute:leaveembedmode};{execute:leavetextmode}]
+
+
 $onlyIf[$hasPermsInChannel[$getGuildVar[leavechannel];$clientID;viewchannel;sendmessages]==true;]
 $onlyIf[$guildChannelExists[$guildID;$getGuildVar[leavechannel]]==true;]
 $onlyIf[$getGuildVar[leavechannel]!=none;]
