@@ -13,12 +13,12 @@ $oldMessage
 After:
 $message
 
-Attachments:
-$if[$messageAttachments!=;None;$messageAttachments[
+$if[$messageAttachments!=; ;Attachments:
+
+$messageAttachments[
 
 
-]
-]
+]]
 ;msgedit-logs.txt]
 
 $useChannel[$getGuildVar[msglogeditchannel]]`
