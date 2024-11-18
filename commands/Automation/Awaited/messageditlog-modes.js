@@ -14,18 +14,10 @@ After:
 $message
 
 Attachments:
-$if[$messageAttachment[1]!=;$messageAttachment[1];None] $if[$messageAttachment[2]!=;
+$if[$messageAttachments!=;None;$messageAttachments[
 
-$messageAttachment[2]
-] $if[$messageAttachment[3]!=;
 
-$messageAttachment[3]
-] $if[$messageAttachment[4]!=;
-
-$messageAttachment[4]
-] $if[$messageAttachment[5]!=;
-
-$messageAttachment[5]
+]
 ]
 ;msgedit-logs.txt]
 
