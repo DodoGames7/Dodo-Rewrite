@@ -9,7 +9,8 @@ $ephemeral
 
 $if[$and[$randomNumber[1;100;false]>=38;$randomNumber[1;100;false]<89]==true;
 
-$interactionUpdate[$title[🚩 | Find the flag!]
+$interactionUpdate[
+$title[🚩 | Find the flag!]
 $description[There is a hidden flag somewhere around 1-3, where you think the flag is on?]
 $color[$getGlobalVar[embedcolor]]
 $addActionRow
@@ -18,12 +19,14 @@ $addButton[ftf2_$authorID;;Secondary;2️⃣;true]
 $addButton[ftf3_$authorID;;Secondary;3️⃣;true]
 ]
 
-$interactionFollowUp[$title[You found the flag!]
+$interactionFollowUp[
+$title[You found the flag!]
 $description[Nice guess, the flag was on zone 1! 🏳️]
 $color[DarkGreen]
 ]
 ;
-$interactionUpdate[$title[🚩 | Find the flag!]
+$interactionUpdate[
+$title[🚩 | Find the flag!]
 $description[There is a hidden flag somewhere around 1-3, where you think the flag is on?]
 $color[$getGlobalVar[embedcolor]]
 $addActionRow
@@ -32,7 +35,8 @@ $addButton[ftf2_$authorID;;Secondary;2️⃣;true]
 $addButton[ftf3_$authorID;;Secondary;3️⃣;true]
 ]
 
-$interactionFollowUp[$title[Aww.. miss!]
+$interactionFollowUp[
+$title[Aww.. miss!]
 $description[Wrong guess... the flag was on zone $randomText[2;3]. 🏴]
 $color[Red]
 ]
@@ -49,7 +53,8 @@ $ephemeral
 
 $if[$and[$randomNumber[1;100;false]>=38;$randomNumber[1;100;false]<89]==true;
 
-$interactionUpdate[$title[🚩 | Find the flag!]
+$interactionUpdate[
+$title[🚩 | Find the flag!]
 $description[There is a hidden flag somewhere around 1-3, where you think the flag is on?]
 $color[$getGlobalVar[embedcolor]]
 $addActionRow
@@ -58,12 +63,14 @@ $addButton[ftf2_$authorID;;Success;🏳️;true]
 $addButton[ftf3_$authorID;;Secondary;3️⃣;true]
 ]
 
-$interactionFollowUp[$title[You found the flag!]
+$interactionFollowUp[
+$title[You found the flag!]
 $description[Nice guess, the flag was on zone 2! 🏳️]
 $color[DarkGreen]
 ]
 ;
-$interactionUpdate[$title[🚩 | Find the flag!]
+$interactionUpdate[
+$title[🚩 | Find the flag!]
 $description[There is a hidden flag somewhere around 1-3, where you think the flag is on?]
 $color[$getGlobalVar[embedcolor]]
 $addActionRow
@@ -72,7 +79,8 @@ $addButton[ftf2_$authorID;;Danger;2️⃣;true]
 $addButton[ftf3_$authorID;;Secondary;3️⃣;true]
 ]
 
-$interactionFollowUp[$title[Aww.. miss!]
+$interactionFollowUp[
+$title[Aww.. miss!]
 $description[Wrong guess... the flag was on zone $randomText[1;3]. 🏴]
 $color[Red]
 ]
@@ -89,7 +97,8 @@ $ephemeral
 
 $if[$and[$randomNumber[1;100;false]>=38;$randomNumber[1;100;false]<89]==true;
 
-$interactionUpdate[$title[🚩 | Find the flag!]
+$interactionUpdate[
+$title[🚩 | Find the flag!]
 $description[There is a hidden flag somewhere around 1-3, where you think the flag is on?]
 $color[$getGlobalVar[embedcolor]]
 $addActionRow
@@ -98,12 +107,14 @@ $addButton[ftf2_$authorID;;Secondary;2️⃣;true]
 $addButton[ftf3_$authorID;;Success;🏳️;true]
 ]
 
-$interactionFollowUp[$title[You found the flag!]
+$interactionFollowUp[
+$title[You found the flag!]
 $description[Nice guess, the flag was on zone 3! 🏳️]
 $color[DarkGreen]
 ]
 ;
-$interactionUpdate[$title[🚩 | Find the flag!]
+$interactionUpdate[
+$title[🚩 | Find the flag!]
 $description[There is a hidden flag somewhere around 1-3, where you think the flag is on?]
 $color[$getGlobalVar[embedcolor]]
 $addActionRow
@@ -112,7 +123,8 @@ $addButton[ftf2_$authorID;;Secondary;2️⃣;true]
 $addButton[ftf3_$authorID;;Danger;3️⃣;true]
 ]
 
-$interactionFollowUp[$title[Aww.. miss!]
+$interactionFollowUp[
+$title[Aww.. miss!]
 $description[Wrong guess... the flag was on zone $randomText[1;2]. 🏴]
 $color[Red]
 ]

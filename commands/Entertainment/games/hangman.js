@@ -13,7 +13,7 @@ Time remaining: <t:$trunc[$divide[$sum[$getTimestamp;$getUserCooldownTime[hangma
 $if[$checkContains[$message;--settings;—settings;--themes;—themes]==true;
 $title[Hangman settings]
 $description[Welcome to Hangman's settings! Select a theme to use!]
-$addField[Current setting(s);
+$addField[Current configuration;
 **Theme:** $toTitleCase[$getUserVar[hangman_theme]]
 ]
 $color[$getGlobalVar[embedcolor]]

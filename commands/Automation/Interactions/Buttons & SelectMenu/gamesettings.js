@@ -11,7 +11,7 @@ $ephemeral
 $interactionUpdate[
 $title[Type]
 $description[This will decide on how Trivia will start. **Multiple** means the game will start with 4 questions. **Single** means the game will start with a "true" or "false" as the only answer options!]
-$addField[Current setting(s);$toTitleCase[$getUserVar[trivia_type]]]
+$addField[Current configuration;$toTitleCase[$getUserVar[trivia_type]]]
 $color[$getGlobalVar[embedcolor]]
 $addActionRow
 $addStringSelectMenu[triviasettings_$authorID;Select a option;false;1;1]
@@ -70,7 +70,7 @@ $ephemeral
 $interactionUpdate[
 $title[Difficulty]
 $description[This option is dedicated to changing current Difficulty for Trivia. Choose a Difficulty-set available below.]
-$addField[Current setting(s);$toTitleCase[$getUserVar[trivia_difficulty]]]
+$addField[Current configuration;$toTitleCase[$getUserVar[trivia_difficulty]]]
 $color[$getGlobalVar[embedcolor]]
 $addActionRow
 $addStringSelectMenu[triviasettings_$authorID;Select a option;false;1;1]
@@ -140,7 +140,7 @@ $let[difficulty;$advancedReplace[$getUserVar[flood_difficulty];18;Hard;13;Normal
 $interactionUpdate[
 $title[Difficulty]
 $description[This option is dedicated to changing current Difficulty for Flood. Choose a Difficulty-set available below. ]
-$addField[Current setting(s);$get[difficulty]]
+$addField[Current configuration;$get[difficulty]]
 $color[$getGlobalVar[embedcolor]]
 $addActionRow
 $addStringSelectMenu[floodsettings_$authorID;Select a option;false;1;1]

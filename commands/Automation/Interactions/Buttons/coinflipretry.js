@@ -10,11 +10,13 @@ $ephemeral
 $let[number;$and[$randomNumber[1;100;false]>=38;$randomNumber[1;100;false]<89]]
 $let[result;$advancedReplace[$checkCondition[$get[number]==true];true;Heads;false;Tails]]
 
-$interactionUpdate[$title[🪙 Flipping Coin...]
+$interactionUpdate[
+$title[🪙 Flipping Coin...]
 $color[$getGlobalVar[embedcolor]]
 ]
 $wait[5000]
-$interactionReply[$title[You got...]
+$interactionReply[
+$title[You got...]
 $description[**$get[result]**]
 $color[$getGlobalVar[embedcolor]]
 $addActionRow

@@ -19,6 +19,6 @@ $color[$getGlobalVar[embedcolor]]
 $attachment[./assets/dodo-bot-logo.png;dodobot-logo.png]
 $thumbnail[attachment://dodobot-logo.png]
 $addActionRow
-$addButton[https://github.com/DodoGames7/Dodo-Bot;Source code;Link]
+$addButton[https://github.com/ddodogames/Dodo-Bot;Source code;Link]
     `
 }

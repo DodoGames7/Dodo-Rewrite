@@ -11,6 +11,7 @@ $interactionUpdate[
 $title[Changes]
 $description[
 * Support for returning banner link has been added to \`user\` command
+* Updated Github links to use the new username
 ]
 $if[$getGlobalVar[pre_release]==on;
 $attachment[./assets/warning.png;warning.png]
@@ -23,7 +24,7 @@ $addButton[versionchanges_$authorID;Changes;Secondary;;true]
 $addButton[versionbugfixes_$authorID;Bug Fixes;Secondary]
 $addButton[versionother_$authorID;Other;Secondary]
 $addActionRow
-$addButton[https://github.com/DodoGames7/Dodo-Bot/releases;Changelog History;Link;📜]
+$addButton[https://github.com/ddodogames/Dodo-Bot/releases;Changelog History;Link;📜]
 ]`
 },{
     type:"interactionCreate",
@@ -50,7 +51,7 @@ $addButton[versionchanges_$authorID;Changes;Secondary]
 $addButton[versionbugfixes_$authorID;Bug Fixes;Secondary;;true]
 $addButton[versionother_$authorID;Other;Secondary]
 $addActionRow
-$addButton[https://github.com/DodoGames7/Dodo-Bot/releases;Changelog History;Link;📜]
+$addButton[https://github.com/ddodogames/Dodo-Bot/releases;Changelog History;Link;📜]
 ]`
 },{
     type:"interactionCreate",
@@ -65,6 +66,7 @@ $interactionUpdate[
 $title[Other]
 $description[
 * \`version\` command will now display the Revision if there any
+* "Current setting(s)" seen in some places has been renamed to "Current configuration"
 * (Source Code) changed the placing for local assets used in the bot
 * (Source Code) Revision will now also appear on startup message (for consoles)
 ]
@@ -79,7 +81,7 @@ $addButton[versionchanges_$authorID;Changes;Secondary]
 $addButton[versionbugfixes_$authorID;Bug Fixes;Secondary]
 $addButton[versionother_$authorID;Other;Secondary;;true]
 $addActionRow
-$addButton[https://github.com/DodoGames7/Dodo-Bot/releases;Changelog History;Link;📜]
+$addButton[https://github.com/ddodogames/Dodo-Bot/releases;Changelog History;Link;📜]
 ]`
 },{
     type:"interactionCreate",
@@ -103,12 +105,12 @@ $if[$getGlobalVar[pre_release]==on;
 $attachment[./assets/warning.png;warning.png]
 $footer[Testing is recommended;attachment://warning.png]
 ]
-    $color[$getGlobalVar[embedcolor]]
-    $addActionRow
-    $addButton[versionchanges_$authorID;Changes;Secondary]
-    $addButton[versionbugfixes_$authorID;Bug Fixes;Secondary]
-    $addButton[versionother_$authorID;Other;Secondary]
+$color[$getGlobalVar[embedcolor]]
 $addActionRow
-$addButton[https://github.com/DodoGames7/Dodo-Bot/releases;Changelog History;Link;📜]
+$addButton[versionchanges_$authorID;Changes;Secondary]
+$addButton[versionbugfixes_$authorID;Bug Fixes;Secondary]
+$addButton[versionother_$authorID;Other;Secondary]
+$addActionRow
+$addButton[https://github.com/ddodogames/Dodo-Bot/releases;Changelog History;Link;📜]
 ]`
 }]

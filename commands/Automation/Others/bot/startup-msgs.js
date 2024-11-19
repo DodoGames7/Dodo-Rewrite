@@ -9,7 +9,7 @@ $wait[2000]
 $log[Dodo-Bot v$getGlobalVar[version]$if[$getGlobalVar[pre_release]==on; (build $getGlobalVar[buildNumber])]$if[$getGlobalVar[buildRevision]!=0; (Revision $getGlobalVar[buildRevision])] is ready to be used on the client $userTag[$clientID]!]
 $djsEval[const chalk = require('chalk')
 
-console.log(chalk.yellow("Tip: Found an issue? Report it here: https://github.com/DodoGames7/Dodo-Bot/issues/new"))
+console.log(chalk.yellow("Tip: Found an issue? Report it here: https://github.com/ddodogames/Dodo-Bot/issues/new/choose"))
 ]
 
 $djsEval[const chalk = require('chalk')

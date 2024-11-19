@@ -15,7 +15,7 @@ $thumbnail[attachment://dodobot-logo.png]
 $footer[Made with ❤️ by $username[632607624742961153]!]
 $color[$getGlobalVar[embedcolor]]
 $addActionRow
-$addButton[https://github.com/DodoGames7/Dodo-Bot;Source code;Link]
+$addButton[https://github.com/ddodogames/Dodo-Bot;Source code;Link]
 ]
 ;$guildLeave]
 `

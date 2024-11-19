@@ -7,6 +7,13 @@ $let[topics;$randomText[Did you go out today?;What did you eat today?;What are y
     $return[$get[topics]]
     `
   },{
+    name: "8ballanswers",
+    params: [],
+    code: `$let[Answers;$randomText[Yes;No;Yes definitely;You may rely on it;Without a doubt;It is decidedly so;Ask again later;Better not tell you now;Cannot predict now;Concentrate and ask again;My reply is no;My sources say no;Outlook not so good;Very doubtful;Most likely;As I see it, yes;Signs point to yes;Reply hazy, try again;Don’t count on it]]
+
+    $return[$get[Answers]]
+`
+  },{
     name: "commandperms",
     params: ["name"],
     code: `$jsonLoad[perms;$commandInfo[messageCreate;$env[name];info;perms]]
@@ -61,13 +68,6 @@ $let[message;$replace[$replace[$replace[$replace[$replace[$replace[$replace[$rep
 
     $return[$get[message]]
     `
-  },{
-    name: "8ballanswers",
-    params: [],
-    code: `$let[Answers;$randomText[Yes;No;Yes definitely;You may rely on it;Without a doubt;It is decidedly so;Ask again later;Better not tell you now;Cannot predict now;Concentrate and ask again;My reply is no;My sources say no;Outlook not so good;Very doubtful;Most likely;As I see it, yes;Signs point to yes;Reply hazy, try again;Don’t count on it]]
-
-    $return[$get[Answers]]
-`
   },{
     name: "autoListroles",
     params: ["variable", "sep"],
