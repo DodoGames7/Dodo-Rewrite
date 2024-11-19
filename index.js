@@ -30,7 +30,7 @@ respondOnEdit: {
  commands: config.respondOnEdit,
  time: 20000
 },
-suppressAllErrors: config.DisableAllErrors
+suppressAllErrors: config.DisableAllErrors // Whether or not to disable errors from aoi.js
 });
 
 // Handlers
