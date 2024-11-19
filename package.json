@@ -3,6 +3,7 @@
   "version": "2.2.1-build.2184",
   "description": "A personal bot project made in aoi.js v6 aiming to both entertain and provide users some features to use.",
   "main": "index.js",
+  "homepage": "https://github.com/ddodogames/Dodo-Bot",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "setup": "npm install",
