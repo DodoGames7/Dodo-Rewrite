@@ -17,12 +17,13 @@ Time remaining: <t:$truncate[$divide[$sum[$getCooldownTime[3s;user;say;$authorID
     name: "awaitedsay",
     $if: "old",
     type: "awaited",
-    code: `$if[$checkContains[$message;--embed;—embed]==true||$charCount[$message]>=2000]
+    code: `
+$if[$checkContains[$message;--embed;—embed]==true||$charCount[$message]>=2000]
 $author[$username;$userAvatar;$userURL[$authorID]]
-  $title[Say Cmd!;$nonEscape[$get[links]]]
-  $description[$get[content]]
-  $color[Random]
-  $addTimeStamp
+$title[Say Cmd!;$nonEscape[$get[links]]]
+$description[$get[content]]
+$color[Random]
+$addTimeStamp
 $else
 $message
 
