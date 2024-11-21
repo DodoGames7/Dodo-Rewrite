@@ -7,7 +7,7 @@ info: {
 },
 code: `
 $InteractionEdit[Ping: $pingms
-Message Ping: $interactionPing
+Message Ping: $interactionPingms
 Database Ping: $roundTenth[$databasePing;1]
 Last Restart: <t:$truncate[$divide[$readyTimestamp;1000]]:f>
 ]
