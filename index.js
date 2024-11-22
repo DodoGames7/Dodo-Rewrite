@@ -35,6 +35,7 @@ suppressAllErrors: config.DisableAllErrors // Whether or not to disable errors f
 
 // Handlers
 client.loadCommands("./commands/", config.LogCommands);
+
 Object.keys(vars).forEach((t) =>
   client.variables(vars[t], t)
 )

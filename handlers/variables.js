@@ -2,7 +2,7 @@ const config = require("../config.json");
 
 module.exports = {
   "main": {
-  // Games variables
+  // Game variables
   trivia_type: "multiple",
   trivia_difficulty: "medium",
   flood_difficulty: 13,
