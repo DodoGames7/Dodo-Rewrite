@@ -17,15 +17,15 @@ $let[dmsstatus;$advancedReplace[$checkCondition[$isUserDMEnabled[$get[user]]==tr
 
 $title[$get[username]'s information;$callFunction[userURL;$get[user]]]
 $addField[**General**;
-**Joined Discord on:** <t:$trunc[$divide[$userCreatedAt[$get[user]];1000]]:f>
-**Account type:** $get[accounttype]
-**ID:** $get[user]
+* **Joined Discord on:** <t:$trunc[$divide[$userCreatedAt[$get[user]];1000]]:f>
+* **Account type:** $get[accounttype]
+* **ID:** $get[user]
 ;true]
 $addField[**Other**;
-**Avatar:** $hyperlink[link;$userAvatar[$get[user]]]$if[$userBanner[$get[user]]!=;
-**Banner:** $hyperlink[link;$userBanner[$get[user]]]
+* **Avatar:** $hyperlink[link;$userAvatar[$get[user]]]$if[$userBanner[$get[user]]!=;
+* **Banner:** $hyperlink[link;$userBanner[$get[user]]]
 ]
-**DMS:** $get[dmsstatus]
+* **DMS:** $get[dmsstatus]
 ;true]
 $thumbnail[$userAvatar[$get[user]]]
 $color[$getGlobalVar[embedcolor]]

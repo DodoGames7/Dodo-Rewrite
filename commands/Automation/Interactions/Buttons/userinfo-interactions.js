@@ -27,16 +27,16 @@ $interactionUpdate[
 $author[Server information;$get[servericon]]
 $title[$get[username]'s information;$callFunction[userURL;$get[user]]]
 $addField[**General**;
-**Joined the server on:** <t:$trunc[$divide[$memberJoinedAt[$guildID;$get[user]];1000]]:f>
-**Booster:** $get[booster]
-**Amount of roles:** $arrayLength[amountofroles]
-**Nickname:** $get[nickname]
+* **Joined the server on:** <t:$trunc[$divide[$memberJoinedAt[$guildID;$get[user]];1000]]:f>
+* **Booster:** $get[booster]
+* **Amount of roles:** $arrayLength[amountofroles]
+* **Nickname:** $get[nickname]
 ;true]
 $addField[**Other**;
-**Platforms:** $if[$memberPlatforms[$guildID;$get[user]]==;Unavailable;$toTitleCase[$memberPlatforms[$guildID;$get[user]]]]
-**Highest Role:** $get[highestrole]
-**Lowest Role:** $get[lowestrole]
-**Status:** $if[$status[$guildID;$get[user]]==;None;$status[$guildID;$get[user]]]
+* **Platforms:** $if[$memberPlatforms[$guildID;$get[user]]==;Unavailable;$toTitleCase[$memberPlatforms[$guildID;$get[user]]]]
+* **Highest Role:** $get[highestrole]
+* **Lowest Role:** $get[lowestrole]
+* **Status:** $if[$status[$guildID;$get[user]]==;None;$status[$guildID;$get[user]]]
 ;true]
 $thumbnail[$userAvatar[$get[user]]]
 $color[$getGlobalVar[embedcolor]]
@@ -61,15 +61,15 @@ $let[dmsstatus;$advancedReplace[$checkCondition[$isUserDMEnabled[$get[user]]==tr
 $interactionUpdate[
 $title[$get[username]'s information;$callFunction[userURL;$get[user]]]
 $addField[**General**;
-**Joined Discord on:** <t:$trunc[$divide[$userCreatedAt[$get[user]];1000]]:f>
-**Account type:** $get[accounttype]
-**ID:** $get[user]
+* **Joined Discord on:** <t:$trunc[$divide[$userCreatedAt[$get[user]];1000]]:f>
+* **Account type:** $get[accounttype]
+* **ID:** $get[user]
 ;true]
 $addField[**Other**;
-**Avatar:** $hyperlink[link;$userAvatar[$get[user]]]$if[$userBanner[$get[user]]!=;
-**Banner:** $hyperlink[link;$userBanner[$get[user]]]
+* **Avatar:** $hyperlink[link;$userAvatar[$get[user]]]$if[$userBanner[$get[user]]!=;
+* **Banner:** $hyperlink[link;$userBanner[$get[user]]]
 ]
-**DMS:** $get[dmsstatus]
+* **DMS:** $get[dmsstatus]
 ;true]
 $thumbnail[$userAvatar[$get[user]]]
 $color[$getGlobalVar[embedcolor]]
