@@ -115,8 +115,8 @@ $interactionUpdate[The current progress for all members will remain then.]
         code: `$interactionUpdate[{newEmbed:{title:Level up Message}{description:This option is dedicated to changing current options for level up message. Choose an option to change.
     
 Press the "Toggle" button to enable/disable the Level up Message or use the other options alternatively to manage level up message settings.}{field:**Current Setting(s)**:
-    **Level up channel#COLON#** $get[levelupchannel]
-    **Level up message#COLON#** \`$get[levelupmessage]\`
+* **Level up channel#COLON#** $get[levelupchannel]
+* **Level up message#COLON#** \`$get[levelupmessage]\`
 }{color:$getVar[embedcolor]}}{actionRow:{button:Go back:2:levelingsettings_$authorID:false:↩️}{button:Toggle:2:enablelevelingmessage_$authorID:false:🔄}{button:Set Channel:2:levelingchannelsetup_$authorID:false}{button:Set Message:2:levelingsetmsgmodal_$authorID:false}}{actionRow:{button:Test Message:2:levelingtestmessage_$authorID:false}}]
     
     $let[levelupchannel;$advancedReplaceText[$checkCondition[$getGuildVar[levelingmessagechannel]==none];true;none;false;<#$getGuildVar[levelingmessagechannel]> (\`$getGuildVar[levelingmessagechannel]\`)]]
@@ -136,8 +136,8 @@ Press the "Toggle" button to enable/disable the Level up Message or use the othe
     $interactionUpdate[{newEmbed:{title:Level up Message}{description:This option is dedicated to changing current options for level up message. Choose an option to change.
 
 Press the "Toggle" button to enable/disable the Level up Message or use the other options alternatively to manage level up message settings.}{field:**Current Setting(s)**:
-    **Level up channel#COLON#** $get[levelupchannel]
-    **Level up message#COLON#** \`$get[levelupmessage]\`
+* **Level up channel#COLON#** $get[levelupchannel]
+* **Level up message#COLON#** \`$get[levelupmessage]\`
 }{color:$getVar[embedcolor]}}{actionRow:{button:Go back:2:levelingsettings_$authorID:false:↩️}{button:Toggle:2:enablelevelingmessage_$authorID:false:🔄}{button:Set Channel:2:levelingchannelsetup_$authorID:false}{button:Set Message:2:levelingsetmsgmodal_$authorID:false}}{actionRow:{button:Test Message:2:levelingtestmessage_$authorID:false}}]
     
     $let[levelupchannel;$advancedReplaceText[$checkCondition[$getGuildVar[levelingmessagechannel]==none];true;none;false;<#$getGuildVar[levelingmessagechannel]> (\`$getGuildVar[levelingmessagechannel]\`)]]
@@ -342,7 +342,7 @@ To manage a specific setting, use any of the buttons below to do so!
     },{
         type: "interaction",
         prototype: "button",
-        code: `$interactionUpdate[{newEmbed:{title:Roles}{description:Use the dropdown menu below to select roles to exclude from xp. (You can exclude up to 10)!
+        code: `$interactionUpdate[{newEmbed:{title:Roles}{description:Use the dropdown menu below to select roles to exclude from xp. (You can add up to 10)!
 
 **Tip#COLON#** Unable to find the role you're looking for? Try typing the role name instead!
 }{field:**Current Role(s)**:
@@ -360,9 +360,9 @@ $autoList[$nonEscape[$getGuildVar[levelingexcludedroles]];, ;autoListRoles]
     },{
         type: "interaction",
         prototype: "selectMenu",
-        code: `$interactionFollowUp[Successfully added the excluded roles!;true]
+        code: `$interactionFollowUp[Successfully updated the list!;true]
 
-    $interactionUpdate[{newEmbed:{title:Roles}{description:Use the dropdown menu below to select roles to exclude from xp. (You can exclude up to 10)!
+    $interactionUpdate[{newEmbed:{title:Roles}{description:Use the dropdown menu below to select roles to exclude from xp. (You can add up to 10)!
 
 **Tip#COLON#** Unable to find the role you're looking for? Try typing the role name instead!
 }{field:**Current Role(s)**:
@@ -384,7 +384,7 @@ $autoList[$nonEscape[$getGuildVar[levelingexcludedroles]];, ;autoListRoles]
         prototype: "button",
         code: `$interactionFollowUp[Successfully reset the current list!;true]
 
-    $interactionUpdate[{newEmbed:{title:Roles}{description:Use the dropdown menu below to select roles to exclude from xp. (You can exclude up to 10)!
+    $interactionUpdate[{newEmbed:{title:Roles}{description:Use the dropdown menu below to select roles to exclude from xp. (You can add up to 10)!
 
 **Tip#COLON#** Unable to find the role you're looking for? Try typing the role name instead!
 }{field:**Current Role(s)**:
@@ -410,7 +410,7 @@ $autoList[$nonEscape[$getGuildVar[levelingexcludedroles]];, ;autoListRoles]
     },{
         type: "interaction",
         prototype: "button",
-        code: `$interactionUpdate[{newEmbed:{title:Channels}{description:Use the dropdown menu below to select channels to exclude from xp. (You can exclude up to 10)!
+        code: `$interactionUpdate[{newEmbed:{title:Channels}{description:Use the dropdown menu below to select channels to exclude from xp. (You can add up to 10)!
 
 **Tip#COLON#** Unable to find the channel you're looking for? Try typing the channel name instead!
 }{field:**Current Channel(s)**:
@@ -428,9 +428,9 @@ $autoList[$nonEscape[$getGuildVar[levelingexcludedchannels]];, ;autoListChannels
     },{
         type: "interaction",
         prototype: "selectMenu",
-        code: `$interactionFollowUp[Successfully added the excluded channels!;true]
+        code: `$interactionFollowUp[Successfully updated the list!;true]
 
-    $interactionUpdate[{newEmbed:{title:Channels}{description:Use the dropdown menu below to select channels to exclude from xp. (You can exclude up to 10)!
+    $interactionUpdate[{newEmbed:{title:Channels}{description:Use the dropdown menu below to select channels to exclude from xp. (You can add up to 10)!
 
 **Tip#COLON#** Unable to find the channel you're looking for? Try typing the channel name instead!
 }{field:**Current Channel(s)**:
@@ -452,7 +452,7 @@ $autoList[$nonEscape[$getGuildVar[levelingexcludedchannels]];, ;autoListChannels
         prototype: "button",
         code: `$interactionFollowUp[Successfully reset the current list!;true]
 
-    $interactionUpdate[{newEmbed:{title:Channels}{description:Use the dropdown menu below to select channels to exclude from xp. (You can exclude up to 10)!
+    $interactionUpdate[{newEmbed:{title:Channels}{description:Use the dropdown menu below to select channels to exclude from xp. (You can add up to 10)!
 
 **Tip#COLON#** Unable to find the channel you're looking for? Try typing the channel name instead!
 }{field:**Current Channel(s)**:
@@ -478,7 +478,7 @@ $autoList[$nonEscape[$getGuildVar[levelingexcludedchannels]];, ;autoListChannels
     },{
         type: "interaction",
         prototype: "button",
-        code: `$interactionUpdate[{newEmbed:{title:Categories}{description:Use the dropdown menu below to select channel categories to exclude from xp. (You can exclude up to 10)!
+        code: `$interactionUpdate[{newEmbed:{title:Categories}{description:Use the dropdown menu below to select channel categories to exclude from xp. (You can add up to 10)!
 
 **Tip#COLON#** Unable to find the category you're looking for? Try typing the category name instead!
 }{field:**Current Categories**:
@@ -496,9 +496,9 @@ $autoList[$nonEscape[$getGuildVar[levelingexcludedcategories]];, ;autoListCatego
     },{
         type: "interaction",
         prototype: "selectMenu",
-        code: `$interactionFollowUp[Successfully added the excluded categories!;true]
+        code: `$interactionFollowUp[Successfully updated the list!;true]
 
-    $interactionUpdate[{newEmbed:{title:Categories}{description:Use the dropdown menu below to select channel categories to exclude from xp. (You can exclude up to 10)!
+    $interactionUpdate[{newEmbed:{title:Categories}{description:Use the dropdown menu below to select channel categories to exclude from xp. (You can add up to 10)!
 
 **Tip#COLON#** Unable to find the category you're looking for? Try typing the category name instead!
 }{field:**Current Categories**:
@@ -520,7 +520,7 @@ $autoList[$nonEscape[$getGuildVar[levelingexcludedcategories]];, ;autoListCatego
         prototype: "button",
         code: `$interactionFollowUp[Successfully reset the current list!;true]
 
-    $interactionUpdate[{newEmbed:{title:Categories}{description:Use the dropdown menu below to select channel categories to exclude from xp. (You can exclude up to 10)!
+    $interactionUpdate[{newEmbed:{title:Categories}{description:Use the dropdown menu below to select channel categories to exclude from xp. (You can add up to 10)!
 
 **Tip#COLON#** Unable to find the category you're looking for? Try typing the category name instead!
 }{field:**Current Categories**:
@@ -550,7 +550,7 @@ $autoList[$nonEscape[$getGuildVar[levelingexcludedcategories]];, ;autoListCatego
     
     By default, this is disabled but you can choose to enable it if you want to do so.
 }{field:**Current Setting(s)**:
-**Reset on Leave#COLON#** \`$get[leaveonreset]\`
+* **Reset on Leave#COLON#** \`$get[leaveonreset]\`
 }{color:$getVar[embedcolor]}}{actionRow:{button:Go back:2:levelingsettings_$authorID:false:↩️}{button:Toggle:2:togglelevelingleaveonreset_$authorID:false:🔄}}]
     
     $let[leaveonreset;$advancedReplaceText[$getGuildVar[levelleaveonreset];on;Enabled;off;Disabled]]
@@ -568,7 +568,7 @@ $autoList[$nonEscape[$getGuildVar[levelingexcludedcategories]];, ;autoListCatego
 
     By default, this is disabled but you can choose to enable it if you want to do so.
 }{field:**Current Setting(s)**:
-**Reset on Leave#COLON#** \`$get[leaveonreset]\`
+* **Reset on Leave#COLON#** \`$get[leaveonreset]\`
 }{color:$getVar[embedcolor]}}{actionRow:{button:Go back:2:levelingsettings_$authorID:false:↩️}{button:Toggle:2:togglelevelingleaveonreset_$authorID:false:🔄}}]
     
     $let[leaveonreset;$advancedReplaceText[$getGuildVar[levelleaveonreset];on;Enabled;off;Disabled]]

@@ -21,7 +21,7 @@ $get[content]
     $thumbnail[$authorAvatar]
     $color[$getGuildVar[leavemessageembedcolor]]
     
-    $let[serverimage;$advancedReplaceText[$checkCondition[$guildIcon==];false;$guildIcon;true;$clientAvatar]]
+    $let[serverimage;$advancedReplaceText[$checkCondition[$guildIcon==];false;$guildIcon;true;$userDefaultAvatar[$clientID]]]
     
     $useChannel[$getGuildVar[leavechannel]]
     $disableMentionType[roles]
@@ -48,7 +48,7 @@ $get[content]
     $thumbnail[$authorAvatar]
     $color[$getGuildVar[leavemessageembedcolor]]
     
-    $let[serverimage;$advancedReplaceText[$checkCondition[$guildIcon==];false;$guildIcon;true;$clientAvatar]]
+    $let[serverimage;$advancedReplaceText[$checkCondition[$guildIcon==];false;$guildIcon;true;$userDefaultAvatar[$clientID]]]
     
     $useChannel[$getGuildVar[leavechannel]]
     $disableMentionType[roles]

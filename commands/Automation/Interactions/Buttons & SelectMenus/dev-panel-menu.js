@@ -63,8 +63,8 @@ $let[newtoggledsetting;$advancedReplaceText[$checkCondition[$getVar[botinvitatio
 
 When an error occurs, information such as the server name, it's id, alongside with the command name and the error will be included in logs to help the bot owners with some useful information regarding where does the error come from.
 }{field:**Current Setting(s)**:
-**Error log**#COLON# \`$get[errorsystem]\`
-**Error Channel**#COLON# $get[errorchannel]
+* **Error log**#COLON# \`$get[errorsystem]\`
+* **Error Channel**#COLON# $get[errorchannel]
 }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:errorlogtoggle_$authorID:false:🔄}{button:Set channel:2:errorlogsetupchannel_$authorID:false}}]
 
     $let[errorsystem;$advancedReplaceText[$checkCondition[$getVar[errorsystem]==on];true;Enabled;false;Disabled]]
@@ -90,8 +90,8 @@ $interactionUpdate[{newEmbed:{title:Error Logging}{description:
 
 When an error occurs, information such as the server name, it's id, alongside with the command name and the error will be included in logs to help the bot owners with some useful information regarding where does the error come from.
 }{field:**Current Setting(s)**:
-**Error log**#COLON# \`$get[errorsystem]\`
-**Error Channel**#COLON# $get[errorchannel]
+* **Error log**#COLON# \`$get[errorsystem]\`
+* **Error Channel**#COLON# $get[errorchannel]
 }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:errorlogtoggle_$authorID:false:🔄}{button:Set channel:2:errorlogsetupchannel_$authorID:false}}]
 
     $let[errorsystem;$advancedReplaceText[$checkCondition[$getVar[errorsystem]==on];true;Enabled;false;Disabled]]
@@ -213,8 +213,8 @@ $interactionUpdate[{newEmbed:{title:Error Logging}{description:
 
 When an error occurs, information such as the server name, it's id, alongside with the command name and the error will be included in logs to help the bot owners with some useful information regarding where does the error come from.
 }{field:**Current Setting(s)**:
-**Error log**#COLON# \`$get[errorsystem]\`
-**Error Channel**#COLON# $get[errorchannel]
+* **Error log**#COLON# \`$get[errorsystem]\`
+* **Error Channel**#COLON# $get[errorchannel]
 }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:errorlogtoggle_$authorID:false:🔄}{button:Set channel:2:errorlogsetupchannel_$authorID:false}}]
 
     $let[errorsystem;$advancedReplaceText[$checkCondition[$getVar[errorsystem]==on];true;Enabled;false;Disabled]]
@@ -367,8 +367,8 @@ $let[newtoggledsetting;$advancedReplaceText[$checkCondition[$getVar[pre_release_
             code: `$interactionUpdate[{newEmbed:{title:Startup}{description:
 This option let's you set a channel for the bot to inform users that it became online to use.
 }{field:**Current Setting(s)**:
-**Startup**#COLON# \`$get[startupfeature]\`
-**Startup channel**#COLON# $get[startupchannel]
+* **Startup**#COLON# \`$get[startupfeature]\`
+* **Startup channel**#COLON# $get[startupchannel]
 }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:botstartuptoggle_$authorID:false:🔄}{button:Set Channel:2:setbotstartupchannel_$authorID:false}}]
     
     
@@ -387,8 +387,8 @@ This option let's you set a channel for the bot to inform users that it became o
     $interactionUpdate[{newEmbed:{title:Startup}{description:
 This option let's you set a channel for the bot to inform users that it became online to use.
 }{field:**Current Setting(s)**:
-**Startup**#COLON# \`$get[startupfeature]\`
-**Startup channel**#COLON# $get[startupchannel]
+* **Startup**#COLON# \`$get[startupfeature]\`
+* **Startup channel**#COLON# $get[startupchannel]
 }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:botstartuptoggle_$authorID:false:🔄}{button:Set Channel:2:setbotstartupchannel_$authorID:false}}]
     
     
@@ -505,8 +505,8 @@ $interactionUpdate[{newEmbed:{title:Channel Setup}{description:Choose a channel 
             code: `$interactionUpdate[{newEmbed:{title:Startup}{description:
     This option let's you set a channel for the bot to inform users that it became online to use.
 }{field:**Current Setting(s)**:
-**Startup**#COLON# \`$get[startupfeature]\`
-**Startup channel**#COLON# $get[startupchannel]
+* **Startup**#COLON# \`$get[startupfeature]\`
+* **Startup channel**#COLON# $get[startupchannel]
 }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:botstartuptoggle_$authorID:false:🔄}{button:Set Channel:2:setbotstartupchannel_$authorID:false}}]
     
     
@@ -568,8 +568,8 @@ $let[newtoggledsetting;$advancedReplaceText[$checkCondition[$getVar[showbuildinf
    This option let's you configure how many members are needed for a server so that the bot can join there.
 
 When the requirement is not met, the bot will simply leave the server.
-}{field:**Current Setting(s)**:
-**Member requirement**#COLON# \`$getVar[servermemberrequirement]\`
+}{field:**Current requirement**:
+* \`$getVar[servermemberrequirement]\`
 }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Set requirement:2:setmemberrequirement_$authorID:false}{button:Reset:2:resetmemberrequirement_$authorID:false}}]
 
 
@@ -601,8 +601,8 @@ $interactionUpdate[{newEmbed:{title:Member requirement}{description:
    This option let's you configure how many members are needed for a server so that the bot can join there.
 
 When the requirement is not met, the bot will simply leave the server.
-}{field:**Current Setting(s)**:
-**Member requirement**#COLON# \`$getVar[servermemberrequirement]\`
+}{field:**Current requirement**:
+* \`$getVar[servermemberrequirement]\`
 }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Set requirement:2:setmemberrequirement_$authorID:false}{button:Reset:2:resetmemberrequirement_$authorID:false}}]
 
 $setVar[servermemberrequirement;$get[input]]
@@ -631,8 +631,8 @@ $interactionUpdate[{newEmbed:{title:Member requirement}{description:
    This option let's you configure how many members are needed for a server so that the bot can join there.
 
 When the requirement is not met, the bot will simply leave the server.
-}{field:**Current Setting(s)**:
-**Member requirement**#COLON# \`$getVar[servermemberrequirement]\`
+}{field:**Current requirement**:
+* \`$getVar[servermemberrequirement]\`
 }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Set requirement:2:setmemberrequirement_$authorID:false}{button:Reset:2:resetmemberrequirement_$authorID:false}}]
 
     $deleteVar[servermemberrequirement;;main]

@@ -7,8 +7,8 @@ module.exports = [{
 * **Multiple**
 
 **Single** starts the game with only "True" or "False" answer for each question. **Multiple** starts the game with multiple answers for each question.
-}{field:**Current Setting(s)**:
-**Type#COLON#** \`$toLocaleUpperCase[$getGlobalUserVar[trivia_type]]\`
+}{field:**Current type**:
+* \`$toLocaleUpperCase[$getGlobalUserVar[trivia_type]]\`
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:triviasettings_$authorID:Select a option:1:1:false:{stringInput:Trivia type:triviatype:How the game should start?:false}{stringInput:Difficulty:triviadifficulty:How hard the game will be?:false}}}{actionRow:{button:Toggle:2:triviatypetoggle_$authorID:false}}]
 
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
@@ -30,8 +30,8 @@ $interactionUpdate[{newEmbed:{title:Trivia type}{description:
 * **Multiple**
 
 **Single** starts the game with only "True" or "False" answer for each question. **Multiple** starts the game with multiple answers for each question.
-}{field:**Current Setting(s)**:
-**Type#COLON#** \`$toLocaleUpperCase[$getGlobalUserVar[trivia_type]]\`
+}{field:**Current type**:
+* \`$toLocaleUpperCase[$getGlobalUserVar[trivia_type]]\`
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:triviasettings_$authorID:Select a option:1:1:false:{stringInput:Trivia type:triviatype:How the game should start?:false}{stringInput:Difficulty:triviadifficulty:How hard the game will be?:false}}}{actionRow:{button:Toggle:2:triviatypetoggle_$authorID:false}}]
 
 
@@ -59,8 +59,8 @@ $let[newtoggledsetting;$advancedReplaceText[$checkCondition[$getGlobalUserVar[tr
 * **Hard**
 
 To change difficulty to any of the options above, use the buttons below to do so!
-}{field:**Current Setting(s)**:
-**Difficulty#COLON#** \`$toLocaleUpperCase[$getGlobalUserVar[trivia_difficulty]]\`
+}{field:**Current difficulty**:
+* \`$toLocaleUpperCase[$getGlobalUserVar[trivia_difficulty]]\`
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:triviasettings_$authorID:Select a option:1:1:false:{stringInput:Trivia type:triviatype:How the game should start?:false}{stringInput:Difficulty:triviadifficulty:How hard the game will be?:false}}}{actionRow:{button:Easy:2:triviaopteasy_$authorID:false}{button:Medium:2:triviaoptmedium_$authorID:false}{button:Hard:2:triviaopthard_$authorID:false}}]
 
 
@@ -85,8 +85,8 @@ $interactionUpdate[{newEmbed:{title:Trivia Difficulty}{description:
 * **Hard**
 
 To change difficulty to any of the options above, use the buttons below to do so!
-}{field:**Current Setting(s)**:
-**Difficulty#COLON#** \`$toLocaleUpperCase[$getGlobalUserVar[trivia_difficulty]]\`
+}{field:**Current difficulty**:
+* \`$toLocaleUpperCase[$getGlobalUserVar[trivia_difficulty]]\`
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:triviasettings_$authorID:Select a option:1:1:false:{stringInput:Trivia type:triviatype:How the game should start?:false}{stringInput:Difficulty:triviadifficulty:How hard the game will be?:false}}}{actionRow:{button:Easy:2:triviaopteasy_$authorID:false}{button:Medium:2:triviaoptmedium_$authorID:false}{button:Hard:2:triviaopthard_$authorID:false}}]
 
   $setGlobalUserVar[trivia_difficulty;easy]
@@ -117,8 +117,8 @@ $interactionUpdate[{newEmbed:{title:Trivia Difficulty}{description:
 * **Hard**
 
 To change difficulty to any of the options above, use the buttons below to do so!
-}{field:**Current Setting(s)**:
-**Difficulty#COLON#** \`$toLocaleUpperCase[$getGlobalUserVar[trivia_difficulty]]\`
+}{field:**Current difficulty**:
+* \`$toLocaleUpperCase[$getGlobalUserVar[trivia_difficulty]]\`
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:triviasettings_$authorID:Select a option:1:1:false:{stringInput:Trivia type:triviatype:How the game should start?:false}{stringInput:Difficulty:triviadifficulty:How hard the game will be?:false}}}{actionRow:{button:Easy:2:triviaopteasy_$authorID:false}{button:Medium:2:triviaoptmedium_$authorID:false}{button:Hard:2:triviaopthard_$authorID:false}}]
 
   $setGlobalUserVar[trivia_difficulty;medium]
@@ -150,8 +150,8 @@ $interactionUpdate[{newEmbed:{title:Trivia Difficulty}{description:
 * **Hard**
 
 To change difficulty to any of the options above, use the buttons below to do so!
-}{field:**Current Setting(s)**:
-**Difficulty#COLON#** \`$toLocaleUpperCase[$getGlobalUserVar[trivia_difficulty]]\`
+}{field:**Current difficulty**:
+* \`$toLocaleUpperCase[$getGlobalUserVar[trivia_difficulty]]\`
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:triviasettings_$authorID:Select a option:1:1:false:{stringInput:Trivia type:triviatype:How the game should start?:false}{stringInput:Difficulty:triviadifficulty:How hard the game will be?:false}}}{actionRow:{button:Easy:2:triviaopteasy_$authorID:false}{button:Medium:2:triviaoptmedium_$authorID:false}{button:Hard:2:triviaopthard_$authorID:false}}]
 
   $setGlobalUserVar[trivia_difficulty;hard]
@@ -180,8 +180,8 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[aut
 * **Hard**#COLON# Starts with blocks at large size
 
 To change difficulty to any of the options above, use the buttons below to do so!
-}{field:**Current Setting(s)**:
-**Difficulty#COLON#** \`$get[floodmode]\`
+}{field:**Current difficulty**:
+* \`$get[floodmode]\`
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:floodsettings_$authorID:Select a option:1:1:false:{stringInput:Difficulty:flooddifficulty:How hard the game will be?:false}}}{actionRow:{button:Easy:2:floodopteasy_$authorID:false}{button:Normal:2:floodoptnormal_$authorID:false}{button:Hard:2:floodopthard_$authorID:false}}]
 
 $let[floodmode;$advancedReplaceText[$getGlobalUserVar[flood_difficulty];18;Hard;13;Normal;8;Easy]]
@@ -206,8 +206,8 @@ $interactionUpdate[{newEmbed:{title:Flood difficulty}{description:Which difficul
 * **Hard**#COLON# Starts with blocks at large size
 
 To change difficulty to any of the options above, use the buttons below to do so!
-}{field:**Current Setting(s)**:
-**Difficulty#COLON#** \`$get[floodmode]\`
+}{field:**Current difficulty**:
+* \`$get[floodmode]\`
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:floodsettings_$authorID:Select a option:1:1:false:{stringInput:Difficulty:flooddifficulty:How hard the game will be?:false}}}{actionRow:{button:Easy:2:floodopteasy_$authorID:false}{button:Normal:2:floodoptnormal_$authorID:false}{button:Hard:2:floodopthard_$authorID:false}}]
 
 $let[floodmode;$advancedReplaceText[$getGlobalUserVar[flood_difficulty];18;Hard;13;Normal;8;Easy]]
@@ -239,8 +239,8 @@ $interactionUpdate[{newEmbed:{title:Flood difficulty}{description:Which difficul
 * **Hard**#COLON# Starts with blocks at large size
 
 To change difficulty to any of the options above, use the buttons below to do so!
-}{field:**Current Setting(s)**:
-**Difficulty#COLON#** \`$get[floodmode]\`
+}{field:**Current difficulty**:
+* \`$get[floodmode]\`
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:floodsettings_$authorID:Select a option:1:1:false:{stringInput:Difficulty:flooddifficulty:How hard the game will be?:false}}}{actionRow:{button:Easy:2:floodopteasy_$authorID:false}{button:Normal:2:floodoptnormal_$authorID:false}{button:Hard:2:floodopthard_$authorID:false}}]
 
 $let[floodmode;$advancedReplaceText[$getGlobalUserVar[flood_difficulty];18;Hard;13;Normal;8;Easy]]
@@ -271,8 +271,8 @@ $interactionUpdate[{newEmbed:{title:Flood difficulty}{description:Which difficul
 * **Hard**#COLON# Starts with blocks at large size
 
 To change difficulty to any of the options above, use the buttons below to do so!
-}{field:**Current Setting(s)**:
-**Difficulty#COLON#** \`$get[floodmode]\`
+}{field:**Current difficulty**:
+* \`$get[floodmode]\`
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:floodsettings_$authorID:Select a option:1:1:false:{stringInput:Difficulty:flooddifficulty:How hard the game will be?:false}}}{actionRow:{button:Easy:2:floodopteasy_$authorID:false}{button:Normal:2:floodoptnormal_$authorID:false}{button:Hard:2:floodopthard_$authorID:false}}]
 
 $let[floodmode;$advancedReplaceText[$getGlobalUserVar[flood_difficulty];18;Hard;13;Normal;8;Easy]]
