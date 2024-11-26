@@ -22,7 +22,7 @@ $let[devbuild;$if[$getVar[pre_release_mode]==on;{footer:Testing is recommended:h
     code: `
     $interactionUpdate[{newEmbed:{title:Bug Fixes}{description:
 * Made small code change to \`8ball\` to avoid potential issue
-* Fixed a weird part of \`credits\` code to avoid issues
+* Fixed a weird part of \`credits\` interaction code to avoid issues
 * Fixed a leftover code still present in \`guess-the-pokemon\` command
     }{color:$getVar[embedcolor]}$nonEscape[$get[devbuild]]}{actionRow:{button:Home:2:homebutton_$authorID:false:🏠}{button:Changes:2:versionchanges_$authorID:false}{button:Bug Fixes:2:versionbugfixes_$authorID:true}{button:Other:2:versionother_$authorID:false}}{actionRow:{button:Changelog history:5:https#COLON#//github.com/ddodogames/Dodo-Bot/releases:false:📜}}]
 
