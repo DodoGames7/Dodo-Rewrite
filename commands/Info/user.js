@@ -8,13 +8,13 @@ $if: "old",
 aliases: ["userinfo", "user-info"],
 code: `$title[Information for $get[username];$userURL[$get[user]]]
 $addField[**Other**;
-**Avatar:** [link]($userAvatar[$get[user]])
-**DMs:** $get[userdms]
+* **Avatar:** [link]($userAvatar[$get[user]])
+* **DMs:** $get[userdms]
 ;true]
 $addField[**General**;
-**Joined Discord on:** <t:$truncate[$divide[$creationDate[$get[user];ms];1000]]:f>
-**Bot account:** $get[botchecker]
-**ID:** $get[user]
+* **Joined Discord on:** <t:$truncate[$divide[$creationDate[$get[user];ms];1000]]:f>
+* **Bot account:** $get[botchecker]
+* **ID:** $get[user]
 ;true]
 $color[$getVar[embedcolor]]
 $thumbnail[$userAvatar[$get[user]]]
