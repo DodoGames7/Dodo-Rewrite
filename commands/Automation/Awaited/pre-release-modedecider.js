@@ -13,8 +13,7 @@ module.exports = [{
 
     $setVar[release_type;$getVar[DevReleaseTypeToSet]]
     $onlyIf[$checkContains[$getVar[release_type];$getVar[DevReleaseTypeToSet]]==false]`
-},
-{
+},{
     name: "Disable-pre-release",
     type: "awaited",
     code: `
