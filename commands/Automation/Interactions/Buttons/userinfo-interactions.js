@@ -13,7 +13,6 @@ $interactionUpdate[{newEmbed:{author:Server information:$nonEscape[$get[serverim
 :true}{thumbnail:$userAvatar[$get[user]]}{color:$getVar[embedcolor]}}{actionRow:{button:General info:2:mainmeminfo_$authorID_$get[user]:false}{button:Member's Server info:2:memberservinfo_$authorID_$get[user]:true}}]
 
 
-
 $let[username;$advancedReplaceText[$checkCondition[$hasUserTag[$get[user]]==false];true;$username[$get[user]];false;$userTag[$get[user]]]]
 $let[lowestrole;$advancedReplaceText[$checkCondition[$userLowestRole[$get[user];$guildID]==$guildID];true;None;false;$roleName[$userLowestRole[$get[user];$guildID]]]]
 $let[highestrole;$advancedReplaceText[$checkCondition[$userHighestRole[$get[user];$guildID;id]==$guildID];true;None;false;$userHighestRole[$get[user];$guildID;name]]]
@@ -21,7 +20,7 @@ $let[serverimage;$advancedReplaceText[$checkCondition[$guildIcon==];false;$guild
 $let[boosterchecker;$advancedReplaceText[$checkCondition[$isBoosting[$get[user];$guildID]==true];true;Yes;false;No]]
 
 $onlyIf[$memberExists[$get[user];$guildID]==true;
-The user appears to have left the server. The ablity to view their server information in this server has been temporarily disabled until they re-join again
+The user appears to have left the server. The ablity to view their server information has been temporarily disabled until they re-join again
 {ephemeral}
 {interaction}
 ]

@@ -18,7 +18,6 @@ $let[embeddescription;$getEmbed[$channelID;$interactionData[message.id];1;descri
 $let[embedtitle;$getEmbed[$channelID;$interactionData[message.id];1;title]]
 
 
-
   `
 },{
   name: "tailsinteraction",
@@ -39,7 +38,6 @@ $let[embedtitle;$getEmbed[$channelID;$interactionData[message.id];1;title]]
 $let[embeddescription;$getEmbed[$channelID;$interactionData[message.id];1;description]]
 $let[embedtitle;$getEmbed[$channelID;$interactionData[message.id];1;title]]
 
- 
 
   `
 }]
