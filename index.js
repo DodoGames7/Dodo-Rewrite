@@ -22,17 +22,18 @@ const client = new AoiClient({
     tables: ["main"], // tables for the database
     securityKey: process.env.DBsecurityKey || config.DBsecurityKey // Security Key with either env or config
   },
- disableFunctions: ["$clientToken"], // For safety reasons
- mobilePlatform: config.MobileStatus, // Whether or not to enable mobile status
- debugs: {
- interpreter: config.EnableDebugMode // Whether or not to enable aoi.js debug mode
-},
-respondOnEdit: {
- commands: config.respondOnEdit,
- time: 20000
-},
-suppressAllErrors: config.DisableAllErrors // Whether or not to disable errors from aoi.js
+  disableFunctions: ["$clientToken"], // For safety reasons
+  mobilePlatform: config.MobileStatus, // Whether or not to enable mobile status
+  debugs: {
+   interpreter: config.EnableDebugMode // Whether or not to enable aoi.js debug mode
+  },
+  respondOnEdit: {
+   commands: config.respondOnEdit,
+   time: 20000
+  },
+  suppressAllErrors: config.DisableAllErrors // Whether or not to disable errors from aoi.js
 });
+
 
 // Handlers
 client.loadCommands("./commands/", config.LogCommands);
