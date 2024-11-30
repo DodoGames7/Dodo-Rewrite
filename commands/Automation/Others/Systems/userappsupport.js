@@ -1,5 +1,5 @@
 module.exports = [{
-    name: "User app support decider",
+    name: "Userapps support",
     type: "ready",
     code: `$ifAwaited[$getVar[userapps]==true;{execute:createuserapps}]`
 },{
