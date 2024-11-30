@@ -27,9 +27,8 @@ $setGuildVar[islevelingreset;no]
 
 $onlyIf[$checkContains[$getGuildVar[levelingexcludedchannels];$channelID]==false;]
 $onlyIf[$checkContains[$getGuildVar[levelingexcludedcategories];$get[channelcategory]]==false;]
-$onlyIf[$hasRoles[$guildID;$authorID;$nonEscape[$get[outputexcludedroles]]]==false;]
+$onlyIf[$hasRoles[$guildID;$authorID;$nonEscape[$joinSplitText[#SEMI#]]==false;]
 
-$let[outputexcludedroles;$joinSplitText[#SEMI#]]
 $let[channelcategory;$advancedReplaceText[$checkCondition[$channelCategoryID==];true;Nothing;false;$channelCategoryID]]
 $textSplit[$getGuildVar[levelingexcludedroles];, ]
 
