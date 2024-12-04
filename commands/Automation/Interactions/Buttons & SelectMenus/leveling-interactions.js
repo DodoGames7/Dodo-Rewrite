@@ -316,7 +316,7 @@ Press the "Toggle" button to enable/disable the Level up Message or use the othe
         code: `$interactionUpdate[{newEmbed:{title:Exclusions}{description:This category is dedicated to choosing on what should be excluded from allowing xp!
 
 To manage a specific setting, use any of the buttons below to do so!
-    }{color:$getVar[embedcolor]}}{actionRow:{button:Go back:2:levelingsettings_$authorID:false:↩️}{button:Roles:2:levelingexcluderolessetting_$authorID:false}{button:Channels:2:levelingexcludechannelssetting_$authorID:false}{button:Categories:2:levelingexcludecategoriessetting_$authorID:false}}]
+    }{color:$getVar[embedcolor]}}{actionRow:{button:Go back:2:levelingsettings_$authorID:false:↩️}{button:Roles (Soon):2:levelingexcluderolessetting_$authorID:true}{button:Channels:2:levelingexcludechannelssetting_$authorID:false}{button:Categories:2:levelingexcludecategoriessetting_$authorID:false}}]
 
 
     $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
@@ -331,7 +331,7 @@ To manage a specific setting, use any of the buttons below to do so!
         code: `$interactionUpdate[{newEmbed:{title:Exclusions}{description:This category is dedicated to choosing on what should be excluded from allowing xp!
 
 To manage a specific setting, use any of the buttons below to do so!
-    }{color:$getVar[embedcolor]}}{actionRow:{button:Go back:2:levelingsettings_$authorID:false:↩️}{button:Roles:2:levelingexcluderolessetting_$authorID:false}{button:Channels:2:levelingexcludechannelssetting_$authorID:false}{button:Categories:2:levelingexcludecategoriessetting_$authorID:false}}]
+    }{color:$getVar[embedcolor]}}{actionRow:{button:Go back:2:levelingsettings_$authorID:false:↩️}{button:Roles (Soon):2:levelingexcluderolessetting_$authorID:true}{button:Channels:2:levelingexcludechannelssetting_$authorID:false}{button:Categories:2:levelingexcludecategoriessetting_$authorID:false}}]
 
 
     $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
@@ -339,74 +339,6 @@ To manage a specific setting, use any of the buttons below to do so!
     {interaction}
     ]
     $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==levelingexclusionshome;]`
-    },{
-        type: "interaction",
-        prototype: "button",
-        code: `$interactionUpdate[{newEmbed:{title:Roles}{description:Use the dropdown menu below to select roles to exclude from xp. (You can add up to 10)!
-
-**Tip#COLON#** Unable to find the role you're looking for? Try typing the role name instead!
-}{field:**Current Role(s)**:
-$autoList[$nonEscape[$getGuildVar[levelingexcludedroles]];, ;autoListRoles]
-}{color:$getVar[embedcolor]}}{actionRow:{selectMenu:levelingexcluderolemenusetup_$authorID:Select roles.:1:10:false:{roleInput}}}{actionRow:{button:Go back:2:levelingexclusionshome_$authorID:false:↩️}{button:Reset:2:levelingexcluderolesreset_$authorID:false}}]
-
-
-    $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
-    {ephemeral}
-    {interaction}
-    ]
-
-    $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==levelingexcluderolessetting;]
-    `
-    },{
-        type: "interaction",
-        prototype: "selectMenu",
-        code: `$interactionFollowUp[Successfully updated the list!;true]
-
-    $interactionUpdate[{newEmbed:{title:Roles}{description:Use the dropdown menu below to select roles to exclude from xp. (You can add up to 10)!
-
-**Tip#COLON#** Unable to find the role you're looking for? Try typing the role name instead!
-}{field:**Current Role(s)**:
-$autoList[$nonEscape[$getGuildVar[levelingexcludedroles]];, ;autoListRoles]
-}{color:$getVar[embedcolor]}}{actionRow:{selectMenu:levelingexcluderolemenusetup_$authorID:Select roles.:1:10:false:{roleInput}}}{actionRow:{button:Go back:2:levelingexclusionshome_$authorID:false:↩️}{button:Reset:2:levelingexcluderolesreset_$authorID:false}}]
-
-    $setGuildVar[levelingexcludedroles;$getSelectMenuValues[all;, ]]
-
-    $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
-    {ephemeral}
-    {interaction}
-    ]
-
-    $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==levelingexcluderolemenusetup;]
-
-    `
-    },{
-        type: "interaction",
-        prototype: "button",
-        code: `$interactionFollowUp[Successfully reset the current list!;true]
-
-    $interactionUpdate[{newEmbed:{title:Roles}{description:Use the dropdown menu below to select roles to exclude from xp. (You can add up to 10)!
-
-**Tip#COLON#** Unable to find the role you're looking for? Try typing the role name instead!
-}{field:**Current Role(s)**:
-$autoList[$nonEscape[$getGuildVar[levelingexcludedroles]];, ;autoListRoles]
-}{color:$getVar[embedcolor]}}{actionRow:{selectMenu:levelingexcluderolemenusetup_$authorID:Select roles.:1:10:false:{roleInput}}}{actionRow:{button:Go back:2:levelingexclusionshome_$authorID:false:↩️}{button:Reset:2:levelingexcluderolesreset_$authorID:false}}]
-
-    $deleteVar[levelingexcludedroles;$guildID;main]
-
-    $onlyIf[$getGuildVar[levelingexcludedroles]!=none;
-    There's nothing to reset.
-    {ephemeral}
-    {interaction}
-    ]
-
-    $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
-    {ephemeral}
-    {interaction}
-    ]
-
-    $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==levelingexcluderolesreset;]
-
-    `
     },{
         type: "interaction",
         prototype: "button",
@@ -606,3 +538,75 @@ $autoList[$nonEscape[$getGuildVar[levelingexcludedcategories]];, ;autoListCatego
     `
     }]
     
+
+    /* Might be used again
+     * {
+     *   type: "interaction",
+     *   prototype: "button",
+     *   code: `$interactionUpdate[{newEmbed:{title:Roles}{description:Use the dropdown menu below to select roles to exclude from xp. (You can add up to 10)!
+     *
+     **Tip#COLON#** Unable to find the role you're looking for? Try typing the role name instead!
+     } {fie*ld:**Current Role(s)**:
+     $autoList[$nonEscape[$getGuildVar[levelingexcludedroles]];, ;autoListRoles]
+     }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:levelingexcluderolemenusetup_$authorID:Select roles.:1:10:false:{roleInput}}}{actionRow:{button:Go back:2:levelingexclusionshome_$authorID:false:↩️}{button:Reset:2:levelingexcluderolesreset_$authorID:false}}]
+
+
+     $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
+     {ephemeral}
+     {interaction}
+     ]
+
+     $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==levelingexcluderolessetting;]
+     `
+     },{
+     type: "interaction",
+prototype: "selectMenu",
+code: `$interactionFollowUp[Successfully updated the list!;true]
+
+$interactionUpdate[{newEmbed:{title:Roles}{description:Use the dropdown menu below to select roles to exclude from xp. (You can add up to 10)!
+
+**Tip#COLON#** Unable to find the role you're looking for? Try typing the role name instead!
+}{field:**Current Role(s)**:
+$autoList[$nonEscape[$getGuildVar[levelingexcludedroles]];, ;autoListRoles]
+}{color:$getVar[embedcolor]}}{actionRow:{selectMenu:levelingexcluderolemenusetup_$authorID:Select roles.:1:10:false:{roleInput}}}{actionRow:{button:Go back:2:levelingexclusionshome_$authorID:false:↩️}{button:Reset:2:levelingexcluderolesreset_$authorID:false}}]
+
+$setGuildVar[levelingexcludedroles;$getSelectMenuValues[all;, ]]
+
+$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
+{ephemeral}
+{interaction}
+]
+
+$onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==levelingexcluderolemenusetup;]
+
+`
+},{
+type: "interaction",
+prototype: "button",
+code: `$interactionFollowUp[Successfully reset the current list!;true]
+
+$interactionUpdate[{newEmbed:{title:Roles}{description:Use the dropdown menu below to select roles to exclude from xp. (You can add up to 10)!
+
+**Tip#COLON#** Unable to find the role you're looking for? Try typing the role name instead!
+}{field:**Current Role(s)**:
+$autoList[$nonEscape[$getGuildVar[levelingexcludedroles]];, ;autoListRoles]
+}{color:$getVar[embedcolor]}}{actionRow:{selectMenu:levelingexcluderolemenusetup_$authorID:Select roles.:1:10:false:{roleInput}}}{actionRow:{button:Go back:2:levelingexclusionshome_$authorID:false:↩️}{button:Reset:2:levelingexcluderolesreset_$authorID:false}}]
+
+$deleteVar[levelingexcludedroles;$guildID;main]
+
+$onlyIf[$getGuildVar[levelingexcludedroles]!=none;
+There's nothing to reset.
+{ephemeral}
+{interaction}
+]
+
+$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
+{ephemeral}
+{interaction}
+]
+
+$onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==levelingexcluderolesreset;]
+
+`
+}
+*/

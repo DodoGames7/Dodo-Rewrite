@@ -15,7 +15,7 @@ module.exports = {
   versionCodename: "Cards",
   libraryversiondevcheck: "off",
   buildStatus: "Incomplete",
-  buildDate: "1733043936796",
+  buildDate: "1733295525571",
   buildType: "Official Stable",
   buildBranch: "v2",
   buildRevision: "0",
@@ -56,7 +56,7 @@ module.exports = {
   levelmessagefeature: "off",
   levelleaveonreset: "off",
   islevelingreset: "no",
-  levelingexcludedroles: "none",
+  // levelingexcludedroles: "none",
   levelingexcludedchannels: "none",
   levelingexcludedcategories: "none",
   // Developer variables

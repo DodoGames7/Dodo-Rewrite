@@ -3,7 +3,7 @@ module.exports = [{
     prototype: "button",
     code: `
     $interactionUpdate[{newEmbed:{title:Changes}{description:
-* You can now exclude channels, roles and categories from xp in \`leveling\` command
+* You can now exclude channels and categories from xp in \`leveling\` command (roles support are yet to be decided)
   * The "Reset on Leave" button is now a select menu option as part of this change
 * Added full attachment support for message edit logs in embed mode
 * Added 2 slash commands called \`avatar\` and \`ping\` for user apps
