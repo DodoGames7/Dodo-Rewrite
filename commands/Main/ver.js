@@ -36,16 +36,16 @@ Time remaining: <t:$truncate[$divide[$sum[$getCooldownTime[2s;user;version;$auth
   name: "versionbuildinfo",
   type: "awaited",
   code: `$title[Build Info]
+$addField[Progress;
+* **Status**: $getVar[buildStatus]
+* **Type**: $getVar[buildType]
+;true]
 $addField[General;
 * **Dodo-Bot**: v$getVar[version]
 * **Codename**: $getVar[versionCodename]
 * **Build Branch**: $getVar[buildBranch]
 * **Revision**: $getVar[buildRevision]
 * **Build number**: $getVar[buildNumber]
-;true]
-$addField[Progress;
-* **Status**: $getVar[buildStatus]
-* **Type**: $getVar[buildType]
 ;true]
 $color[$getVar[embedcolor]]
 
