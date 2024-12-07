@@ -7,8 +7,8 @@ module.exports = [{
 * **Codename**#COLON# $getVar[versionCodename]
 * **Build Branch**#COLON# $getVar[buildBranch]
 * **Revision**#COLON# $getVar[buildRevision]
-* **Build number**#COLON# $getVar[buildNumber]:true}
-{field:Progress:
+* **Build number**#COLON# $getVar[buildNumber]
+:true}{field:Progress:
 * **Status**#COLON# $getVar[buildStatus]
 * **Type**#COLON# $getVar[buildType]
 :true}{color:$getVar[embedcolor]}};all;true]

@@ -22,7 +22,7 @@ $let[embeddescription;$getEmbed[$channelID;$interactionData[message.id];1;descri
 $let[embedtitle;$getEmbed[$channelID;$interactionData[message.id];1;title]]
 
 `
-}, {
+},{
      name: "ftfresults2",
     type:"interaction",
     prototype: "button",
@@ -46,7 +46,7 @@ $endif
 $let[embeddescription;$getEmbed[$channelID;$interactionData[message.id];1;description]]
 $let[embedtitle;$getEmbed[$channelID;$interactionData[message.id];1;title]]
 `
-}, {
+},{
     name: "ftfresults3",
     type:"interaction",
     prototype: "button",

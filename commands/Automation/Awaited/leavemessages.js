@@ -1,8 +1,9 @@
 module.exports = [{
     name: "leavetextmodetest",
     type: "awaited",
-    code: `**This is a test Leave message! Please, ignore this.**
-    $get[content]
+    code: `
+**This is a test Leave message! Please, ignore this.**
+$get[content]
     
     
     $useChannel[$getGuildVar[leavechannel]]
@@ -11,7 +12,8 @@ module.exports = [{
     },{
     name: "leaveembedmodetest",
     type: "awaited",
-    code: `**This is a test Leave message! Please, ignore this.**
+    code: `
+**This is a test Leave message! Please, ignore this.**
     $author[Member left;$get[serverimage]]
     $description[
     $get[content]
@@ -19,7 +21,7 @@ module.exports = [{
     $thumbnail[$authorAvatar]
     $color[$getGuildVar[leavemessageembedcolor]]
     
-    $let[serverimage;$advancedReplaceText[$checkCondition[$guildIcon==];false;$guildIcon;true;$clientAvatar]]
+    $let[serverimage;$advancedReplaceText[$checkCondition[$guildIcon==];false;$guildIcon;true;$userDefaultAvatar[$clientID]]]
     
     $useChannel[$getGuildVar[leavechannel]]
     $disableMentionType[roles]
@@ -46,7 +48,7 @@ module.exports = [{
     $thumbnail[$authorAvatar]
     $color[$getGuildVar[leavemessageembedcolor]]
     
-    $let[serverimage;$advancedReplaceText[$checkCondition[$guildIcon==];false;$guildIcon;true;$clientAvatar]]
+    $let[serverimage;$advancedReplaceText[$checkCondition[$guildIcon==];false;$guildIcon;true;$userDefaultAvatar[$clientID]]]
     
     $useChannel[$getGuildVar[leavechannel]]
     $disableMentionType[roles]

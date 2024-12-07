@@ -1,13 +1,14 @@
 {
   "name": "Dodo-Bot",
-  "version": "2.2.0-build.2178.rev1",
+  "version": "2.2.1-build.2186",
   "description": "A personal bot project made in aoi.js v6 aiming to both entertain and provide users some features to use.",
   "main": "index.js",
+  "homepage": "https://github.com/ddodogames/Dodo-Bot",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "setup": "npm install",
     "start": "node index.js",
-    "startWithoutDeprecations": "node index.js -- --no-deprecation"
+    "startWithoutDeprecation": "node index.js -- --no-deprecation"
   },
   "engines": {
     "node": ">=20.x"

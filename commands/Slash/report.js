@@ -9,7 +9,7 @@ code: `$interactionReply[{newEmbed:{title:Reporting bugs}{description:Even thoug
 
 To get started, be sure to have a Github account first, then press the button below to open an issue.}{color:$getVar[embedcolor]}}
 
-{actionRow:{button:Open a issue:5:https#COLON#//github.com/DodoGames7/Dodo-Bot/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=%5BBUG%5D:false}};all;true]
+{actionRow:{button:Open a issue:5:https#COLON#//github.com/ddodogames/Dodo-Bot/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=%5BBUG%5D:false}};all;true]
 
 $onlyIf[$getVar[userapps]==true;User apps are currently disabled.
 {ephemeral}

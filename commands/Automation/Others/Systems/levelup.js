@@ -24,6 +24,11 @@ $disableMentionType[everyone]`
     code: `
 $setUserVar[xp;$sum[$getUserVar[xp];1];$authorID;$guildID]
 $setGuildVar[islevelingreset;no]
+
+$onlyIf[$checkContains[$getGuildVar[levelingexcludedchannels];$channelID]==false;]
+$onlyIf[$checkContains[$getGuildVar[levelingexcludedcategories];$get[channelcategory]]==false;]
+$let[channelcategory;$advancedReplaceText[$checkCondition[$channelCategoryID==];true;Nothing;false;$channelCategoryID]]
+
 $cooldown[2s;]
 $onlyIf[$isBot==false;]
 $onlyIf[$getGuildVar[levelsystem]==on;]`

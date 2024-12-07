@@ -34,19 +34,15 @@ $let[userInput;{userID}]`
     name: "$fallbackAttachment",
     type: "aoi.js",
     params: ["url", "fallbacktoUse"],
-    code: `
-$advancedReplaceText[$checkCondition[$IsValidImageLink[$get[Input]]==true];true;$get[Input];false;$get[FallbackInput]]
+    code: `$advancedReplaceText[$checkCondition[$IsValidImageLink[$get[Input]]==true];true;$get[Input];false;$get[FallbackInput]]
 $let[FallbackInput;{fallbacktoUse}]
-$let[Input;{url}]
-
-    `
-  },{ // Temporarily used for testing purposes
+$let[Input;{url}]`
+  },{
     name: "$autoList",
     type: "aoi.js",
     params: ["text", "seperator", "type"],
     code: `$arrayMap[returnlist;{type};
 ;{}]
-
 $createArray[returnlist;$nonEscape[$get[createlist]]]
 $let[createlist;$advancedReplaceText[{text};{seperator};#SEMI#]]`
   },{
@@ -90,4 +86,16 @@ $let[createlist;$advancedReplaceText[{text};{seperator};#SEMI#]]`
   type: "aoi.js",
   params: ["text"],
   code: `$replaceTextWithRegex[$replaceTextWithRegex[{text};/r|l/;g;w];/R|L/;g;W]`
+},{ // credit goes to https://github.com/aoijs/aoi.js/pull/678 for the original code
+  name: "$messageAttachments",
+  type: "djs",
+  code: async (d) => {
+    const data = d.util.aoiFunc(d);
+    const [sep = ', '] = data.inside.splits;
+
+    data.result = d.message.attachments.map(x => x?.url).join(sep);
+    return {
+        code: d.util.setCode(data)
+    }
+  }
 }]

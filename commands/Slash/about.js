@@ -9,7 +9,7 @@ code: `$interactionReply[{newEmbed:{title:About Dodo-Bot}{description:Dodo-Bot i
 
 The project has existed since late 2021 and to this day, it continues to be developed with new improvements along with other type of updates as well!}{thumbnail:https#COLON#//us-east-1.tixte.net/uploads/dodogames.wants.solutions/dodo-bot-logo.png}{color:$getVar[embedcolor]}}
 
-{actionRow:{button:Source Code:5:https#COLON#//github.com/DodoGames7/Dodo-Bot:false}};all;true]
+{actionRow:{button:Source Code:5:https#COLON#//github.com/ddodogames/Dodo-Bot:false}};all;true]
 
 $onlyIf[$getVar[userapps]==true;User apps are currently disabled.
 {ephemeral}

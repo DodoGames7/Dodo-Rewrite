@@ -2,7 +2,7 @@ const config = require("../config.json");
 
 module.exports = {
   "main": {
-  // Games variables
+  // Game variables
   trivia_type: "multiple",
   trivia_difficulty: "medium",
   flood_difficulty: 13,
@@ -11,16 +11,16 @@ module.exports = {
   // Bot variables (do not touch)
   autopingreply: "off",
   includebots: "on",
-  version: "2.2.0",
-  versionCodename: "Iron",
+  version: "2.2.1",
+  versionCodename: "Cards",
   libraryversiondevcheck: "off",
   buildStatus: "Complete",
-  buildDate: "1730832504372",
+  buildDate: "1733563963395",
   buildType: "Official Stable",
   buildBranch: "v2",
-  buildRevision: "1",
+  buildRevision: "0",
   showbuildinfo: "off",
-  buildNumber: "2178",
+  buildNumber: "2186",
   embedcolor: config.Embedcolor,
   originalembedcolor: config.Embedcolor,
   release_type: "Stable",
@@ -56,6 +56,9 @@ module.exports = {
   levelmessagefeature: "off",
   levelleaveonreset: "off",
   islevelingreset: "no",
+  // levelingexcludedroles: "none",
+  levelingexcludedchannels: "none",
+  levelingexcludedcategories: "none",
   // Developer variables
   errorchannel: "none",
   errorsystem: "off",
@@ -64,7 +67,7 @@ module.exports = {
   pre_release_mode: "off",
   botinvitationmessage: "on",
   servermemberrequirement: "0",
-  userapps: config.EnableUserAppSupport,
+  userapps: config.EnableUserApps,
   isuserappsalreadysetup: "no",
   errorsdisabled: config.DisableAllErrors
   }

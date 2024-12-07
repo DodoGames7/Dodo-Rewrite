@@ -41,13 +41,12 @@ Game.startGame();
   name: "triviasettings",
   type: "awaited",
   code: `$title[Trivia Settings]
-  $description[Welcome to Trivia settings! To select a option to change, use the dropdown menu below!
-
-**Current Setting(s)**
+$description[Welcome to Trivia settings! To select a option to change, use the dropdown menu below!]
+$addField[**Current Setting(s)**;
 **Type#COLON#** \`$toLocaleUpperCase[$getGlobalUserVar[trivia_type]]\`
 **Difficulty#COLON#** \`$toLocaleUpperCase[$getGlobalUserVar[trivia_difficulty]]\`
-  ]
-  $color[$getVar[embedcolor]]
-  $addSelectMenu[1;string;triviasettings_$authorID;Select a option;1;1;false;Type:How the game should start?:triviatype:false;Difficulty:How hard the game will be?:triviadifficulty:false]`
+]
+$color[$getVar[embedcolor]]
+$addSelectMenu[1;string;triviasettings_$authorID;Select a option;1;1;false;Type:How the game should start?:triviatype:false;Difficulty:How hard the game will be?:triviadifficulty:false]`
 }]
 

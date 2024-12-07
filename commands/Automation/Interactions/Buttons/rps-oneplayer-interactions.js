@@ -13,7 +13,7 @@ $let[embeddescription;$getEmbed[$channelID;$interactionData[message.id];1;descri
 $let[embedtitle;$getEmbed[$channelID;$interactionData[message.id];1;title]]
 
 `
-}, {
+},{
      name: "rpsgameresults2",
     type:"interaction",
     prototype: "button",
@@ -28,7 +28,7 @@ $let[botselection;$randomText[Rock 🌑;Paper 📰;Scissors ✂️]]
 $let[embeddescription;$getEmbed[$channelID;$interactionData[message.id];1;description]]
 $let[embedtitle;$getEmbed[$channelID;$interactionData[message.id];1;title]]
 `
-}, {
+},{
     name: "rpsgameresults3",
     type:"interaction",
     prototype: "button",

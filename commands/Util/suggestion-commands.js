@@ -21,9 +21,9 @@ $onlyIf[$guildChannelExists[$guildID;$get[channeltarget]]==true;Either you have 
 $let[channeltarget;$findGuildChannel[$message;false]]
 $onlyIf[$message!=;Please set an channel.
 Usage: \`$getGuildVar[prefix]$nonEscape[$commandInfo[suggestion-set;info.usage]]\`]
+$onlyPerms[managechannels;You do not have \`ManageChannels\` permission to use this.]
 $cooldown[3s; Slow down! Don't spam the command!
 Time remaining: <t:$truncate[$divide[$sum[$getCooldownTime[3s;user;suggest-set;$authorID];$dateStamp];1000]]:R>]
-$onlyPerms[managechannels;You do not have \`ManageChannels\` permission to use this.]
 `
 },{
     name: "suggest-reset",
@@ -34,9 +34,9 @@ $onlyPerms[managechannels;You do not have \`ManageChannels\` permission to use t
     code: `$deleteVar[suggestionchannel;$guildID;main]
 Successfully reset suggestion channel! Run \`suggest-set\` to set a channel again.
 $onlyIf[$getGuildVar[suggestionchannel]!=none;There is no channel set to reset.]
+$onlyPerms[managechannels;You do not have \`ManageChannels\` permission to use this.]
 $cooldown[3s; Slow down! Don't spam the command!
-Time remaining: <t:$truncate[$divide[$sum[$getCooldownTime[3s;user;suggest-reset;$authorID];$dateStamp];1000]]:R>]
-$onlyPerms[managechannels;You do not have \`ManageChannels\` permission to use this.]`
+Time remaining: <t:$truncate[$divide[$sum[$getCooldownTime[3s;user;suggest-reset;$authorID];$dateStamp];1000]]:R>]`
 },{
     name: "suggest",
     info: {

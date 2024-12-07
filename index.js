@@ -1,11 +1,13 @@
-const { AoiClient } = require("aoi.js"); // Define aoi.js client creator
+const { AoiClient } = require("aoi.js"); // Define aoi.js client
 const config = require("./config.json"); // Load the setup options from config
 require('dotenv').config() // Enable env support in local hosting
+
+// Needed for handler codes
 const functions = require("./handlers/functions.js");
 const vars = require('./handlers/variables.js');
 
 
-// Client Setup
+// Setting up Client
 const client = new AoiClient({
   token: process.env.BotToken || config.BotToken, // Token with either env or config
   prefix: "$getGuildVar[prefix]", // By default, it uses custom prefix system (default prefix used: d!).
@@ -20,20 +22,22 @@ const client = new AoiClient({
     tables: ["main"], // tables for the database
     securityKey: process.env.DBsecurityKey || config.DBsecurityKey // Security Key with either env or config
   },
- disableFunctions: ["$clientToken"], // For safety reasons
- mobilePlatform: config.MobileStatus, // Whether or not to enable mobile status
- debugs: {
- interpreter: config.EnableDebugMode // Whether or not to enable aoi.js debug mode
-},
-respondOnEdit: {
- commands: config.respondOnEdit,
- time: 20000
-},
-suppressAllErrors: config.DisableAllErrors
+  disableFunctions: ["$clientToken"], // For safety reasons
+  mobilePlatform: config.MobileStatus, // Whether or not to enable mobile status
+  debugs: {
+   interpreter: config.EnableDebugMode // Whether or not to enable aoi.js debug mode
+  },
+  respondOnEdit: {
+   commands: config.respondOnEdit,
+   time: 20000
+  },
+  suppressAllErrors: config.DisableAllErrors // Whether or not to disable errors from aoi.js
 });
+
 
 // Handlers
 client.loadCommands("./commands/", config.LogCommands);
+
 Object.keys(vars).forEach((t) =>
   client.variables(vars[t], t)
 )
