@@ -75,7 +75,7 @@ $let[createlist;$advancedReplaceText[{text};{seperator};#SEMI#]]`
     const data = d.util.aoiFunc(d);
 
     const hex = Math.floor(Math.random() * 16777215).toString(16);
-    data.result = `#${hex.padStart(6, "0")}`;
+    data.result = `${hex.padStart(6, "0")}`;
 
     return {
       code: d.util.setCode(data)

@@ -3,7 +3,7 @@ module.exports = [{
     prototype: "button",
     code: `$interactionUpdate[{newEmbed:{title:Developer Panel}{description:This panel allows you to change some things the bot operates behind the scenes. 
     
-To change a option, use the select menu below to do so.}{color:Red}{thumbnail:https#COLON#//us-east-1.tixte.net/uploads/dodo-bot.wants.solutions/devsettings.png}}{actionRow:{selectMenu:devmenu_$authorID:Select a option:1:1:false:{stringInput:Bot Invitation Message:botwelcome:Whether or not the bot should greet new servers.:false:👋}{stringInput:Error Logging:errorlog:Send errors to specific channel.:false:📢}{stringInput:Embed color:botembedcolor:Change the current embed color used in all commands.:false:🎨}{stringInput:Pre-release:botdevmode:Whether or not to enable Pre-release mode.:false:🚧}{stringInput:Startup:botstartup:Choose a channel for bot's startup msgs to be sent:false:🚦}{stringInput:Show build info:showbuildinfo:Whether or not to enable "Build Info" button in stats cmd:false:🛠️}{stringInput:Member requirement:memberrequirement:How much members are required for new servers:false:📋}}}]
+To change a option, use the select menu below to do so.}{color:Red}{thumbnail:https#COLON#//us-east-1.tixte.net/uploads/dodo-bot.wants.solutions/devsettings.png}}{actionRow:{selectMenu:devmenu_$authorID:Select a option:1:1:false:{stringInput:Bot Invitation Message:botwelcome:Whether or not the bot should greet new servers.:false:👋}{stringInput:Error Logging:errorlog:Send errors to specific channel.:false:📢}{stringInput:Embed color:botembedcolor:Change the current embed color used in all commands.:false:🎨}{stringInput:Pre-release:botdevmode:Whether or not to enable Pre-release mode.:false:🚧}{stringInput:Startup:botstartup:Choose a channel for bot's startup msgs to be sent:false:🚦}{stringInput:Show build info:showbuildinfo:Whether or not to enable "Build Info" button in stats cmd:false:🛠️}{stringInput:Member requirement:memberrequirement:How much members are required for new servers:false:📋}}}{actionRow:{button:Leave a server:2:leaveserverbutton_$authorID:false}}]
 
 
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];You're not the author of this command! {ephemeral}
@@ -652,5 +652,49 @@ When the requirement is not met, the bot will simply leave the server.
     $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==resetmemberrequirement;]
 
     `
+    },{
+        type: "interaction",
+        prototype: "button",
+        code: `
+
+        $interactionModal[Leave a server;leaveservermodalresult;
+        {actionRow:
+            {textInput:Server ID:1:numberInput:true:e.g, $guildID:0:160}
+        }]
+
+
+        $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];You're not the author of this command! {ephemeral}
+        {interaction}]
+        $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==leaveserverbutton;]
+        `
+    },{
+        name: "leaveservermodalresult",
+        type: "interaction",
+        prototype: "modal",
+        code: `
+        $let[hidetext;$clientLeave[$get[input]]]
+        $interactionReply[Successfully left the server "$guildName[$get[input]]"!;all;true]
+
+        $onlyIf[$checkContains[$guildIds;$get[input]]==true;
+       I am not in the server you specified.
+       {ephemeral}
+       {interaction}
+        ]
+
+        $onlyIf[$guildExists[$get[input]]==true;
+        Please enter a valid server id to proceed.
+        {ephemeral}
+        {interaction}
+        ]
+
+        $onlyIf[$isNumber[$get[input]]==true;
+        Please enter a actual number to proceed.
+        {ephemeral}
+        {interaction}
+        ]
+
+        $let[input;$excludeSpecialChars[$textInputValue[numberInput]]]
+
+        `
     }]
     
