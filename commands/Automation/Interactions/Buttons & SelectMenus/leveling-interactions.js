@@ -7,10 +7,10 @@ module.exports = [{
     
     To get started, click on the "Toggle" button! To manage the settings regarding the said feature, press the "Settings" button.
     
-    $get[levelingsystem]}{color:$getVar[embedcolor]}}{actionRow:{button:Toggle:2:toggleleveling_$authorID:false:🔄}{button:Settings:4:levelingsettings_$authorID:false}{button:Reset:2:levelingreset_$authorID:false:⚠️}}]
+    *$get[levelingsystem]*}{color:$getVar[embedcolor]}}{actionRow:{button:Toggle:2:toggleleveling_$authorID:false:🔄}{button:Settings:4:levelingsettings_$authorID:false}{button:Reset:2:levelingreset_$authorID:false:⚠️}}]
     
     
-    $let[levelingsystem;$advancedReplaceText[$checkCondition[$getGuildVar[levelsystem]==on];false;*Leveling is currently disabled*;true;*Leveling is currently enabled*]]
+    $let[levelingsystem;$advancedReplaceText[$getGuildVar[levelsystem];off;Leveling is currently disabled;on;Leveling is currently enabled]]
     
     $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
     {ephemeral}
@@ -29,11 +29,12 @@ module.exports = [{
     
     To get started, click on the "Toggle" button! To manage the settings regarding the said feature, press the "Settings" button.
     
-    $get[levelingsystem]}{color:$getVar[embedcolor]}}{actionRow:{button:Toggle:2:toggleleveling_$authorID:false:🔄}{button:Settings:4:levelingsettings_$authorID:false}{button:Reset:2:levelingreset_$authorID:false:⚠️}}]
+    *$get[levelingsystem]*}{color:$getVar[embedcolor]}}{actionRow:{button:Toggle:2:toggleleveling_$authorID:false:🔄}{button:Settings:4:levelingsettings_$authorID:false}{button:Reset:2:levelingreset_$authorID:false:⚠️}}]
     
     
-    $let[levelingsystem;$advancedReplaceText[$checkCondition[$getGuildVar[levelsystem]==on];false;*Leveling is currently disabled*;true;*Leveling is currently enabled*]]
+    $let[levelingsystem;$advancedReplaceText[$getGuildVar[levelsystem];off;Leveling is currently disabled;on;Leveling is currently enabled]]
     $let[resultmessage;$advancedReplaceText[$checkCondition[$getGuildVar[levelsystem]==on];true;Successfully enabled Leveling!;false;Successfully disabled Leveling!]]
+
     $setGuildVar[levelsystem;$get[newtoggledsetting];$guildID]
     $let[newtoggledsetting;$advancedReplaceText[$checkCondition[$getGuildVar[levelsystem]==on];true;off;false;on]]
     
@@ -316,7 +317,7 @@ Press the "Toggle" button to enable/disable the Level up Message or use the othe
         code: `$interactionUpdate[{newEmbed:{title:Exclusions}{description:This category is dedicated to choosing on what should be excluded from allowing xp!
 
 To manage a specific setting, use any of the buttons below to do so!
-    }{color:$getVar[embedcolor]}}{actionRow:{button:Go back:2:levelingsettings_$authorID:false:↩️}{button:Roles (Soon):2:levelingexcluderolessetting_$authorID:true}{button:Channels:2:levelingexcludechannelssetting_$authorID:false}{button:Categories:2:levelingexcludecategoriessetting_$authorID:false}}]
+    }{color:$getVar[embedcolor]}}{actionRow:{button:Go back:2:levelingsettings_$authorID:false:↩️}{button:Channels:2:levelingexcludechannelssetting_$authorID:false}{button:Categories:2:levelingexcludecategoriessetting_$authorID:false}}]
 
 
     $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
@@ -331,7 +332,7 @@ To manage a specific setting, use any of the buttons below to do so!
         code: `$interactionUpdate[{newEmbed:{title:Exclusions}{description:This category is dedicated to choosing on what should be excluded from allowing xp!
 
 To manage a specific setting, use any of the buttons below to do so!
-    }{color:$getVar[embedcolor]}}{actionRow:{button:Go back:2:levelingsettings_$authorID:false:↩️}{button:Roles (Soon):2:levelingexcluderolessetting_$authorID:true}{button:Channels:2:levelingexcludechannelssetting_$authorID:false}{button:Categories:2:levelingexcludecategoriessetting_$authorID:false}}]
+    }{color:$getVar[embedcolor]}}{actionRow:{button:Go back:2:levelingsettings_$authorID:false:↩️}{button:Channels:2:levelingexcludechannelssetting_$authorID:false}{button:Categories:2:levelingexcludecategoriessetting_$authorID:false}}]
 
 
     $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
@@ -538,6 +539,10 @@ $autoList[$nonEscape[$getGuildVar[levelingexcludedcategories]];, ;autoListCatego
     `
     }]
     
+
+    /* Parser code for re-adding
+    {button:Roles:2:levelingexcluderolessetting_$authorID:false}
+    */
 
     /* Might be used again
      * {

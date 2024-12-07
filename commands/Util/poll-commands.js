@@ -22,9 +22,9 @@ Either you have not specified an channel or channel exists but outside of this s
 
 $let[channeltarget;$findGuildChannel[$message;false]]
 $onlyIf[$message!=;Mention an channel or enter the channel id.]
+$onlyPerms[managechannels;You do not have \`ManageChannels\` permission to use this.]
 $cooldown[5s; Slow down! Don't spam the command!
 Time remaining: <t:$truncate[$divide[$sum[$getCooldownTime[5s;user;poll-set;$authorID];$dateStamp];1000]]:R>]
-$onlyPerms[managechannels;You do not have \`ManageChannels\` permission to use this.]
 `
 },{
     name: "poll-reset",
@@ -36,9 +36,9 @@ $onlyPerms[managechannels;You do not have \`ManageChannels\` permission to use t
     code: `$deleteVar[pollchannel;$guildID;main]
 Successfully reset Poll channel! Run \`suggest-set\` to set a channel again.
 $onlyIf[$getGuildVar[pollchannel]!=none;There is no channel to reset currently.]
+$onlyPerms[managechannels;You do not have \`ManageChannels\` permission to use this.]
 $cooldown[2s; Slow down! Don't spam the command!
 Time remaining: <t:$truncate[$divide[$sum[$getCooldownTime[2s;user;poll-reset;$authorID];$dateStamp];1000]]:R>]
-$onlyPerms[managechannels;You do not have \`ManageChannels\` permission to use this!]
 `
 },{
     name: "poll",
@@ -77,8 +77,8 @@ $onlyIf[$or[$splitText[1]==;$splitText[2]==;$splitText[3]==]==false;Hey there! Y
 
 A example of a usage should be \`$getGuildVar[prefix]$nonEscape[$commandInfo[poll;info.usage]]\`]
 $textSplit[$message;/]
+$onlyPerms[managemessages;You need to have \`ManageMessages\` permission to use this.]
 $cooldown[5s; Slow down! Don't spam the command!
 Time remaining: <t:$truncate[$divide[$sum[$getCooldownTime[5s;user;poll;$authorID];$dateStamp];1000]]:R>]
-$onlyPerms[managemessages;You need to have \`ManageMessages\` permission to proceed.]
 `
 }]

@@ -310,13 +310,13 @@ Welcome to Hangman Settings! To select a theme to use, use the dropdown menu bel
 {interaction}
 ]
 
+$let[embedtitle;$getEmbed[$channelID;$interactionData[message.id];1;title]]
 
  $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
   {ephemeral}
 {interaction}
   ]
-$let[embedtitle;$getEmbed[$channelID;$interactionData[message.id];1;title]]
-$onlyIf[$checkContains[$getSelectMenuValues[all];nature;sport;color;camp;fruit;discord;winter;pokemon]==true;]
+  $onlyIf[$checkContains[$getSelectMenuValues[all];nature;sport;color;camp;fruit;discord;winter;pokemon]==true;]
   $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==hangmansettings;]
 
   `

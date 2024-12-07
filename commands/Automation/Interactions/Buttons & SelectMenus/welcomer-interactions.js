@@ -6,15 +6,17 @@ module.exports = [{
 
 To get started, click on the "Toggle" button! To manage the settings regarding the said feature, press the "Settings" button.
 
-$get[welcomersystem]
+*$get[welcomersystem]*
 
 }{color:$getVar[embedcolor]}}{actionRow:{button:Toggle:2:togglewel_$authorID:false:🔄}{button:Settings:4:welsettings_$authorID:false}}]
+
+$let[welcomersystem;$advancedReplaceText[$getGuildVar[welcomesystem];off;Welcomer is currently disabled;on;Welcomer is currently enabled]]
 
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
 {ephemeral}
 {interaction}
 ]
-$let[welcomersystem;$advancedReplaceText[$getGuildVar[welcomesystem];off;*Welcomer is currently disabled*;on;*Welcomer is currently enabled*]]
+
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==welcomerhomebutton;]
 `
 },{
@@ -28,22 +30,21 @@ $interactionUpdate[{newEmbed:{title:Welcomer}{description:Welcomer is an way to 
 
 To get started, click on the "Toggle" button! To manage the settings regarding the said feature, press the "Settings" button.
 
-$get[welcomersystem]
+*$get[welcomersystem]*
 
 }{color:$getVar[embedcolor]}}{actionRow:{button:Toggle:2:togglewel_$authorID:false:🔄}{button:Settings:4:welsettings_$authorID:false}}]
 
 
+$let[welcomersystem;$advancedReplaceText[$getGuildVar[welcomesystem];off;Welcomer is currently disabled;on;Welcomer is currently enabled]]
+$let[resultmessage;$advancedReplaceText[$checkCondition[$getGuildVar[welcomesystem]==on];true;Successfully enabled Welcomer!;false;Successfully disabled Welcomer!]]
+
+$setGuildVar[welcomesystem;$get[newtoggledsetting];$guildID]
+$let[newtoggledsetting;$advancedReplaceText[$checkCondition[$getGuildVar[welcomesystem]==on];true;off;false;on]]
 
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
 {ephemeral}
 {interaction}
 ]
-
-$let[welcomersystem;$advancedReplaceText[$checkCondition[$getGuildVar[welcomesystem]==on];false;*Welcomer is currently disabled*;true;*Welcomer is currently enabled*]]
-$let[resultmessage;$advancedReplaceText[$checkCondition[$getGuildVar[welcomesystem]==on];true;Successfully enabled Welcomer!;false;Successfully disabled Welcomer!]]
-$setGuildVar[welcomesystem;$get[newtoggledsetting];$guildID]
-$let[newtoggledsetting;$advancedReplaceText[$checkCondition[$getGuildVar[welcomesystem]==on];true;off;false;on]]
-
 
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==togglewel;]
 

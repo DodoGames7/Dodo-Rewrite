@@ -332,6 +332,7 @@ Disabling this will cause the build to identify itself as a "Stable" build with 
 
 
 $let[pre-release;$advancedReplaceText[$getVar[pre_release_mode];on;Enabled;off;Disabled]]
+
     $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];You're not the author of this command! {ephemeral}
 {interaction}]
     $onlyIf[$getSelectMenuValues[all]==botdevmode;]

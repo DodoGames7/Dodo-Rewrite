@@ -52,12 +52,13 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[aut
 By default, this is enabled but you can choose to disable it for whatever reason.}{field:**Current Setting(s)**:
 **Include Bots**#COLON# \`$get[includebots]\`}{color:$getVar[embedcolor]}}{actionRow:{selectMenu:settingsmenu_$authorID:Select a option:1:1:false:{stringInput:Auto Reply:autoreply:Automatically reply to pings!:false}{stringInput:Include Bots:includebots:Whether or not to include bots in message logs.:false}{stringInput:Anonymous:anonymous:Hide moderator names being revealed:false}}}{actionRow:{button:Toggle:2:includebotstoggle_$authorID:false}}]
 
+$let[includebots;$advancedReplaceText[$getGuildVar[includebots];on;Enabled;off;Disabled]]
+
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
    {ephemeral}
 {interaction}
     ]
     
-$let[includebots;$advancedReplaceText[$getGuildVar[includebots];on;Enabled;off;Disabled]]
 $onlyIf[$getSelectMenuValues[all]==includebots;]
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==settingsmenu;]
 `

@@ -25,12 +25,13 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==setuplogshomebutton;
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:msgdeletelogchannelsetupmenu_$authorID:Select a channel to use:1:1:false:{channelInput:Text}}}{actionRow:{button:Home:2:setuplogshomebutton_$authorID:false:🏠}{button:Reset:2:msgdeletelogresetchannel_$authorID:false}}]
 
 
+$let[msgdeletelogchannel;$advancedReplaceText[$checkCondition[$getGuildVar[msglogdeletedchannel]==none];true;none;false;<#$getGuildVar[msglogdeletedchannel]> (\`$getGuildVar[msglogdeletedchannel]\`)]]
 
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
 {ephemeral}
 {interaction}
 ]
-$let[msgdeletelogchannel;$advancedReplaceText[$checkCondition[$getGuildVar[msglogdeletedchannel]==none];true;none;false;<#$getGuildVar[msglogdeletedchannel]> (\`$getGuildVar[msglogdeletedchannel]\`)]]
+
 $onlyIf[$getSelectMenuValues[all]==msgdeletelog;]
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==setuplogsmenu;]
 
@@ -125,12 +126,13 @@ $interactionUpdate[{newEmbed:{author:Message Delete:$clientAvatar}{title:Channel
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:msgeditloglogchannelsetupmenu_$authorID:Select a channel to use:1:1:false:{channelInput:Text}}}{actionRow:{button:Home:2:setuplogshomebutton_$authorID:false:🏠}{button:Reset:2:msgeditlogresetchannel_$authorID:false}}]
 
 
+$let[msglogeditchannel;$advancedReplaceText[$checkCondition[$getGuildVar[msglogeditchannel]==none];true;none;false;<#$getGuildVar[msglogeditchannel]> (\`$getGuildVar[msglogeditchannel]\`)]]
 
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
 {ephemeral}
 {interaction}
 ]
-$let[msglogeditchannel;$advancedReplaceText[$checkCondition[$getGuildVar[msglogeditchannel]==none];true;none;false;<#$getGuildVar[msglogeditchannel]> (\`$getGuildVar[msglogeditchannel]\`)]]
+
 $onlyIf[$getSelectMenuValues[all]==msgeditlog;]
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==setuplogsmenu;]
 
@@ -225,12 +227,13 @@ $interactionUpdate[{newEmbed:{author:Message Edit:$clientAvatar}{title:Channel S
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:banlogchannelsetupmenu_$authorID:Select a channel to use:1:1:false:{channelInput:Text}}}{actionRow:{button:Home:2:setuplogshomebutton_$authorID:false:🏠}{button:Reset:2:banlogresetchannel_$authorID:false}}]
 
 
+$let[banneduserschannel;$advancedReplaceText[$checkCondition[$getGuildVar[banneduserschannel]==none];true;none;false;<#$getGuildVar[banneduserschannel]> (\`$getGuildVar[banneduserschannel]\`)]]
 
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
 {ephemeral}
 {interaction}
 ]
-$let[banneduserschannel;$advancedReplaceText[$checkCondition[$getGuildVar[banneduserschannel]==none];true;none;false;<#$getGuildVar[banneduserschannel]> (\`$getGuildVar[banneduserschannel]\`)]]
+
 $onlyIf[$getSelectMenuValues[all]==banlogs;]
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==setuplogsmenu;]
 
@@ -325,12 +328,13 @@ $interactionUpdate[{newEmbed:{author:Ban:$clientAvatar}{title:Channel Setup}{des
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:unbanlogchannelsetupmenu_$authorID:Select a channel to use:1:1:false:{channelInput:Text}}}{actionRow:{button:Home:2:setuplogshomebutton_$authorID:false:🏠}{button:Reset:2:unbanlogresetchannel_$authorID:false}}]
 
 
+$let[unbanneduserschannel;$advancedReplaceText[$checkCondition[$getGuildVar[unbanneduserschannel]==none];true;none;false;<#$getGuildVar[unbanneduserschannel]> (\`$getGuildVar[unbanneduserschannel]\`)]]
 
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
 {ephemeral}
 {interaction}
 ]
-$let[unbanneduserschannel;$advancedReplaceText[$checkCondition[$getGuildVar[unbanneduserschannel]==none];true;none;false;<#$getGuildVar[unbanneduserschannel]> (\`$getGuildVar[unbanneduserschannel]\`)]]
+
 $onlyIf[$getSelectMenuValues[all]==unbanlogs;]
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==setuplogsmenu;]
 
@@ -425,12 +429,13 @@ $interactionUpdate[{newEmbed:{author:Unban:$clientAvatar}{title:Channel Setup}{d
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:Integrationlogchannelsetupmenu_$authorID:Select a channel to use:1:1:false:{channelInput:Text}}}{actionRow:{button:Home:2:setuplogshomebutton_$authorID:false:🏠}{button:Reset:2:Integrationlogresetchannel_$authorID:false}}]
 
 
+$let[Integrationchannel;$advancedReplaceText[$checkCondition[$getGuildVar[Integrationchannel]==none];true;none;false;<#$getGuildVar[Integrationchannel]> (\`$getGuildVar[Integrationchannel]\`)]]
 
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
 {ephemeral}
 {interaction}
 ]
-$let[Integrationchannel;$advancedReplaceText[$checkCondition[$getGuildVar[Integrationchannel]==none];true;none;false;<#$getGuildVar[Integrationchannel]> (\`$getGuildVar[Integrationchannel]\`)]]
+
 $onlyIf[$getSelectMenuValues[all]==integration;]
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==setuplogsmenu;]
 

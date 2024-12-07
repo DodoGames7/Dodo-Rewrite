@@ -6,15 +6,17 @@ module.exports = [{
 
 To get started, click on the "Toggle" button! To manage the settings regarding the said feature, press the "Settings" button.
 
-$get[leavesystem]
+*$get[leavesystem]*
 
 }{color:$getVar[embedcolor]}}{actionRow:{button:Toggle:2:toggleleave_$authorID:false:🔄}{button:Settings:4:leavesettings_$authorID:false}}]
+
+$let[leavesystem;$advancedReplaceText[$getGuildVar[leavesystem];off;Leave is currently disabled;on;Leave is currently enabled]]
 
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
 {ephemeral}
 {interaction}
 ]
-$let[leavesystem;$advancedReplaceText[$getGuildVar[leavesystem];off;*Leave is currently disabled*;on;*Leave is currently enabled*]]
+
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==leavehomebutton;]
 `
 },{
@@ -28,22 +30,21 @@ $interactionUpdate[{newEmbed:{title:Leave}{description:Leave just like Welcomer 
 
 To get started, click on the "Toggle" button! To manage the settings regarding the said feature, press the "Settings" button.
 
-$get[leavesystem]
+*$get[leavesystem]*
 
 }{color:$getVar[embedcolor]}}{actionRow:{button:Toggle:2:toggleleave_$authorID:false:🔄}{button:Settings:4:leavesettings_$authorID:false}}]
 
 
+$let[leavesystem;$advancedReplaceText[$getGuildVar[leavesystem];off;Leave is currently disabled;on;Leave is currently enabled]]
+$let[resultmessage;$advancedReplaceText[$checkCondition[$getGuildVar[leavesystem]==on];true;Successfully enabled Leave!;false;Successfully disabled Leave!]]
+
+$setGuildVar[leavesystem;$get[newtoggledsetting];$guildID]
+$let[newtoggledsetting;$advancedReplaceText[$checkCondition[$getGuildVar[leavesystem]==on];true;off;false;on]]
 
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
 {ephemeral}
 {interaction}
 ]
-
-$let[leavesystem;$advancedReplaceText[$checkCondition[$getGuildVar[leavesystem]==on];false;*Leave is currently disabled*;true;*Leave is currently enabled*]]
-$let[resultmessage;$advancedReplaceText[$checkCondition[$getGuildVar[leavesystem]==on];true;Successfully enabled Leave!;false;Successfully disabled Leave!]]
-$setGuildVar[leavesystem;$get[newtoggledsetting];$guildID]
-$let[newtoggledsetting;$advancedReplaceText[$checkCondition[$getGuildVar[leavesystem]==on];true;off;false;on]]
-
 
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==toggleleave;]
 

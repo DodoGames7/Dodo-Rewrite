@@ -25,7 +25,9 @@ $let[devbuild;$if[$getVar[pre_release_mode]==on;{footer:Testing is recommended:h
     $interactionUpdate[{newEmbed:{title:Bug Fixes}{description:
 * Made small code change to \`8ball\` to avoid potential issue
 * Fixed a weird part of \`credits\` interaction code to avoid issues
+* Fixed a problem where Welcomer and Leave could be enabled without the author command's permission
 * Fixed a leftover code still present in \`guess-the-pokemon\` command
+* Fixed permission errors being inconsistent for some commands
     }{color:$getVar[embedcolor]}$nonEscape[$get[devbuild]]}{actionRow:{button:Home:2:homebutton_$authorID:false:🏠}{button:Changes:2:versionchanges_$authorID:false}{button:Bug Fixes:2:versionbugfixes_$authorID:true}{button:Other:2:versionother_$authorID:false}}{actionRow:{button:Changelog history:5:https#COLON#//github.com/ddodogames/Dodo-Bot/releases:false:📜}}]
 
 $let[devbuild;$if[$getVar[pre_release_mode]==on;{footer:Testing is recommended:https#COLON#//us-east-1.tixte.net/uploads/dodogames.wants.solutions/warningsign.png};  ]]

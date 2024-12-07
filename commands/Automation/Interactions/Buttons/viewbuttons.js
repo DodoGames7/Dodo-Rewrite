@@ -10,6 +10,7 @@ $createArray[flags;$nonEscape[$get[flagschecker]]]
 $let[flagschecker;$advancedReplaceText[$nonEscape[$commandInfo[$get[cmdname];info.flags]];,;#SEMI#]]
 
 $let[cmdname;$advancedTextSplit[$interactionData[customId];_;3]]
+
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
 {ephemeral}
 {interaction}

@@ -25,11 +25,12 @@ The user appears to have left the server. The ablity to view their server inform
 {interaction}
 ]
 
+$let[user;$advancedTextSplit[$interactionData[customId];_;3]]
+
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
  {ephemeral}
 {interaction} 
   ]
- $let[user;$advancedTextSplit[$interactionData[customId];_;3]]
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==memberservinfo;]
   
 `
@@ -48,14 +49,17 @@ $interactionUpdate[{newEmbed:{title:Information for $get[username]}{url:$nonEsca
 
 
 
-$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
- {ephemeral}
-{interaction} 
-  ]
 $let[username;$advancedReplaceText[$checkCondition[$hasUserTag[$get[user]]==false];true;$username[$get[user]];false;$userTag[$get[user]]]]
 $let[botchecker;$advancedReplaceText[$checkCondition[$isBot[$get[user]]==true];true;Yes;false;No]]
 $let[userdms;$advancedReplaceText[$checkCondition[$isUserDmEnabled[$get[user]]==true];true;Enabled;false;Disabled]]
+
 $let[user;$advancedTextSplit[$interactionData[customId];_;3]]
+
+$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
+{ephemeral}
+{interaction}
+]
+
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==mainmeminfo;]
   
 `
