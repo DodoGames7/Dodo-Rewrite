@@ -5,10 +5,10 @@ info: {
     perms: ["`SendMessages`"]
 },
 aliases: ["randomhex"],
-code: `$title[Random Color]
+code: `$author[Random Color;https://us-east-1.tixte.net/uploads/dodogames.wants.solutions/paintlarger.png]
+$title[$getObjectProperty[api;name]]
 $addField[**RGB code**;$getObjectProperty[api;rgb]]
 $addField[**Hex code**;$getObjectProperty[api;hex]]
-$addField[**Color name**;$getObjectProperty[api;name]]
 $color[$getObjectProperty[api;hex]]
 $thumbnail[$getObjectProperty[api;color_image]]
 $createObject[api;$nonEscape[$get[jsonresponse]]]
