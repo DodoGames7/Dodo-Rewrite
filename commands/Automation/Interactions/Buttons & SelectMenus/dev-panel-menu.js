@@ -659,7 +659,7 @@ When the requirement is not met, the bot will simply leave the server.
 
         $interactionModal[Leave a server;leaveservermodalresult;
         {actionRow:
-            {textInput:Server ID:1:numberInput:true:e.g, $guildID:0:160}
+            {textInput:Server ID:1:numberInput:true:e.g, $guildRandomID:0:160}
         }]
 
 
