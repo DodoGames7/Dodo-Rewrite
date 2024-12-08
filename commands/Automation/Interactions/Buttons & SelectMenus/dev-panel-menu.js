@@ -3,7 +3,7 @@ module.exports = [{
     prototype: "button",
     code: `$interactionUpdate[{newEmbed:{title:Developer Panel}{description:This panel allows you to change some things the bot operates behind the scenes. 
     
-To change a option, use the select menu below to do so.}{color:Red}{thumbnail:https#COLON#//us-east-1.tixte.net/uploads/dodo-bot.wants.solutions/devsettings.png}}{actionRow:{selectMenu:devmenu_$authorID:Select a option:1:1:false:{stringInput:Bot Invitation Message:botwelcome:Whether or not the bot should greet new servers.:false:👋}{stringInput:Error Logging:errorlog:Send errors to specific channel.:false:📢}{stringInput:Embed color:botembedcolor:Change the current embed color used in all commands.:false:🎨}{stringInput:Pre-release:botdevmode:Whether or not to enable Pre-release mode.:false:🚧}{stringInput:Startup:botstartup:Choose a channel for bot's startup msgs to be sent:false:🚦}{stringInput:Show build info:showbuildinfo:Whether or not to enable "Build Info" button in stats cmd:false:🛠️}{stringInput:Member requirement:memberrequirement:How much members are required for new servers:false:📋}}}{actionRow:{button:Leave a server:2:leaveserverbutton_$authorID:false}}]
+To change a option, use the select menu below to do so.}{color:Red}{thumbnail:https#COLON#//us-east-1.tixte.net/uploads/dodo-bot.wants.solutions/devsettings.png}}{actionRow:{selectMenu:devmenu_$authorID:Select a option:1:1:false:{stringInput:Bot Invitation Message:botwelcome:Whether or not the bot should greet new servers.:false:👋}{stringInput:Error Logging:errorlog:Send errors to specific channel.:false:📢}{stringInput:Embed color:botembedcolor:Change the current embed color used in all commands.:false:🎨}{stringInput:Pre-release:botdevmode:Whether or not to enable Pre-release mode.:false:🚧}{stringInput:Startup:botstartup:Choose a channel for bot's startup msgs to be sent:false:🚦}{stringInput:Show build info:showbuildinfo:Whether or not to enable "Build Info" in version cmd:false:🛠️}{stringInput:Member requirement:memberrequirement:How much members are required for new servers:false:📋}}}{actionRow:{button:Leave a server:2:leaveserverbutton_$authorID:false}}]
 
 
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];You're not the author of this command! {ephemeral}
@@ -521,7 +521,7 @@ $interactionUpdate[{newEmbed:{title:Channel Setup}{description:Choose a channel 
     type: "interaction",
     prototype: "selectMenu",
     code: `$interactionUpdate[{newEmbed:{title:Show build info}{description:
-    This option allows you to either enable or disable "Build Info" button seen in \`stats\` command.
+This option allows you to either enable or disable "Build Info" page seen in \`--buildinfo\` flag of \`version\` command.
 
 When enabled, information such as branch, version codename, it's current progress, etc will be shown.
 }{field:**Current setting(s)**:
@@ -543,7 +543,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[aut
 $interactionFollowUp[$get[resultmessage];true]
 
 $interactionUpdate[{newEmbed:{title:Show build info}{description:
-    This option allows you to either enable or disable "Build Info" button seen in \`stats\` command.
+This option allows you to either enable or disable "Build Info" page seen in \`--buildinfo\` flag of \`version\` command.
 
 When enabled, information such as branch, version codename, it's current progress, etc will be shown.
 }{field:**Current setting(s)**:
