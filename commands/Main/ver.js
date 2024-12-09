@@ -15,6 +15,7 @@ Time remaining: <t:$truncate[$divide[$sum[$getCooldownTime[2s;user;version;$auth
   `
 },{
   name: "currentversion",
+  $if: "old",
   type: "awaited",
   code: `$title[Dodo-Bot version]
 $description[
