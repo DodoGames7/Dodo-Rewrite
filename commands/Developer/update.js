@@ -5,7 +5,7 @@ info: {
     perms: ["`SendMessages`"],
     dev: "true"
   },
-aliases: ["restartcmds", "reloadcmds"],
+aliases: ["restartcmds", "reloadcmds", "reload"],
 code: `$author[Commands has been reloaded!;$clientAvatar]
 $addField[Commands;
 * **Prefix:**  $commandsCount
