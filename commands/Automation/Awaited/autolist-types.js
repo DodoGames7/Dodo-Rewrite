@@ -8,7 +8,7 @@ module.exports = [{
     name: "autoListServers",
     type: "awaited",
     code: `
-* {value} - $guildID[{value}]
+* {value} - $guildID[$nonEscape[{value}]]
     `
 },{
     name: "autoListChannels",
