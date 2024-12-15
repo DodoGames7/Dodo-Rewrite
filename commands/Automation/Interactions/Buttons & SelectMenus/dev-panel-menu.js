@@ -663,7 +663,7 @@ When the requirement is not met, the bot will simply leave the server.
         }]
 
 
-        $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];You're not the author of this command! {ephemeral}
+        $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$  interactionData[author.id];You're not the author of this command! {ephemeral}
         {interaction}]
         $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==leaveserverbutton;]
         `
@@ -677,6 +677,8 @@ When the requirement is not met, the bot will simply leave the server.
 
         $onlyIf[$checkContains[$guildIds;$get[input]]==true;
        I am not in the server you specified.
+
+       To see which servers i'm currently in, run \`$getGuildVar[prefix]serverlist\` to do so!
        {ephemeral}
        {interaction}
         ]
@@ -693,7 +695,7 @@ When the requirement is not met, the bot will simply leave the server.
         {interaction}
         ]
 
-        $let[input;$excludeSpecialChars[$textInputValue[numberInput]]]
+        $let[input;$textInputValue[numberInput]]
 
         `
     }]

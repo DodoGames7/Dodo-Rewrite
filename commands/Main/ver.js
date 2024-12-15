@@ -33,7 +33,8 @@ $addButton[1;Bug Fixes;2;versionbugfixes_$authorID;false]
 $addButton[1;Changes;2;versionchanges_$authorID;false]
 
 $let[Revision;$advancedReplaceText[$checkCondition[$getVar[buildRevision]!=0];true; (Revision $getVar[buildRevision]);false; ]]
-$let[releasedatetype;$advancedReplaceText[$checkCondition[$getVar[showbuildinfo]==on];true;Build created on;false;Released on]]`
+$let[releasedatetype;$advancedReplaceText[$checkCondition[$getVar[showbuildinfo]==on];true;Last updated on;false;Released on]]
+`
 },{
   name: "versionbuildinfo",
   type: "awaited",

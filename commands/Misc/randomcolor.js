@@ -6,7 +6,7 @@ info: {
 },
 aliases: ["randomhex"],
 code: `$author[Random Color;https://us-east-1.tixte.net/uploads/dodogames.wants.solutions/paintlarger.png]
-$title[$getObjectProperty[api;name]]
+$title[There you go!]
 $addField[**RGB code**;$getObjectProperty[api;rgb]]
 $addField[**Hex code**;$getObjectProperty[api;hex]]
 $color[$getObjectProperty[api;hex]]
