@@ -102,7 +102,7 @@ $let[permslist;$toLocaleUpperCase[$userPerms[$get[botID];, ;$guildID]]]
     \`\`\`$toLocaleUpperCase[$userPerms[$get[botID];, ;$guildID]]\`\`\`
     }{color:$getVar[embedcolor]}}
 
-    {actionRow:{button:Compact:2:permsuncompactbutton_$get[botID]:false}}]
+    {actionRow:{button:Uncompact:2:permsuncompactbutton_$get[botID]:false}}]
 
     $onlyIf[$userPerms[$get[botID];, ;$guildID]!=;
     This bot does not seem to have any permissions added to it.
