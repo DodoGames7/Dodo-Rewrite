@@ -4,7 +4,7 @@ info: {
     description: "Returns a random color that you can use.",
     perms: ["`SendMessages`"]
 },
-aliases: ["randomhex"],
+aliases: ["randomhex", "randomrgb"],
 code: `$author[Random Color;https://us-east-1.tixte.net/uploads/dodogames.wants.solutions/paintlarger.png]
 $title[There you go!]
 $addField[**RGB code**;$getObjectProperty[api;rgb]]
