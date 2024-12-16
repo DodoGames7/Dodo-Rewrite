@@ -10,9 +10,9 @@ module.exports = [{
     $setObjectProperty[wyrdata;upvotes;$sum[$getObjectProperty[wyrdata;upvotes];1]]
     $createObject[wyrdata;$getMessageVar[wyr;$interactionData[message.id]]]
     
-    $setMessageVar[wyr-hasuservoted-$authorID;true;$interactionData[message.id]]
+    $setMessageVar[wyr_hasuservoted_$authorID;true;$interactionData[message.id]]
     
-    $onlyIf[$getMessageVar[wyr-hasuservoted-$authorID;$interactionData[message.id]]==false;
+    $onlyIf[$getMessageVar[wyr_hasuservoted_$authorID;$interactionData[message.id]]==false;
     You have already voted.
     {interaction}
     {ephemeral}
@@ -20,8 +20,8 @@ module.exports = [{
     
     $let[question2;$getEmbed[$channelID;$interactionData[message.id];1;field2.value]]
     $let[question1;$getEmbed[$channelID;$interactionData[message.id];1;field1.value]]
-    $if[$isVariableExist[wyr-hasuservoted-$authorID;main]==false]
-    $createTemporaryVar[main;wyr-hasuservoted-$authorID:false]
+    $if[$isVariableExist[wyr_hasuservoted_$authorID;main]==false]
+    $createTemporaryVar[main;wyr_hasuservoted_$authorID:false]
     $endif`
     },{
     name: "wyr2-votebutton",
@@ -35,9 +35,9 @@ module.exports = [{
     $setObjectProperty[wyrdata;downvotes;$sum[$getObjectProperty[wyrdata;downvotes];1]]
     $createObject[wyrdata;$getMessageVar[wyr;$interactionData[message.id]]]
     
-    $setMessageVar[wyr-hasuservoted-$authorID;true;$interactionData[message.id]]
+    $setMessageVar[wyr_hasuservoted_$authorID;true;$interactionData[message.id]]
     
-    $onlyIf[$getMessageVar[wyr-hasuservoted-$authorID;$interactionData[message.id]]==false;
+    $onlyIf[$getMessageVar[wyr_hasuservoted_$authorID;$interactionData[message.id]]==false;
     You have already voted.
     {interaction}
     {ephemeral}
@@ -45,7 +45,7 @@ module.exports = [{
     
     $let[question2;$getEmbed[$channelID;$interactionData[message.id];1;field2.value]]
     $let[question1;$getEmbed[$channelID;$interactionData[message.id];1;field1.value]]
-    $if[$isVariableExist[wyr-hasuservoted-$authorID]==false]
-    $createTemporaryVar[main;wyr-hasuservoted-$authorID:false]
+    $if[$isVariableExist[wyr_hasuservoted_$authorID]==false]
+    $createTemporaryVar[main;wyr_hasuservoted_$authorID:false]
     $endif`
     }]
