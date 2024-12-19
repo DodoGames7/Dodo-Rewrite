@@ -1,21 +1,21 @@
 const config = require("../config.json");
 
 module.exports = {
-  "main": {
+  "main": { // This is "table" name, tables can be managed by checking index.js under "tables:" option
   // Game variables
   trivia_type: "multiple",
   trivia_difficulty: "medium",
   flood_difficulty: 13,
   wyr: {upvotes: 0, downvotes: 0},
   hangman_theme: "nature",
-  // Bot variables (do not touch)
+  // Main variables (do not touch)
   autopingreply: "off",
   includebots: "on",
   version: "2.2.2",
   versionCodename: "Electric",
   libraryversiondevcheck: "off",
   buildStatus: "Incomplete",
-  buildDate: "1734372839398",
+  buildDate: "1734613736606",
   buildType: "Pre-release",
   buildBranch: "gitbuilds",
   buildRevision: "0",
@@ -59,7 +59,7 @@ module.exports = {
   // levelingexcludedroles: "none",
   levelingexcludedchannels: "none",
   levelingexcludedcategories: "none",
-  // Developer variables
+  // Developer & other variables
   errorchannel: "none",
   errorsystem: "off",
   startupchannel: "none",
