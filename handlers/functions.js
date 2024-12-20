@@ -30,13 +30,6 @@ $let[userInput;{userID}]`
    type: "aoi.js",
    params: ["userID"],
    code: `https://discord.com/users/{userID}`
-  },{ // Not used yet
-    name: "$fallbackAttachment",
-    type: "aoi.js",
-    params: ["url", "fallbacktoUse"],
-    code: `$advancedReplaceText[$checkCondition[$IsValidImageLink[$get[Input]]==true];true;$get[Input];false;$get[FallbackInput]]
-$let[FallbackInput;{fallbacktoUse}]
-$let[Input;{url}]`
   },{
     name: "$autoList",
     type: "aoi.js",
@@ -99,3 +92,18 @@ $let[createlist;$advancedReplaceText[{text};{seperator};#SEMI#]]`
     }
   }
 }]
+
+
+
+/* Not used yet
+
+{
+name: "$fallbackAttachment",
+type: "aoi.js",
+params: ["url", "fallbacktoUse"],
+code: `$advancedReplaceText[$checkCondition[$IsValidImageLink[$get[Input]]==true];true;$get[Input];false;$get[FallbackInput]]
+$let[FallbackInput;{fallbacktoUse}]
+$let[Input;{url}]`
+}
+
+*/
