@@ -10,6 +10,8 @@ $ephemeral
 $interactionUpdate[
 $title[Changes]
 $description[
+* Build info is now a flag as part of \`version\` command
+   * To access the info, run \`$getGuildVar[prefix]version --buildinfo\` to do so!
 * Support for returning banner link has been added to \`user\` command
 * Slightly updated \`userinfo\` design to use markdowns
 * Updated Github links to use the new username
@@ -39,7 +41,7 @@ $ephemeral
 $interactionUpdate[
 $title[Bug Fixes]
 $description[
-*No Bug fixes has been added yet*
+*No Bug fixes have been added yet*
 ]
 $if[$getGlobalVar[pre_release]==on;
 $attachment[./assets/warning.png;warning.png]
@@ -70,6 +72,7 @@ $description[
 * "Current setting(s)" seen in some places has been renamed to "Current configuration"
 * (Source Code) changed the placing for local assets used in the bot
 * (Source Code) Revision will now also appear on startup message (for consoles)
+* Other minor adjustments have been added
 ]
 $if[$getGlobalVar[pre_release]==on;
 $attachment[./assets/warning.png;warning.png]
@@ -93,7 +96,7 @@ $onlyIf[$advancedTextSplit[$customID;_;1]==$authorID;$interactionReply[You're no
 $ephemeral
 ]]
 
-$let[releasedatetype;$advancedReplace[$checkCondition[$getGlobalVar[pre_release]==on];true;Build created on;false;Released on]]
+$let[releasedatetype;$advancedReplace[$checkCondition[$getGlobalVar[pre_release]==on];true;Last updated on;false;Released on]]
 
 $interactionUpdate[
 $title[Dodo-Bot Version]

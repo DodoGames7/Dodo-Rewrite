@@ -25,8 +25,5 @@ $addField[**ForgeScript**;$get[fsversion];true]
 $addField[**Node.js**;\`$nodeVersion\`;true]
 $addField[**Dodo-Bot**;$get[dodobotversion];true]
 $color[$getGlobalVar[embedcolor]]
-$if[$getGlobalVar[showbuildinfo]==on;
-$addActionRow
-$addButton[buildinfo_$authorID;Build Info;Secondary]
-]`
+`
 }
