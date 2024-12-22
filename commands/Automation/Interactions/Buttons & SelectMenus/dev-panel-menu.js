@@ -685,6 +685,8 @@ When the requirement is not met, the bot will simply leave the server.
 
         $onlyIf[$guildExists[$get[input]]==true;
         Please enter a valid server id to proceed.
+
+        -# This error can also happen if the server specified is not cached
         {ephemeral}
         {interaction}
         ]
