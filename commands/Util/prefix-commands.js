@@ -28,7 +28,7 @@ Time remaining: <t:$truncate[$divide[$sum[$getCooldownTime[2s;user;prefix;$autho
     aliases: "reset-prefix",
     code: `$deleteVar[prefix;$guildID;main]
 The prefix has been successfully reset. <3
-$onlyIf[$getGuildVar[prefix]!=$getGuildVar[originalprefix];Cannot reset when the prefix is default.]
+$onlyIf[$getGuildVar[prefix]!=$getVar[originalprefix];Cannot reset when the prefix is default.]
 $onlyPerms[manageguild;You do not have \`ManageGuild\` permission to use this.]
 $cooldown[2s; Slow down! Don't spam the command!
 Time remaining: <t:$truncate[$divide[$sum[$getCooldownTime[2s;user;prefix-reset;$authorID];$dateStamp];1000]]:R>]
