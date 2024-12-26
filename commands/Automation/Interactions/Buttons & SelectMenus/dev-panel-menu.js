@@ -6,7 +6,7 @@ module.exports = [{
 To change a option, use the select menu below to do so.}{color:Red}{thumbnail:https#COLON#//us-east-1.tixte.net/uploads/dodo-bot.wants.solutions/devsettings.png}}{actionRow:{selectMenu:devmenu_$authorID:Select a option:1:1:false:{stringInput:Bot Invitation Message:botwelcome:Whether or not the bot should greet new servers.:false:👋}{stringInput:Error Logging:errorlog:Send errors to specific channel.:false:📢}{stringInput:Embed color:botembedcolor:Change the current embed color used in all commands.:false:🎨}{stringInput:Pre-release:botdevmode:Whether or not to enable Pre-release mode.:false:🚧}{stringInput:Startup:botstartup:Choose a channel for bot's startup msgs to be sent:false:🚦}{stringInput:Show build info:showbuildinfo:Whether or not to enable "Build Info" in version cmd:false:🛠️}{stringInput:Member requirement:memberrequirement:How much members are required for new servers:false:📋}}}{actionRow:{button:Leave a server:2:leaveserverbutton_$authorID:false}}]
 
 
-$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];You're not the author of this command! {ephemeral}
+$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you. {ephemeral}
 {interaction}]
     $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==developermainpage;]
 `
@@ -24,7 +24,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[aut
 
 $let[botinvitationconfig;$advancedReplaceText[$checkCondition[$getVar[botinvitationmessage]==on];true;Enabled;false;Disabled]]
 
-$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];You're not the author of this command! {ephemeral}
+$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you. {ephemeral}
 {interaction}]
     $onlyIf[$getSelectMenuValues[all]==botwelcome;]
         $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==devmenu;]
@@ -50,7 +50,7 @@ $setVar[botinvitationmessage;$get[newtoggledsetting]]
 $let[newtoggledsetting;$advancedReplaceText[$checkCondition[$getVar[botinvitationmessage]==on];true;off;false;on]]
 
 
- $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];You're not the author of this command! {ephemeral}
+ $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you. {ephemeral}
 {interaction}]
         $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==botgreettoggle;]
 
@@ -75,7 +75,7 @@ $onlyIf[$getVar[errorsdisabled]==false;To configure this option, you need to dis
 {interaction}
 ]
 
-    $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];You're not the author of this command! {ephemeral}
+    $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you. {ephemeral}
 {interaction}]
     $onlyIf[$getSelectMenuValues[all]==errorlog;]
         $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==devmenu;]`
@@ -101,7 +101,7 @@ $let[resultmessage;$advancedReplaceText[$checkCondition[$getVar[errorsystem]==on
 $let[newtoggledsetting;$advancedReplaceText[$checkCondition[$getVar[errorsystem]==on];true;off;false;on]]
 
 
- $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];You're not the author of this command! {ephemeral}
+ $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you. {ephemeral}
 {interaction}]
         $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==errorlogtoggle;]
 
@@ -121,7 +121,7 @@ $interactionUpdate[{newEmbed:{title:Channel Setup}{description:Choose a channel 
     $let[errorchannel;$advancedReplaceText[$checkCondition[$getVar[errorchannel]==none];true;none;false;<#$getVar[errorchannel]> (\`$getVar[errorchannel]\`)]]
 
 
-$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];You're not the author of this command! {ephemeral}
+$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you. {ephemeral}
 {interaction}]
         $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==errorlogsetupchannel;]
 `
@@ -222,7 +222,7 @@ When an error occurs, information such as the server name, it's id, alongside wi
 
 
 
-$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];You're not the author of this command! {ephemeral}
+$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you. {ephemeral}
 {interaction}]
         $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==errorlogpage;]
 `
@@ -236,7 +236,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[aut
 }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Set Color:2:setbotembedcolor_$authorID:false}{button:Preview:2:embedcolorpreview_$authorID:false}{button:Reset:2:resetembedcolor_$authorID:false}}]
 
 
-    $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];You're not the author of this command! {ephemeral}
+    $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you. {ephemeral}
 {interaction}]
     $onlyIf[$getSelectMenuValues[all]==botembedcolor;]
         $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==devmenu;]
@@ -251,7 +251,7 @@ $interactionModal[Set Color;embedcolorsetresult;
   }]
 
 
-$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];You're not the author of this command! {ephemeral}
+$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you. {ephemeral}
 {interaction}]
         $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==setbotembedcolor;]
 `
@@ -333,7 +333,7 @@ Disabling this will cause the build to identify itself as a "Stable" build with 
 
 $let[pre-release;$advancedReplaceText[$getVar[pre_release_mode];on;Enabled;off;Disabled]]
 
-    $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];You're not the author of this command! {ephemeral}
+    $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you. {ephemeral}
 {interaction}]
     $onlyIf[$getSelectMenuValues[all]==botdevmode;]
         $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==devmenu;]
@@ -358,7 +358,7 @@ $let[resultmessage;$advancedReplaceText[$checkCondition[$getVar[pre_release_mode
 $let[newtoggledsetting;$advancedReplaceText[$checkCondition[$getVar[pre_release_mode]==on];true;off;false;on]]
 
 
-    $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];You're not the author of this command! {ephemeral}
+    $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you. {ephemeral}
 {interaction}]
 
         $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==togglebotdevmode;]
@@ -377,7 +377,7 @@ This option let's you set a channel for the bot to inform users that it became o
         $let[startupchannel;$advancedReplaceText[$checkCondition[$getVar[startupchannel]==none];true;none;false;<#$getVar[startupchannel]> (\`$getVar[startupchannel]\`)]]
     
     
-        $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];You're not the author of this command! {ephemeral}
+        $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you. {ephemeral}
     {interaction}]
         $onlyIf[$getSelectMenuValues[all]==botstartup;]
             $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==devmenu;]
@@ -400,7 +400,7 @@ This option let's you set a channel for the bot to inform users that it became o
       $setVar[startupchannelsystem;$get[newtoggledsetting]]
     $let[newtoggledsetting;$advancedReplaceText[$checkCondition[$getVar[startupchannelsystem]==on];true;off;false;on]]
     
-        $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];You're not the author of this command! {ephemeral}
+        $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you. {ephemeral}
     {interaction}]
             $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==botstartuptoggle;]
             `},{
@@ -418,7 +418,7 @@ $interactionUpdate[{newEmbed:{title:Channel Setup}{description:Choose a channel 
         $let[startupchannel;$advancedReplaceText[$checkCondition[$getVar[startupchannel]==none];true;none;false;<#$getVar[startupchannel]> (\`$getVar[startupchannel]\`)]]
     
     
-    $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];You're not the author of this command! {ephemeral}
+    $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you. {ephemeral}
     {interaction}]
             $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==setbotstartupchannel;]
     `
@@ -514,7 +514,7 @@ $interactionUpdate[{newEmbed:{title:Channel Setup}{description:Choose a channel 
     $let[startupfeature;$advancedReplaceText[$checkCondition[$getVar[startupchannelsystem]==on];true;Enabled;false;Disabled]]
         $let[startupchannel;$advancedReplaceText[$checkCondition[$getVar[startupchannel]==none];true;none;false;<#$getVar[startupchannel]> (\`$getVar[startupchannel]\`)]]
     
-        $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];You're not the author of this command! {ephemeral}
+        $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you. {ephemeral}
     {interaction}]
             $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==startupbotpage;]
             `},{
@@ -531,7 +531,7 @@ When enabled, information such as branch, version codename, it's current progres
 
 $let[showbuildinfo;$advancedReplaceText[$checkCondition[$getVar[showbuildinfo]==on];true;Enabled;false;Disabled]]
 
-$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];You're not the author of this command! {ephemeral}
+$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you. {ephemeral}
 {interaction}]
     $onlyIf[$getSelectMenuValues[all]==showbuildinfo;]
         $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==devmenu;]
@@ -557,7 +557,7 @@ $setVar[showbuildinfo;$get[newtoggledsetting]]
 $let[newtoggledsetting;$advancedReplaceText[$checkCondition[$getVar[showbuildinfo]==on];true;off;false;on]]
 
 
- $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];You're not the author of this command! {ephemeral}
+ $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you. {ephemeral}
 {interaction}]
         $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==showbuildinfotoggle;]
 
@@ -574,7 +574,7 @@ When the requirement is not met, the bot will simply leave the server.
 }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Set requirement:2:setmemberrequirement_$authorID:false}{button:Reset:2:resetmemberrequirement_$authorID:false}}]
 
 
-    $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];You're not the author of this command! {ephemeral}
+    $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you. {ephemeral}
 {interaction}]
     $onlyIf[$getSelectMenuValues[all]==memberrequirement;]
         $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==devmenu;]
@@ -589,7 +589,7 @@ $interactionModal[Set requirement;memberrequirementsetresult;
   }]
 
 
-$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];You're not the author of this command! {ephemeral}
+$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you. {ephemeral}
 {interaction}]
         $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==setmemberrequirement;]
 `
@@ -663,8 +663,10 @@ When the requirement is not met, the bot will simply leave the server.
         }]
 
 
-        $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$  interactionData[author.id];You're not the author of this command! {ephemeral}
-        {interaction}]
+        $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
+        {ephemeral}
+        {interaction}
+        ]
         $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==leaveserverbutton;]
         `
     },{
