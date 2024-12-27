@@ -1,7 +1,7 @@
 module.exports = [{
   type: "interaction",
   prototype: "selectMenu",
-  code: `$interactionUpdate[{newEmbed:{title:Main}{field:**General commands**:\`ping\`, \`commandinfo\`, \`perms\`, \`settings\`}{field:**Bot related**:\`stats\`, \`version\`, \`invite\`, \`credits\`, \`about\`, \`report\`, \`gitbuilds\`}{color:$getVar[embedcolor]}}{actionRow:{selectMenu:helpmenu_$authorID:Select a module:1:1:false:{stringInput:Main:main:Explore commands from Main module:false}{stringInput:Entertainment:entertainment:Explore commands from Entertainment module:false}{stringInput:Leveling:leveling:Explore commands from Leveling module:false}{stringInput:Util:util:Explore commands from Util module:false}$nonEscape[$get[devmodule]]}}]
+  code: `$interactionUpdate[{newEmbed:{title:Main}{field:**General commands**:\`ping\`, \`commandinfo\`, \`perms\`, \`settings\`}{field:**Bot related**:\`stats\`, \`version\`, \`invite\`, \`credits\`, \`about\`, \`report\`, \`canary\`}{color:$getVar[embedcolor]}}{actionRow:{selectMenu:helpmenu_$authorID:Select a module:1:1:false:{stringInput:Main:main:Explore commands from Main module:false}{stringInput:Entertainment:entertainment:Explore commands from Entertainment module:false}{stringInput:Leveling:leveling:Explore commands from Leveling module:false}{stringInput:Util:util:Explore commands from Util module:false}$nonEscape[$get[devmodule]]}}]
 
 $let[devmodule;$if[$checkContains[$clientOwnerIDs[| ];$authorID]==true;{stringInput:Developer:dev:Explore commands from Developer module:false};  ]]
   

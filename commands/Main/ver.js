@@ -40,8 +40,7 @@ $let[releasedatetype;$advancedReplaceText[$checkCondition[$getVar[showbuildinfo]
   type: "awaited",
   code: `$title[Build Info]
 $addField[Progress;
-* **Status**: $getVar[buildStatus]
-* **Type**: $getVar[buildType]
+$getVar[buildStatus]
 ;true]
 $addField[General;
 * **Dodo-Bot**: v$getVar[version]
