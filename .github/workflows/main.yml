@@ -23,3 +23,5 @@ jobs:
           automatic_release_tag: "latestcanary"
           prerelease: true
           title: "Latest canary build"
+          files: |
+            LICENSE
