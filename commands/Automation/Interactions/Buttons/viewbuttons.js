@@ -1,7 +1,7 @@
 module.exports = [{
     type: "interaction",
     prototype: "button",
-    code: `$interactionReply[{newEmbed:{title:Flags of this command}{description:The following flags is available for this command#COLON#
+    code: `$interactionReply[{newEmbed:{title:Flags of this command}{description:The following flags are available for this command#COLON#
 
 $arrayJoin[flags;, ]
     }{color:$getVar[embedcolor]}};all;true]
