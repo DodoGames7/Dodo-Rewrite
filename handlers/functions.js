@@ -60,7 +60,7 @@ $let[createlist;$advancedReplaceText[{text};{seperator};#SEMI#]]`
   name: "$excludeSpecialChars",
   type: "aoi.js",
   params: ["text"],
-  code: `$removeContains[{text};+;-;/;%;&;!;?;@;^;*;<;>;$;#;.;_;=;~]`
+  code: `$removeContains[{text};+;-;/;%;&;!;?;@;^;*;<;>;$;#;.;_;=;~;|]`
 },{
   name: "$randomColor", // Exclusive to user apps for now
   type: "djs",
