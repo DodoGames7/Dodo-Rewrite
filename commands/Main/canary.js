@@ -8,7 +8,7 @@ module.exports = {
     code: `$title[About Canary]
 $addField[How to test?;For those who want to host them on their bots. You can download the files from the [canary](https://github.com/ddodogames/Dodo-Bot/tree/canary) branch on Github.
 
-Alternatively, you can invite Dodo Canary (using the button below) to a server to directly test latest pre-release builds (prefix: \`d?\`).
+Alternatively, you can invite Dodo Canary (using the button below) to a server to directly test latest pre-release build (prefix: \`d?\`).
 ]
 $addField[Introduction;Canary is a way to test pre-release builds of upcoming versions of Dodo-Bot before they eventually release as a stable version.
 

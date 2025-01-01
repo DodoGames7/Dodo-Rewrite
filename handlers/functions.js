@@ -24,7 +24,12 @@ $let[userInput;{userID}]`
    name: "$userURL",
    type: "aoi.js",
    params: ["userID"],
-   code: `https://discord.com/users/{userID}`
+   code: `https://discord.com/users/{userID}  `
+  },{
+    name: "$commandExists",
+    type: "aoi.js",
+    params: ["name"],
+    code: `$checkCondition[$commandInfo[$toLowerCase[{name}];name]!=]`
   },{
     name: "$autoList",
     type: "aoi.js",

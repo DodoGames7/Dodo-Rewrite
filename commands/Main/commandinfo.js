@@ -24,7 +24,7 @@ $createArray[perms;$nonEscape[$get[permschecker]]]
 $let[permschecker;$advancedReplaceText[$nonEscape[$commandInfo[$get[cmdname];info.perms]];,;#SEMI#]]
 
 $onlyIf[$commandInfo[$get[cmdname];info.dev]==;Viewing Developer commands is unsupported.]
-$onlyIf[$commandInfo[$get[cmdname];name]!=;The command specified does not appear to exist. Try entering a command that exists within the bot itself.]
+$onlyIf[$commandExists[$get[cmdname]]==true;The command specified does not appear to exist. Try entering a command that exists within the bot itself.]
 $let[cmdname;$toLowerCase[$message]]
 $onlyIf[$message!=;Enter a command name to view it's information about.]
 $cooldown[2s;Slow down! Don't spam the command!

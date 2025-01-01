@@ -5,7 +5,7 @@ module.exports = [{
     perms: ["`SendMessages`"],
     dev: "true"
   },
-  aliases: ["developer-panel", "dev-settings"],
+  aliases: ["developer-panel", "dev-settings", "devpanel"],
   code: `$title[Developer panel]
 $description[This panel allows you to change some things the bot operates behind the scenes.
     

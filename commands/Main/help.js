@@ -1,7 +1,7 @@
 module.exports = {
   name: "help",
   info: {
-    description: "Allows you to check all available commands of the bot.",
+    description: "Let's you check all available commands of the bot.",
     perms: ["`SendMessages`"]
 },
   code: `$title[Help Menu]
