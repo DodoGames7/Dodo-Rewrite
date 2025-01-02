@@ -124,7 +124,7 @@ $ephemeral
     $interactionUpdate[
     $title[Developer]
     $addField[**Tools**;
-\`eval\`, \`exec\`, \`update\`, \`jseval\`, \`readfile\`
+\`eval\`, \`exec\`, \`update\`, \`serverlist\`, \`jseval\`, \`readfile\`
     ]
 $addField[**Bot Management**;
 \`shutdown\`, \`dev-panel\` \`set-customstatus\`]
