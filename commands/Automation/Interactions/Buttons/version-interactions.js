@@ -73,6 +73,7 @@ $description[
 * "Current setting(s)" seen in some places has been renamed to "Current configuration"
 * (Source Code) changed the placing for local assets used in the bot
 * (Source Code) Revision will now also appear on startup message (for consoles)
+* Prefix is no longer case sensitive
 * Other minor adjustments have been added
 ]
 $if[$getGlobalVar[pre_release]==on;

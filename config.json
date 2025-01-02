@@ -1,5 +1,6 @@
 {
     "prefix": "d!",
+    "prefixCaseInsensitive": false,
     "BotToken": "",
     "Embedcolor": "#265999",
     "MobileStatus": false,
