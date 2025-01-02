@@ -43,7 +43,7 @@ $ephemeral
 $interactionUpdate[
 $title[Bug Fixes]
 $description[
-*No Bug fixes have been added yet*
+* Fixed a problem in \`gitbuilds\` (now called \`canary\`) that would have the content out of place
 ]
 $if[$getGlobalVar[pre_release]==on;
 $attachment[./assets/warning.png;warning.png]
