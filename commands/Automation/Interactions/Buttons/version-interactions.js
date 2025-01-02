@@ -15,6 +15,7 @@ $description[
 * Support for returning banner link has been added to \`user\` command
 * Slightly updated \`userinfo\` design to use markdowns
 * Updated Github links to use the new username
+* Bumped ForgeScript version to \`2.1.0\`
 ]
 $if[$getGlobalVar[pre_release]==on;
 $attachment[./assets/warning.png;warning.png]

@@ -560,7 +560,7 @@ $let[showbuildinfo;$advancedReplace[$getGlobalVar[showbuildinfo];off;Disabled;on
 
 $interactionReply[
 $title[Show build info]
-$description[This option allows you to either enable or disable "Build Info" page seen in \`--buildinfo\` flag of \`version\` command.
+$description[When enabled, a button labeled "Build Info" will show up in \`stats\` command. By default, this is enabled for Pre-release builds besides Beta ones.
 
 If you think this is sensitive information then press the "Toggle" button to disable it (if it was enabled by default).]
 $addField[Current configuration;$get[showbuildinfo]]
