@@ -12,7 +12,7 @@ buildNumber: "2360",
 buildStatus: "Incomplete",
 buildBranch: "canary-rebase",
 buildRevision: "0",
-buildDate: "1735801713787",
+buildDate: "1735801805577",
 showbuildinfo: "on",
 AllowBotMembers: config.AllowBotMembers,
 prefix: config.prefix,
@@ -61,6 +61,5 @@ trivia_type: "multiple",
 trivia_difficulty: "medium",
 flood_difficulty: 13,
 wyr: {upvotes: 0, downvotes: 0},
-hangman_theme: "nature",
-
+hangman_theme: "nature"
 }
