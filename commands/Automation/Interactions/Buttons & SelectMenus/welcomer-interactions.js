@@ -55,7 +55,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==togglewel;]
     prototype: "button",
     code: `$interactionUpdate[{newEmbed:{title:Welcomer Settings}{description: Welcome to Welcomer settings! Select a option to change.
 
- }{field:**Current Setting(s)**:
+ }{field:**Current Setup**:
 * **Channel#COLON#** $get[welcomerchannel]
 * **Message Type#COLON#** \`$toLocaleUpperCase[$getGuildVar[welcometype]]\`
 }{color:$getVar[embedcolor]}}{actionRow:{button:Home:2:welcomerhomebutton_$authorID:false:🏠}{button:Channel:2:welcomerchannelbutton_$authorID:false}{button:Message:2:welcomermessagebutton_$authorID:false}{button:Placeholders:2:welcomerplaceholders_$authorID:false}}]

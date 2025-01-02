@@ -17,7 +17,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[aut
     When Dodo-Bot gets added to a new server, it will greet members there with it's features including telling them it's default prefix. When this is disabled, the bot won't say anything when it gets added to new servers.
 
     By default, this is enabled to let people know the prefix easily instead of just guessing randomly to figure out.
-}{field:**Current setting(s)**:
+}{field:**Current Setup**:
 **Bot Invitation Message**#COLON# \`$get[botinvitationconfig]\`
 }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:botgreettoggle_$authorID:false:🔄}}]
 
@@ -39,7 +39,7 @@ $interactionUpdate[{newEmbed:{title:Bot Invitation Message}{description:
     When Dodo-Bot gets added to a new server, it will greet members there with it's features including telling them it's default prefix. When this is disabled, the bot won't say anything when it gets added to new servers.
 
     By default, this is enabled to let people know the prefix easily instead of just guessing randomly to figure out.
-}{field:**Current setting(s)**:
+}{field:**Current Setup**:
 **Bot Invitation Message**#COLON# \`$get[botinvitationconfig]\`
 }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:botgreettoggle_$authorID:false:🔄}}]
 
@@ -62,7 +62,7 @@ $let[newtoggledsetting;$advancedReplaceText[$checkCondition[$getVar[botinvitatio
     Often, you get frustrated not knowing whether or not, your bot has errors. This setting is dedicated to send errors caused by a broken command to a specific channel depending on your choice. There's also an option to enable it.
 
 When an error occurs, information such as the server name, it's id, alongside with the command name and the error will be included in logs to help the bot owners with some useful information regarding where does the error come from.
-}{field:**Current Setting(s)**:
+}{field:**Current Setup**:
 * **Error log**#COLON# \`$get[errorsystem]\`
 * **Error Channel**#COLON# $get[errorchannel]
 }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:errorlogtoggle_$authorID:false:🔄}{button:Set channel:2:errorlogsetupchannel_$authorID:false}}]
@@ -89,7 +89,7 @@ $interactionUpdate[{newEmbed:{title:Error Logging}{description:
     Often, you get frustrated not knowing whether or not, your bot has errors. This setting is dedicated to send errors caused by a broken command to a specific channel depending on your choice. There's also an option to enable it.
 
 When an error occurs, information such as the server name, it's id, alongside with the command name and the error will be included in logs to help the bot owners with some useful information regarding where does the error come from.
-}{field:**Current Setting(s)**:
+}{field:**Current Setup**:
 * **Error log**#COLON# \`$get[errorsystem]\`
 * **Error Channel**#COLON# $get[errorchannel]
 }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:errorlogtoggle_$authorID:false:🔄}{button:Set channel:2:errorlogsetupchannel_$authorID:false}}]
@@ -212,7 +212,7 @@ $interactionUpdate[{newEmbed:{title:Error Logging}{description:
     Often, you get frustrated not knowing whether or not, your bot has errors. This setting is dedicated to send errors caused by a broken command to a specific channel depending on your choice. There's also an option to enable it.
 
 When an error occurs, information such as the server name, it's id, alongside with the command name and the error will be included in logs to help the bot owners with some useful information regarding where does the error come from.
-}{field:**Current Setting(s)**:
+}{field:**Current Setup**:
 * **Error log**#COLON# \`$get[errorsystem]\`
 * **Error Channel**#COLON# $get[errorchannel]
 }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:errorlogtoggle_$authorID:false:🔄}{button:Set channel:2:errorlogsetupchannel_$authorID:false}}]
@@ -326,7 +326,7 @@ $interactionUpdate[{newEmbed:{title:Embed color}{description:
    This option allows you on whether or not the current build used should be marked as development build. By default, it is commonly enabled for development builds as expected.
 
 Disabling this will cause the build to identify itself as a "Stable" build with development build warnings being absent as well!
-}{field:**Current Setting(s)**:
+}{field:**Current Setup**:
 **Pre-release**#COLON# \`$get[pre-release]\`
 }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:togglebotdevmode_$authorID:false}}]
 
@@ -346,7 +346,7 @@ $interactionUpdate[{newEmbed:{title:Pre-release}{description:
    This option allows you on whether or not the current build used should be marked as development build. By default, it is commonly enabled for development builds as expected.
 
 Disabling this will cause the build to identify itself as a "Stable" build with development build warnings being absent as well!
-}{field:**Current Setting(s)**:
+}{field:**Current Setup**:
 **Pre-release**#COLON# \`$get[pre-release]\`
 }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:togglebotdevmode_$authorID:false}}]
 
@@ -367,7 +367,7 @@ $let[newtoggledsetting;$advancedReplaceText[$checkCondition[$getVar[pre_release_
             prototype: "selectMenu",
             code: `$interactionUpdate[{newEmbed:{title:Startup}{description:
 This option let's you set a channel for the bot to inform users that it became online to use.
-}{field:**Current Setting(s)**:
+}{field:**Current Setup**:
 * **Startup**#COLON# \`$get[startupfeature]\`
 * **Startup channel**#COLON# $get[startupchannel]
 }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:botstartuptoggle_$authorID:false:🔄}{button:Set Channel:2:setbotstartupchannel_$authorID:false}}]
@@ -387,7 +387,7 @@ This option let's you set a channel for the bot to inform users that it became o
             code: `$interactionFollowUp[$get[resultmessage];true]
     $interactionUpdate[{newEmbed:{title:Startup}{description:
 This option let's you set a channel for the bot to inform users that it became online to use.
-}{field:**Current Setting(s)**:
+}{field:**Current Setup**:
 * **Startup**#COLON# \`$get[startupfeature]\`
 * **Startup channel**#COLON# $get[startupchannel]
 }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:botstartuptoggle_$authorID:false:🔄}{button:Set Channel:2:setbotstartupchannel_$authorID:false}}]
@@ -505,7 +505,7 @@ $interactionUpdate[{newEmbed:{title:Channel Setup}{description:Choose a channel 
             prototype: "button",
             code: `$interactionUpdate[{newEmbed:{title:Startup}{description:
     This option let's you set a channel for the bot to inform users that it became online to use.
-}{field:**Current Setting(s)**:
+}{field:**Current Setup**:
 * **Startup**#COLON# \`$get[startupfeature]\`
 * **Startup channel**#COLON# $get[startupchannel]
 }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:botstartuptoggle_$authorID:false:🔄}{button:Set Channel:2:setbotstartupchannel_$authorID:false}}]
@@ -524,7 +524,7 @@ $interactionUpdate[{newEmbed:{title:Channel Setup}{description:Choose a channel 
 This option allows you to either enable or disable "Build Info" page seen in \`--buildinfo\` flag of \`version\` command.
 
 When enabled, information such as branch, version codename, it's current progress, etc will be shown.
-}{field:**Current setting(s)**:
+}{field:**Current Setup**:
 **Show build info**#COLON# \`$get[showbuildinfo]\`
 }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:showbuildinfotoggle_$authorID:false:🔄}}]
 
@@ -546,7 +546,7 @@ $interactionUpdate[{newEmbed:{title:Show build info}{description:
 This option allows you to either enable or disable "Build Info" page seen in \`--buildinfo\` flag of \`version\` command.
 
 When enabled, information such as branch, version codename, it's current progress, etc will be shown.
-}{field:**Current setting(s)**:
+}{field:**Current Setup**:
 **Show build info**#COLON# \`$get[showbuildinfo]\`
 }{color:Red}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:showbuildinfotoggle_$authorID:false:🔄}}]
 

@@ -55,7 +55,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==toggleleave;]
     prototype: "button",
     code: `$interactionUpdate[{newEmbed:{title:Leave Settings}{description: Welcome to Leave settings! Select a option to change.
 
- }{field:**Current Setting(s)**:
+ }{field:**Current Setup**:
 * **Channel#COLON#** $get[leavechannel]
 * **Message Type#COLON#** \`$toLocaleUpperCase[$getGuildVar[leavetype]]\`
 }{color:$getVar[embedcolor]}}{actionRow:{button:Home:2:leavehomebutton_$authorID:false:🏠}{button:Channel:2:leavechannelbutton_$authorID:false}{button:Message:2:leavemessagebutton_$authorID:false}{button:Placeholders:2:leaveplaceholders_$authorID:false}}]
