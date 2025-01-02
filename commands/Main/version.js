@@ -27,8 +27,7 @@ $addField[About the build;
 * **Revision**: $getGlobalVar[buildRevision]
 ;true]
 $addField[Progress;
-* **Status**: $getGlobalVar[buildStatus]
-* **Type**: $getGlobalVar[buildType]
+$getGlobalVar[buildStatus]
 ;true]
 $color[$getGlobalVar[embedcolor]]
 
