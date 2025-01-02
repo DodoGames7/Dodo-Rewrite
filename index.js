@@ -18,7 +18,7 @@ require('dotenv').config() // Enable env support in local hosting
     ],
    mobile: config.MobileStatus, // Mobile status
    disableConsoleErrors: config.disableConsoleErrors, // Console errors option
-   prefixCaseInsensitive: config.prefixCaseInsensitive, // Whether or not prefix should be case sensitive
+   prefixCaseInsensitive: config.prefixCaseInsensitive // Whether or not prefix should be case sensitive
 })
 
 // Handlers
