@@ -13,7 +13,7 @@ Time remaining: <t:$trunc[$divide[$sum[$getTimestamp;$getUserCooldownTime[trivcm
 $if[$checkContains[$message;--settings;—settings]==true;
 $title[Trivia settings]
 $description[Welcome to Trivia's settings! Select a option to change!]
-$addField[Current configuration;
+$addField[Current Setup;
 **Type:** $toTitleCase[$getUserVar[trivia_type]]
 **Difficulty:** $toTitleCase[$getUserVar[trivia_difficulty]]
 ]

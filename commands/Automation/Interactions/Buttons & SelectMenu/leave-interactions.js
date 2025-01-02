@@ -47,7 +47,7 @@ $interactionReply[
 $title[Leave Settings]
 $description[Welcome to Leave settings! Select a option to change.
 ]
-$addField[Current configuration;
+$addField[Current Setup;
 * **Leave channel:** $get[currentchannel]
 * **Message type:** \`$toTitleCase[$getGuildVar[leavetype]]\`
 ]
@@ -71,7 +71,7 @@ $interactionUpdate[
 $title[Leave Settings]
 $description[Welcome to Leave settings! Select a option to change.
 ]
-$addField[Current configuration;
+$addField[Current Setup;
 * **Leave channel:** $get[currentchannel]
 * **Message type:** \`$toTitleCase[$getGuildVar[leavetype]]\`
 ]

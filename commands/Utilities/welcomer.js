@@ -18,7 +18,7 @@ $title[Welcomer]
 $description[Welcomer is a way to greet new members of your server with your own choice of the message you're going to use it for the server!
 
 To get started, click on the "Toggle" button! To manage the settings regarding the said feature, press the "Settings" button.]
-$addField[Current configuration;$get[welcomersystem]]
+$addField[Current Setup;$get[welcomersystem]]
 $color[$getGlobalVar[embedcolor]]
 $addActionRow
 $addButton[welcomertoggle_$authorID;Toggle;Secondary;🔄]
