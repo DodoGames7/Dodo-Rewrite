@@ -8,5 +8,5 @@ module.exports = {
     aliases: ["guildlist"],
     type: "messageCreate",
     code: `$onlyIf[$checkContains[$clientOwnerID[$getGlobalVar[AllowBotMembers]];$authorID]==true;]
-    $attachment[$callFunction[autoListServers;$serverIDs[, ];, ];allservers.md;true]`
+    $attachment[$callFunction[autoListServers;$serverIDs;, ];allservers.md;true]`
 }

@@ -15,6 +15,7 @@ $description[
 * Support for returning banner link has been added to \`user\` command
 * Slightly updated \`userinfo\` design to use markdowns
 * Updated Github links to use the new username
+* Ported the uncompact mode for perms list for integration logs from 2.2.2
 * Bumped ForgeScript version to \`2.1.0\`
 ]
 $if[$getGlobalVar[pre_release]==on;
@@ -28,7 +29,7 @@ $addButton[versionchanges_$authorID;Changes;Secondary;;true]
 $addButton[versionbugfixes_$authorID;Bug Fixes;Secondary]
 $addButton[versionother_$authorID;Other;Secondary]
 $addActionRow
-$addButton[https://github.com/ddodogames/Dodo-Bot/releases;Changelog History;Link;📜]
+$addButton[https://github.com/ddodogames/Dodo-Bot/releases;Changelog history;Link;📜]
 ]`
 },{
     type:"interactionCreate",
@@ -55,7 +56,7 @@ $addButton[versionchanges_$authorID;Changes;Secondary]
 $addButton[versionbugfixes_$authorID;Bug Fixes;Secondary;;true]
 $addButton[versionother_$authorID;Other;Secondary]
 $addActionRow
-$addButton[https://github.com/ddodogames/Dodo-Bot/releases;Changelog History;Link;📜]
+$addButton[https://github.com/ddodogames/Dodo-Bot/releases;Changelog history;Link;📜]
 ]`
 },{
     type:"interactionCreate",
@@ -74,7 +75,7 @@ $description[
 * (Source Code) changed the placing for local assets used in the bot
 * (Source Code) Revision will now also appear on startup message (for consoles)
 * Prefix is no longer case sensitive
-* Other minor adjustments have been added
+* Other minor adjustments have been added and renamed "Gitbuilds" to "Canary" (including the command)
 ]
 $if[$getGlobalVar[pre_release]==on;
 $attachment[./assets/warning.png;warning.png]
@@ -87,7 +88,7 @@ $addButton[versionchanges_$authorID;Changes;Secondary]
 $addButton[versionbugfixes_$authorID;Bug Fixes;Secondary]
 $addButton[versionother_$authorID;Other;Secondary;;true]
 $addActionRow
-$addButton[https://github.com/ddodogames/Dodo-Bot/releases;Changelog History;Link;📜]
+$addButton[https://github.com/ddodogames/Dodo-Bot/releases;Changelog history;Link;📜]
 ]`
 },{
     type:"interactionCreate",
@@ -117,6 +118,6 @@ $addButton[versionchanges_$authorID;Changes;Secondary]
 $addButton[versionbugfixes_$authorID;Bug Fixes;Secondary]
 $addButton[versionother_$authorID;Other;Secondary]
 $addActionRow
-$addButton[https://github.com/ddodogames/Dodo-Bot/releases;Changelog History;Link;📜]
+$addButton[https://github.com/ddodogames/Dodo-Bot/releases;Changelog history;Link;📜]
 ]`
 }]

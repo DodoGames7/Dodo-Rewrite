@@ -12,7 +12,7 @@ buildNumber: "2360",
 buildStatus: "Incomplete",
 buildBranch: "canary-rebase",
 buildRevision: "0",
-buildDate: "1735795460440",
+buildDate: "1735801713787",
 showbuildinfo: "on",
 AllowBotMembers: config.AllowBotMembers,
 prefix: config.prefix,
@@ -24,12 +24,6 @@ errorchannel: "",
 servermemberrequirement: "0",
 embedcolor: config.Embedcolor,
 originalembedcolor: config.Embedcolor,
-// Game variables
-trivia_type: "multiple",
-trivia_difficulty: "medium",
-flood_difficulty: 13,
-wyr: {upvotes: 0, downvotes: 0},
-hangman_theme: "nature",
 // Feature variables
 suggestionchannel: "",
 msglogdeletechannel: "",
@@ -62,4 +56,11 @@ levelingexcludedroles: "none",
 autoreplyping: "off",
 anonymous: "off",
 includebots: "on"
+// Game variables
+trivia_type: "multiple",
+trivia_difficulty: "medium",
+flood_difficulty: 13,
+wyr: {upvotes: 0, downvotes: 0},
+hangman_theme: "nature",
+
 }

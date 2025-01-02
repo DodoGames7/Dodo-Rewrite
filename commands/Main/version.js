@@ -1,7 +1,7 @@
 module.exports = {
     name: "version",
     info: {
-        description: "View the current version of Dodo-Bot (along with it's Changelog)",
+        description: "View the current version of Dodo-Bot (along with it's changelog)",
         perms: "`SendMessages`",
         flags: ["`--buildinfo`"]
     },
@@ -49,7 +49,7 @@ $footer[Testing is recommended;attachment://warning.png]
     $addButton[versionbugfixes_$authorID;Bug Fixes;Secondary]
     $addButton[versionother_$authorID;Other;Secondary]
     $addActionRow
-    $addButton[https://github.com/ddodogames/Dodo-Bot/releases;Changelog History;Link;📜]
+    $addButton[https://github.com/ddodogames/Dodo-Bot/releases;Changelog history;Link;📜]
 ]
 `
 }

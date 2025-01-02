@@ -43,12 +43,74 @@ $title[Permissions of this bot]
 $description[**$username[$get[botID]]** has the following permissions:
 
 
-$codeBlock[$memberPerms[$guildID;$get[botID];, ];markdown]
+$codeBlock[$memberPerms[$guildID;$get[botID]];markdown]
 ]
 $color[$getGlobalVar[embedcolor]]
 $ephemeral
+$addActionRow
+$addButton[permslistuncompactbutton_$get[botID];Uncompact;Secondary]
 ]
 `
+},{
+    type: "interactionCreate",
+    allowedInteractionTypes: ["button"],
+    code: `
+    $onlyIf[$advancedTextSplit[$customID;_;0]==permslistuncompactbutton;]
+
+    $let[botID;$advancedTextSplit[$customID;_;1]]
+
+    $onlyIf[$memberExists[$guildID;$get[botID]]==true;
+    $interactionReply[This bot is no longer in this server.
+    $ephemeral
+    ]]
+
+    $onlyIf[$memberPerms[$guildID;$get[botID];, ]!=;
+    $interactionReply[This bot does not seem to have any permissions added to it.
+    $ephemeral
+    ]]
+
+    $interactionUpdate[
+        $title[Permissions of this bot]
+        $description[**$username[$get[botID]]** has the following permissions:
+
+
+        $callFunction[autoListText;$memberPerms[$guildID;$get[botID]];, ]
+        ]
+        $color[$getGlobalVar[embedcolor]]
+        $addActionRow
+        $addButton[permslistcompactbutton_$get[botID];Compact;Secondary]
+    ]
+    `
+},{
+    type: "interactionCreate",
+    allowedInteractionTypes: ["button"],
+    code: `
+    $onlyIf[$advancedTextSplit[$customID;_;0]==permslistcompactbutton;]
+
+    $let[botID;$advancedTextSplit[$customID;_;1]]
+
+    $onlyIf[$memberExists[$guildID;$get[botID]]==true;
+    $interactionReply[This bot is no longer in this server.
+    $ephemeral
+    ]]
+
+    $onlyIf[$memberPerms[$guildID;$get[botID];, ]!=;
+    $interactionReply[This bot does not seem to have any permissions added to it.
+    $ephemeral
+    ]]
+
+    $interactionUpdate[
+        $title[Permissions of this bot]
+        $description[**$username[$get[botID]]** has the following permissions:
+
+
+        $codeBlock[$memberPerms[$guildID;$get[botID]];markdown]
+        ]
+        $color[$getGlobalVar[embedcolor]]
+        $addActionRow
+        $addButton[permslistuncompactbutton_$get[botID];Uncompact;Secondary]
+    ]
+    `
 },{
 type: "interactionCreate",
 allowedInteractionTypes: ["button"],
