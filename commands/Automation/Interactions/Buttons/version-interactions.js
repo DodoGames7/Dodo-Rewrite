@@ -16,7 +16,7 @@ $description[
 * Slightly updated \`userinfo\` design to use markdowns
 * Updated Github links to use the new username
 * Ported the uncompact mode for perms list for integration logs from 2.2.2
-* Bumped ForgeScript version to \`2.1.0\`
+* Bumped ForgeScript version to \`2.2.0\`
 ]
 $if[$getGlobalVar[pre_release]==on;
 $attachment[./assets/warning.png;warning.png]
