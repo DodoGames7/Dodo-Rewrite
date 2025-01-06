@@ -24,7 +24,7 @@ $description[
 * **$get[releasedatetype]**: <t:$truncate[$divide[$getVar[buildDate];1000]]:f>
 ]
 $color[$getVar[embedcolor]]
-$if[$getVar[pre_release_mode]==on]
+$if[$getVar[pre_release]==on]
 $footer[Testing is recommended;https://us-east-1.tixte.net/uploads/dodogames.wants.solutions/refreshedredwarning2.png]
 $endif
 $addButton[2;Changelog history;5;https://github.com/ddodogames/Dodo-Bot/releases;false;📜]

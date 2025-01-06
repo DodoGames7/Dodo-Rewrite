@@ -331,7 +331,7 @@ Disabling this will cause the build to identify itself as a "Stable" build with 
 }{color:Yellow}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:togglebotdevmode_$authorID:false}}]
 
 
-$let[pre-release;$advancedReplaceText[$getVar[pre_release_mode];on;Enabled;off;Disabled]]
+$let[pre-release;$advancedReplaceText[$getVar[pre_release];on;Enabled;off;Disabled]]
 
     $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you. {ephemeral}
 {interaction}]
@@ -340,7 +340,7 @@ $let[pre-release;$advancedReplaceText[$getVar[pre_release_mode];on;Enabled;off;D
         `},{
         type: "interaction",
         prototype: "button",
-        code: `$ifAwaited[$getVar[pre_release_mode]==on;{execute:Enable-pre-release};{execute:Disable-pre-release}]
+        code: `$ifAwaited[$getVar[pre_release]==on;{execute:Enable-pre-release};{execute:Disable-pre-release}]
 $interactionFollowUp[$get[resultmessage];true]
 $interactionUpdate[{newEmbed:{title:Pre-release}{description:
    This option allows you on whether or not the current build used should be marked as development build. By default, it is commonly enabled for development builds as expected.
@@ -351,11 +351,11 @@ Disabling this will cause the build to identify itself as a "Stable" build with 
 }{color:Yellow}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Toggle:2:togglebotdevmode_$authorID:false}}]
 
 
-$let[pre-release;$advancedReplaceText[$getVar[pre_release_mode];on;Enabled;off;Disabled]]
+$let[pre-release;$advancedReplaceText[$getVar[pre_release];on;Enabled;off;Disabled]]
 
-$let[resultmessage;$advancedReplaceText[$checkCondition[$getVar[pre_release_mode]==on];true;Pre-release mode will now be enabled!;false;Pre-release mode will now no longer be enabled!]]
-  $setVar[pre_release_mode;$get[newtoggledsetting]]
-$let[newtoggledsetting;$advancedReplaceText[$checkCondition[$getVar[pre_release_mode]==on];true;off;false;on]]
+$let[resultmessage;$advancedReplaceText[$checkCondition[$getVar[pre_release]==on];true;Pre-release mode will now be enabled!;false;Pre-release mode will now no longer be enabled!]]
+  $setVar[pre_release;$get[newtoggledsetting]]
+$let[newtoggledsetting;$advancedReplaceText[$checkCondition[$getVar[pre_release]==on];true;off;false;on]]
 
 
     $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you. {ephemeral}
