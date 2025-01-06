@@ -6,11 +6,12 @@ module.exports = [{
 
 To get started, click on the "Toggle" button! To manage the settings regarding the said feature, press the "Settings" button.
 
-*$get[welcomersystem]*
+**Current Setup**
+* $get[welcomesystem]
 
 }{color:$getVar[embedcolor]}}{actionRow:{button:Toggle:2:togglewel_$authorID:false:🔄}{button:Settings:4:welsettings_$authorID:false}}]
 
-$let[welcomersystem;$advancedReplaceText[$getGuildVar[welcomesystem];off;Welcomer is currently disabled;on;Welcomer is currently enabled]]
+$let[welcomersystem;$advancedReplaceText[$getGuildVar[welcomesystem];off;Disabled;on;Enabled]]
 
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
 {ephemeral}
