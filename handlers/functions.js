@@ -24,7 +24,7 @@ $let[userInput;{userID}]`
    name: "$userURL",
    type: "aoi.js",
    params: ["userID"],
-   code: `https://discord.com/users/{userID}  `
+   code: `https://discord.com/users/{userID}`
   },{
     name: "$commandExists",
     type: "aoi.js",
