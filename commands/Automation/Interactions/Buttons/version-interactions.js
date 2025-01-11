@@ -36,6 +36,7 @@ $let[devbuild;$if[$getVar[pre_release]==on;{footer:Testing is recommended:https#
     code: `$interactionUpdate[{newEmbed:{title:Other}{description:
 * "Current setting(s)" seen in some places has been renamed to "Current Setup"
 * Redesigned the current setting look in \`welcomer\`, \`leave\` and \`leveling\` in main page
+* (Source code) Bumped the package \`dotenv\` to version \`16.4.7\`
 * (Source code) made it so that auto updating Dodo-Bot is possible with just \`git pull\`
  }{color:$getVar[embedcolor]}$nonEscape[$get[devbuild]]}{actionRow:{button:Home:2:homebutton_$authorID:false:🏠}{button:Changes:2:versionchanges_$authorID:false}{button:Bug Fixes:2:versionbugfixes_$authorID:false}{button:Other:2:versionother_$authorID:true}}{actionRow:{button:Changelog history:5:https#COLON#//github.com/ddodogames/Dodo-Bot/releases:false:📜}}]
 
