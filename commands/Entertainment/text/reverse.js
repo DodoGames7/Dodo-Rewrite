@@ -1,7 +1,7 @@
 module.exports = {
     name: "reverse",
     info: {
-        description: "Let's you reverse text.",
+        description: "Reverse some text.",
         perms: ["`SendMessages`"]
     },
     code: `$getObjectProperty[api;text]
