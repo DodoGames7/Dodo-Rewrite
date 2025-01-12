@@ -1,7 +1,7 @@
 module.exports = [{
     type: "interaction",
     prototype: "button",
-    code: `$interactionReply[{newEmbed:{title:Flags of this command}{description:The following flags is available for this command#COLON#
+    code: `$interactionReply[{newEmbed:{title:Flags of this command}{description:The following flags are available for this command#COLON#
 
 $arrayJoin[flags;, ]
     }{color:$getVar[embedcolor]}};all;true]
@@ -46,7 +46,9 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==viewserverdescriptio
     code: `$interactionReply[{newEmbed:{title:Permissions of this bot}{description:**$username[$get[botID]]** has the following permissions#COLON#
 
     \`\`\`$toLocaleUpperCase[$userPerms[$get[botID];, ;$guildID]]\`\`\`
-    }{color:$getVar[embedcolor]}};all;true]
+    }{color:$getVar[embedcolor]}}
+
+    {actionRow:{button:Uncompact:2:permsuncompactbutton_$get[botID]:false}};all;true]
 
 $onlyIf[$userPerms[$get[botID];, ;$guildID]!=;
 This bot does not seem to have any permissions added to it.
@@ -63,6 +65,60 @@ This bot is no longer in this server.
 $let[botID;$advancedTextSplit[$interactionData[customId];_;2]]
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==viewbotpermsbutton;]
 `
+},{
+    type: "interaction",
+    prototype: "button",
+    code: `$interactionUpdate[{newEmbed:{title:Permissions of this bot}{description:**$username[$get[botID]]** has the following permissions#COLON#
+
+
+    $autoList[$nonEscape[$get[permslist]];, ;autoListText]
+    }{color:$getVar[embedcolor]}}
+
+    {actionRow:{button:Compact:2:permscompactbutton_$get[botID]:false}}]
+
+$let[permslist;$toLocaleUpperCase[$userPerms[$get[botID];, ;$guildID]]]
+
+    $onlyIf[$userPerms[$get[botID];, ;$guildID]!=;
+    This bot does not seem to have any permissions added to it.
+    {ephemeral}
+    {interaction}
+    ]
+
+    $onlyIf[$memberExists[$get[botID];$guildID]==true;
+    This bot is no longer in this server.
+    {ephemeral}
+    {interaction}
+    ]
+
+    $let[botID;$advancedTextSplit[$interactionData[customId];_;2]]
+    $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==permsuncompactbutton;]
+    `
+},{
+    type: "interaction",
+    prototype: "button",
+    code: `$interactionUpdate[{newEmbed:{title:Permissions of this bot}{description:**$username[$get[botID]]** has the following permissions#COLON#
+
+
+    \`\`\`$toLocaleUpperCase[$userPerms[$get[botID];, ;$guildID]]\`\`\`
+    }{color:$getVar[embedcolor]}}
+
+    {actionRow:{button:Uncompact:2:permsuncompactbutton_$get[botID]:false}}]
+
+    $onlyIf[$userPerms[$get[botID];, ;$guildID]!=;
+    This bot does not seem to have any permissions added to it.
+    {ephemeral}
+    {interaction}
+    ]
+
+    $onlyIf[$memberExists[$get[botID];$guildID]==true;
+    This bot is no longer in this server.
+    {ephemeral}
+    {interaction}
+    ]
+
+    $let[botID;$advancedTextSplit[$interactionData[customId];_;2]]
+    $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==permscompactbutton;]
+    `
 },{
     type: "interaction",
     prototype: "button",

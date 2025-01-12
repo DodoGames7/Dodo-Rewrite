@@ -6,11 +6,12 @@ module.exports = [{
 
 To get started, click on the "Toggle" button! To manage the settings regarding the said feature, press the "Settings" button.
 
-*$get[leavesystem]*
+**Current Setup**
+* $get[leavesystem]
 
 }{color:$getVar[embedcolor]}}{actionRow:{button:Toggle:2:toggleleave_$authorID:false:🔄}{button:Settings:4:leavesettings_$authorID:false}}]
 
-$let[leavesystem;$advancedReplaceText[$getGuildVar[leavesystem];off;Leave is currently disabled;on;Leave is currently enabled]]
+$let[leavesystem;$advancedReplaceText[$getGuildVar[leavesystem];off;Disabled;on;Enabled]]
 
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
 {ephemeral}
@@ -55,7 +56,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==toggleleave;]
     prototype: "button",
     code: `$interactionUpdate[{newEmbed:{title:Leave Settings}{description: Welcome to Leave settings! Select a option to change.
 
- }{field:**Current Setting(s)**:
+ }{field:**Current Setup**:
 * **Channel#COLON#** $get[leavechannel]
 * **Message Type#COLON#** \`$toLocaleUpperCase[$getGuildVar[leavetype]]\`
 }{color:$getVar[embedcolor]}}{actionRow:{button:Home:2:leavehomebutton_$authorID:false:🏠}{button:Channel:2:leavechannelbutton_$authorID:false}{button:Message:2:leavemessagebutton_$authorID:false}{button:Placeholders:2:leaveplaceholders_$authorID:false}}]

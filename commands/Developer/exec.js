@@ -12,7 +12,7 @@ $createFile[$exec[$message];result.txt]
 $else
 \`\`\`$exec[$message]\`\`\`
 $endif
-$onlyIf[$message!=;Send me an terminal command to be executed.]
+$onlyIf[$message!=;Please send a terminal command to be executed.]
 $onlyIf[$checkContains[$clientOwnerIDs[| ];$authorID]==true;]
 
   `

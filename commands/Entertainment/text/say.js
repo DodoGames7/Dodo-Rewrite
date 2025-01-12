@@ -22,7 +22,7 @@ $if[$checkContains[$message;--embed;—embed]==true||$charCount[$message]>=2000]
 $author[$username;$userAvatar;$userURL[$authorID]]
 $title[Say Cmd!;$nonEscape[$get[links]]]
 $description[$get[content]]
-$color[Random]
+$color[#$randomColor]
 $addTimeStamp
 $else
 $message

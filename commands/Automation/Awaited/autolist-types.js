@@ -5,6 +5,12 @@ module.exports = [{
    $if[{value}==none;none;* {value}]
 `
 },{
+    name: "autoListServers",
+    type: "awaited",
+    code: `
+* $guildName[{value}] - {value}
+    `
+},{
     name: "autoListChannels",
     type: "awaited",
     code: `$if[{value}==none;none;$get[channels]]

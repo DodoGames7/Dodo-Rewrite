@@ -7,10 +7,12 @@ module.exports = [{
     
     To get started, click on the "Toggle" button! To manage the settings regarding the said feature, press the "Settings" button.
     
-    *$get[levelingsystem]*}{color:$getVar[embedcolor]}}{actionRow:{button:Toggle:2:toggleleveling_$authorID:false:🔄}{button:Settings:4:levelingsettings_$authorID:false}{button:Reset:2:levelingreset_$authorID:false:⚠️}}]
+    **Current Setup**
+    * $get[levelingsystem]
+    }{color:$getVar[embedcolor]}}{actionRow:{button:Toggle:2:toggleleveling_$authorID:false:🔄}{button:Settings:4:levelingsettings_$authorID:false}{button:Reset:2:levelingreset_$authorID:false:⚠️}}]
     
     
-    $let[levelingsystem;$advancedReplaceText[$getGuildVar[levelsystem];off;Leveling is currently disabled;on;Leveling is currently enabled]]
+    $let[levelingsystem;$advancedReplaceText[$getGuildVar[levelsystem];off;Disabled;on;Enabled]]
     
     $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
     {ephemeral}
@@ -32,7 +34,7 @@ module.exports = [{
     *$get[levelingsystem]*}{color:$getVar[embedcolor]}}{actionRow:{button:Toggle:2:toggleleveling_$authorID:false:🔄}{button:Settings:4:levelingsettings_$authorID:false}{button:Reset:2:levelingreset_$authorID:false:⚠️}}]
     
     
-    $let[levelingsystem;$advancedReplaceText[$getGuildVar[levelsystem];off;Leveling is currently disabled;on;Leveling is currently enabled]]
+    $let[levelingsystem;$advancedReplaceText[$getGuildVar[levelsystem];off;Disabled;on;Enabled]]
     $let[resultmessage;$advancedReplaceText[$checkCondition[$getGuildVar[levelsystem]==on];true;Successfully enabled Leveling!;false;Successfully disabled Leveling!]]
 
     $setGuildVar[levelsystem;$get[newtoggledsetting];$guildID]
@@ -89,7 +91,7 @@ $interactionUpdate[The current progress for all members will remain then.]
         code: `$interactionUpdate[{newEmbed:{title:Leveling settings}{description:Welcome to Leveling settings! Select a option to change.
 
 
- }{field:**Current Setting(s)**:
+ }{field:**Current Setup**:
 **Level up channel#COLON#** $get[levelupchannel]
 **Level up message#COLON#** \`$get[levelupmessage]\`
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:levelingotheroptionsmenu_$authorID:Other options:1:1:false:{stringInput:Reset on Leave:resetonleave:Reset user's progress when they leave:false}{stringInput:Exclusions:exclusions:Choose what to exclude from allowing xp:false}}}
@@ -115,7 +117,7 @@ $interactionUpdate[The current progress for all members will remain then.]
         prototype: "button",
         code: `$interactionUpdate[{newEmbed:{title:Level up Message}{description:This option is dedicated to changing current options for level up message. Choose an option to change.
     
-Press the "Toggle" button to enable/disable the Level up Message or use the other options alternatively to manage level up message settings.}{field:**Current Setting(s)**:
+Press the "Toggle" button to enable/disable the Level up Message or use the other options alternatively to manage level up message settings.}{field:**Current Setup**:
 * **Level up channel#COLON#** $get[levelupchannel]
 * **Level up message#COLON#** \`$get[levelupmessage]\`
 }{color:$getVar[embedcolor]}}{actionRow:{button:Go back:2:levelingsettings_$authorID:false:↩️}{button:Toggle:2:enablelevelingmessage_$authorID:false:🔄}{button:Set Channel:2:levelingchannelsetup_$authorID:false}{button:Set Message:2:levelingsetmsgmodal_$authorID:false}}{actionRow:{button:Test Message:2:levelingtestmessage_$authorID:false}}]
@@ -136,7 +138,7 @@ Press the "Toggle" button to enable/disable the Level up Message or use the othe
         code: `$interactionFollowUp[$get[resultmessage];true]
     $interactionUpdate[{newEmbed:{title:Level up Message}{description:This option is dedicated to changing current options for level up message. Choose an option to change.
 
-Press the "Toggle" button to enable/disable the Level up Message or use the other options alternatively to manage level up message settings.}{field:**Current Setting(s)**:
+Press the "Toggle" button to enable/disable the Level up Message or use the other options alternatively to manage level up message settings.}{field:**Current Setup**:
 * **Level up channel#COLON#** $get[levelupchannel]
 * **Level up message#COLON#** \`$get[levelupmessage]\`
 }{color:$getVar[embedcolor]}}{actionRow:{button:Go back:2:levelingsettings_$authorID:false:↩️}{button:Toggle:2:enablelevelingmessage_$authorID:false:🔄}{button:Set Channel:2:levelingchannelsetup_$authorID:false}{button:Set Message:2:levelingsetmsgmodal_$authorID:false}}{actionRow:{button:Test Message:2:levelingtestmessage_$authorID:false}}]
@@ -482,7 +484,7 @@ $autoList[$nonEscape[$getGuildVar[levelingexcludedcategories]];, ;autoListCatego
         code: `$interactionUpdate[{newEmbed:{title:Reset on Leave}{description:This option let's you reset User's current level whenever they leave the server. 
     
     By default, this is disabled but you can choose to enable it if you want to do so.
-}{field:**Current Setting(s)**:
+}{field:**Current Setup**:
 * **Reset on Leave#COLON#** \`$get[leaveonreset]\`
 }{color:$getVar[embedcolor]}}{actionRow:{button:Go back:2:levelingsettings_$authorID:false:↩️}{button:Toggle:2:togglelevelingleaveonreset_$authorID:false:🔄}}]
     
@@ -500,7 +502,7 @@ $autoList[$nonEscape[$getGuildVar[levelingexcludedcategories]];, ;autoListCatego
     $interactionUpdate[{newEmbed:{title:Reset on Leave}{description:This option let's you reset User's current level whenever they leave the server.
 
     By default, this is disabled but you can choose to enable it if you want to do so.
-}{field:**Current Setting(s)**:
+}{field:**Current Setup**:
 * **Reset on Leave#COLON#** \`$get[leaveonreset]\`
 }{color:$getVar[embedcolor]}}{actionRow:{button:Go back:2:levelingsettings_$authorID:false:↩️}{button:Toggle:2:togglelevelingleaveonreset_$authorID:false:🔄}}]
     
@@ -539,79 +541,3 @@ $autoList[$nonEscape[$getGuildVar[levelingexcludedcategories]];, ;autoListCatego
     `
     }]
     
-
-    /* Parser code for re-adding
-    {button:Roles:2:levelingexcluderolessetting_$authorID:false}
-    */
-
-    /* Might be used again
-     * {
-     *   type: "interaction",
-     *   prototype: "button",
-     *   code: `$interactionUpdate[{newEmbed:{title:Roles}{description:Use the dropdown menu below to select roles to exclude from xp. (You can add up to 10)!
-     *
-     **Tip#COLON#** Unable to find the role you're looking for? Try typing the role name instead!
-     } {fie*ld:**Current Role(s)**:
-     $autoList[$nonEscape[$getGuildVar[levelingexcludedroles]];, ;autoListRoles]
-     }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:levelingexcluderolemenusetup_$authorID:Select roles.:1:10:false:{roleInput}}}{actionRow:{button:Go back:2:levelingexclusionshome_$authorID:false:↩️}{button:Reset:2:levelingexcluderolesreset_$authorID:false}}]
-
-
-     $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
-     {ephemeral}
-     {interaction}
-     ]
-
-     $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==levelingexcluderolessetting;]
-     `
-     },{
-     type: "interaction",
-prototype: "selectMenu",
-code: `$interactionFollowUp[Successfully updated the list!;true]
-
-$interactionUpdate[{newEmbed:{title:Roles}{description:Use the dropdown menu below to select roles to exclude from xp. (You can add up to 10)!
-
-**Tip#COLON#** Unable to find the role you're looking for? Try typing the role name instead!
-}{field:**Current Role(s)**:
-$autoList[$nonEscape[$getGuildVar[levelingexcludedroles]];, ;autoListRoles]
-}{color:$getVar[embedcolor]}}{actionRow:{selectMenu:levelingexcluderolemenusetup_$authorID:Select roles.:1:10:false:{roleInput}}}{actionRow:{button:Go back:2:levelingexclusionshome_$authorID:false:↩️}{button:Reset:2:levelingexcluderolesreset_$authorID:false}}]
-
-$setGuildVar[levelingexcludedroles;$getSelectMenuValues[all;, ]]
-
-$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
-{ephemeral}
-{interaction}
-]
-
-$onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==levelingexcluderolemenusetup;]
-
-`
-},{
-type: "interaction",
-prototype: "button",
-code: `$interactionFollowUp[Successfully reset the current list!;true]
-
-$interactionUpdate[{newEmbed:{title:Roles}{description:Use the dropdown menu below to select roles to exclude from xp. (You can add up to 10)!
-
-**Tip#COLON#** Unable to find the role you're looking for? Try typing the role name instead!
-}{field:**Current Role(s)**:
-$autoList[$nonEscape[$getGuildVar[levelingexcludedroles]];, ;autoListRoles]
-}{color:$getVar[embedcolor]}}{actionRow:{selectMenu:levelingexcluderolemenusetup_$authorID:Select roles.:1:10:false:{roleInput}}}{actionRow:{button:Go back:2:levelingexclusionshome_$authorID:false:↩️}{button:Reset:2:levelingexcluderolesreset_$authorID:false}}]
-
-$deleteVar[levelingexcludedroles;$guildID;main]
-
-$onlyIf[$getGuildVar[levelingexcludedroles]!=none;
-There's nothing to reset.
-{ephemeral}
-{interaction}
-]
-
-$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];This interaction is not for you.
-{ephemeral}
-{interaction}
-]
-
-$onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==levelingexcluderolesreset;]
-
-`
-}
-*/

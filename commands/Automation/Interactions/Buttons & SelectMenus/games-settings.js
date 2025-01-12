@@ -297,7 +297,7 @@ $let[floodmode;$advancedReplaceText[$getGlobalUserVar[flood_difficulty];18;Hard;
   prototype: "selectMenu",
   code: `$interactionFollowUp[Set Hangman's theme to \`$toLocaleUpperCase[$getSelectMenuValues[all]]\`!;true]
 $interactionUpdate[{newEmbed:{title:$get[embedtitle]}{description:
-Welcome to Hangman Settings! To select a theme to use, use the dropdown menu below!
+Welcome to Hangman Themes! To select a theme to use, use the dropdown menu below!
 }{field:**Current theme**:
 * \`$toLocaleUpperCase[$getGlobalUserVar[hangman_theme]]\`
 }{color:$getVar[embedcolor]}}{actionRow:{selectMenu:hangmansettings_$authorID:Select a theme:1:1:false:{stringInput:Nature:nature:Sets the theme to Nature-related:false}{stringInput:Sport:sport:Sets the theme to Sport-related:false}{stringInput:Color:color:Sets the theme to Color-related:false}{stringInput:Camp:camp:Sets the theme to Camp-related:false}{stringInput:Fruit:fruit:Sets the theme to Fruit-related:false}{stringInput:Discord:discord:Sets the theme to Discord-related:false}{stringInput:Winter:winter:Sets the theme to Winter-related:false}{stringInput:Pokemon:pokemon:Sets the theme to Pokemon-related:false}}}]

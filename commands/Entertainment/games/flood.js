@@ -40,7 +40,7 @@ Game.startGame();
   type: "awaited",
   code: `$title[Flood Settings]
 $description[Welcome to Flood settings! To select a option to change, use the dropdown menu below!]
-$addField[**Current Setting(s)**;
+$addField[**Current Setup**;
 **Difficulty#COLON#** \`$get[type]\`
 ]
 $color[$getVar[embedcolor]]

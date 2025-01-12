@@ -31,6 +31,7 @@ const client = new AoiClient({
    commands: config.respondOnEdit,
    time: 20000
   },
+  aoiAutoUpdate: false,
   suppressAllErrors: config.DisableAllErrors // Whether or not to disable errors from aoi.js
 });
 

@@ -1,26 +1,25 @@
 const config = require("../config.json");
 
 module.exports = {
-  "main": {
+  "main": { // This is "table" name, tables can be managed by checking index.js under "tables:" option
   // Game variables
   trivia_type: "multiple",
   trivia_difficulty: "medium",
   flood_difficulty: 13,
   wyr: {upvotes: 0, downvotes: 0},
   hangman_theme: "nature",
-  // Bot variables (do not touch)
+  // Main variables (do not touch)
   autopingreply: "off",
   includebots: "on",
-  version: "2.2.1",
-  versionCodename: "Cards",
+  version: "2.2.2",
+  versionCodename: "Electric",
   libraryversiondevcheck: "off",
   buildStatus: "Complete",
-  buildDate: "1733563963395",
-  buildType: "Official Stable",
+  buildDate: "1736720758981",
   buildBranch: "v2",
   buildRevision: "0",
   showbuildinfo: "off",
-  buildNumber: "2186",
+  buildNumber: "2196",
   embedcolor: config.Embedcolor,
   originalembedcolor: config.Embedcolor,
   release_type: "Stable",
@@ -56,15 +55,14 @@ module.exports = {
   levelmessagefeature: "off",
   levelleaveonreset: "off",
   islevelingreset: "no",
-  // levelingexcludedroles: "none",
   levelingexcludedchannels: "none",
   levelingexcludedcategories: "none",
-  // Developer variables
+  // Developer & other variables
   errorchannel: "none",
   errorsystem: "off",
   startupchannel: "none",
   startupchannelsystem: "off",
-  pre_release_mode: "off",
+  pre_release: "off",
   botinvitationmessage: "on",
   servermemberrequirement: "0",
   userapps: config.EnableUserApps,

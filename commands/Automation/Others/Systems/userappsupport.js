@@ -13,6 +13,16 @@ $createApplicationCommand[global;about;Returns information about Dodo-Bot;sendme
 $createApplicationCommand[global;ping;Returns the bot's Latency;sendmessages;user;all;slash]
 
 
+$createApplicationCommand[global;banner;Returns your/users profile banner.;sendmessages;user;all;slash;[
+  {
+    "type": 6,
+    "name": "user",
+    "description": "User to select to view banner",
+    "required": false
+  }
+]]
+
+
 $createApplicationCommand[global;avatar;Returns your/users profile picture.;sendmessages;user;all;slash;[
   {
     "type": 6,
