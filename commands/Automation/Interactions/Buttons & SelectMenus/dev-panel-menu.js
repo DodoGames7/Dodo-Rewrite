@@ -231,6 +231,8 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[aut
         prototype: "selectMenu",
         code: `$interactionUpdate[{newEmbed:{title:Embed color}{description:
    This option allows you to change the current embed color used across commands of Dodo-Bot. To change the current used embed color, you will need to have a valid hex code of a color in order to proceed.
+
+-# You can use the placeholder \`<random>\` on "Set Color" button to get a random color!
 }{field:**Current Hex code**:
 * \`$getVar[embedcolor]\`
 }{color:Yellow}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Set Color:2:setbotembedcolor_$authorID:false}{button:Preview:2:embedcolorpreview_$authorID:false}{button:Reset:2:resetembedcolor_$authorID:false}}]
@@ -259,26 +261,30 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[aut
         name: "embedcolorsetresult",
         type: "interaction",
         prototype: "modal",
-        code: `$interactionFollowUp[\`$textInputValue[hexInput]\` will now be used as the new embed color!;true]
+        code: `$interactionFollowUp[\`$get[embedcolorinput]\` will now be used as the new embed color!;true]
 $interactionUpdate[{newEmbed:{title:Embed color}{description:
    This option allows you to change the current embed color used across commands of Dodo-Bot. To change the current used embed color, you will need to have a valid hex code of a color in order to proceed.
+
+-# You can use the placeholder \`<random>\` on "Set Color" button to get a random color!
 }{field:**Current Hex code**:
 * \`$getVar[embedcolor]\`
 }{color:Yellow}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Set Color:2:setbotembedcolor_$authorID:false}{button:Preview:2:embedcolorpreview_$authorID:false}{button:Reset:2:resetembedcolor_$authorID:false}}]
 
-$setVar[embedcolor;$textInputValue[hexInput]]
+$setVar[embedcolor;$get[embedcolorinput]]
 
-$onlyIf[$isValidColor[$textInputValue[hexInput]]==true;
+$onlyIf[$isValidColor[$get[embedcolorinput]]==true;
 Your hex code containing the color is incorrect! Please, double check your hex code and try again.{ephemeral}
 {interaction}]
 
-$onlyIf[$isValidHex[$textInputValue[hexInput]]==true;
+$onlyIf[$isValidHex[$get[embedcolorinput]]==true;
 You did not provide a hex code! Please, make sure to provide a actual hex code and try again.{ephemeral}
 {interaction}]
 
-$onlyIf[$stringStartsWith[$textInputValue[hexInput];#]==true;
+$onlyIf[$stringStartsWith[$get[embedcolorinput];#]==true;
 Your hex code must start with a \`#\`! Please, try again.{ephemeral}
 {interaction}]
+
+$let[embedcolorinput;$advancedReplaceText[$checkCondition[$stringStartsWith[$textInputValue[hexInput];<random>]==true];true;#$randomColor;false;$textInputValue[hexInput]]]
 
 `
     },{
@@ -287,6 +293,8 @@ Your hex code must start with a \`#\`! Please, try again.{ephemeral}
         code: `$interactionFollowUp[Embed color has been reset!;true]
 $interactionUpdate[{newEmbed:{title:Embed color}{description:
    This option allows you to change the current embed color used across commands of Dodo-Bot. To change the current used embed color, you will need to have a valid hex code of a color in order to proceed.
+
+-# You can use the placeholder \`<random>\` on "Set Color" button to get a random color!
 }{field:**Current Hex code**:
 * \`$getVar[embedcolor]\`
 }{color:Yellow}}{actionRow:{button:Home:2:developermainpage_$authorID:false:🏠}{button:Set Color:2:setbotembedcolor_$authorID:false}{button:Preview:2:embedcolorpreview_$authorID:false}{button:Reset:2:resetembedcolor_$authorID:false}}]
