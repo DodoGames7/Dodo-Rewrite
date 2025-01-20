@@ -18,7 +18,7 @@ $onlyIf[$get[channeltarget]!=$getGuildVar[pollchannel];You already have set this
 $onlyIf[$checkContains[$channelType[$get[channeltarget]];text;announcement]==true;You must set either Text or Announcement channel as a Poll channel to use Polls feature.]
 
 $onlyIf[$guildChannelExists[$guildID;$get[channeltarget]]==true;
-Either you have not specified an channel or channel exists but outside of this server. Please mention an valid channel.
+Either you have not specified a channel, or the channel exists outside of this server. Please mention a valid channel.
 ]
 
 $let[channeltarget;$findGuildChannel[$message;false]]
