@@ -7,7 +7,7 @@ module.exports = {
     code: `
 
 $author[$username[$get[messageauthor]];$userAvatar[$get[messageauthor]];$userURL[$get[messageauthor]]]
-$description[$getMessage[$get[channeltarget];$messageSlice[1]]]
+$description[$log[$getMessage[$get[channeltarget];$messageSlice[1]]]]
 $color[$getVar[embedcolor]]
 $addButton[1;Jump to the message;5;$nonEscape[$messageURL[$messageSlice[1];$get[channeltarget]]];false]
 
