@@ -6,20 +6,20 @@ module.exports = {
     },
     code: `
 
-[Jump to the message]($messageURL[$message[2];$get[channeltarget]])
+[Jump to the message]($messageURL[$messageSlice[1];$get[channeltarget]])
 $author[$username[$get[messageauthor]];$userAvatar[$get[messageauthor]];$userURL[$get[messageauthor]]]
-$description[$getMessage[$get[channeltarget];$message[2];content]]
+$description[$getMessage[$get[channeltarget];$messageSlice[1];content]]
 $color[$getVar[embedcolor]]
 
-$let[messageauthor;$getMessage[$get[channeltarget];$message[2];userID]]
+$let[messageauthor;$getMessage[$get[channeltarget];$messageSlice[1];userID]]
 
-$onlyIf[$messageExists[$message[2];$get[channeltarget]]==true;Please provide a valid message id.]
+$onlyIf[$messageExists[$messageSlice[1];$get[channeltarget]]==true;Please provide a valid message id.]
 $onlyIf[$guildChannelExists[$guildID;$get[channeltarget]]==true;
 Either you have not specified a channel, or the channel exists outside of this server. Please mention a valid channel.
 ]
 
 $let[channeltarget;$findGuildChannel[$message[1];false]]
-$onlyIf[$message[1]!=&&$message[2]!=;Please provide a channel and message id.
+$onlyIf[$message[1]!=&&$messageSlice[1]!=;Please provide a channel and message id.
 
 Usage: \`$getGuildVar[prefix]quote <channel id> <message id>\`
 ]`
