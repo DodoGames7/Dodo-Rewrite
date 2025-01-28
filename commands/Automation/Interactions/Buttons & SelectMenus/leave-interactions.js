@@ -31,7 +31,8 @@ $interactionUpdate[{newEmbed:{title:Leave}{description:Leave just like Welcomer 
 
 To get started, click on the "Toggle" button! To manage the settings regarding the said feature, press the "Settings" button.
 
-*$get[leavesystem]*
+**Current Setup**
+* $get[leavesystem]
 
 }{color:$getVar[embedcolor]}}{actionRow:{button:Toggle:2:toggleleave_$authorID:false:🔄}{button:Settings:4:leavesettings_$authorID:false}}]
 

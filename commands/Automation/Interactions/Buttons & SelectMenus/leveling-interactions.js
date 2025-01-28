@@ -31,7 +31,8 @@ module.exports = [{
     
     To get started, click on the "Toggle" button! To manage the settings regarding the said feature, press the "Settings" button.
     
-    *$get[levelingsystem]*}{color:$getVar[embedcolor]}}{actionRow:{button:Toggle:2:toggleleveling_$authorID:false:🔄}{button:Settings:4:levelingsettings_$authorID:false}{button:Reset:2:levelingreset_$authorID:false:⚠️}}]
+    **Current Setup**
+    * $get[levelingsystem]*}{color:$getVar[embedcolor]}}{actionRow:{button:Toggle:2:toggleleveling_$authorID:false:🔄}{button:Settings:4:levelingsettings_$authorID:false}{button:Reset:2:levelingreset_$authorID:false:⚠️}}]
     
     
     $let[levelingsystem;$advancedReplaceText[$getGuildVar[levelsystem];off;Disabled;on;Enabled]]

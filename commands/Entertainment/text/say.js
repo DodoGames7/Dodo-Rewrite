@@ -30,7 +30,7 @@ $message
 - From [\`$username\`](<$userURL[$authorID]>)
 $endif
 $disableMentionType[all]
-$onlyIf[$get[content]!=;You cannot activate embed mode without specifying a text first.]
+$onlyIf[$get[content]!=;You cannot activate embed mode without providing a text first.]
 $let[content;$removeContains[$message;--embed;—embed]]
 $let[links;$randomText[$getClientInvite[sendmessages;viewchannel;addreactions;attachfiles;viewauditlog];https://www.youtube.com/watch?v=dQw4w9WgXcQ]]
 `
