@@ -5,7 +5,7 @@ module.exports = [{
     perms: ["`SendMessages`"]
 },
   aliases: "jokes",
-  code: `$ifAwaited[$getObjectProperty[api;joke]==;{execute:twopart};{execute:onepart}]
+  code: `$ifAwaited[$getObjectProperty[api;joke]==;{execute:twopart};{execute:single}]
   $createObject[api;$nonEscape[$get[jsonresponse]]]
 $onlyIf[$isValidObject[$nonEscape[$get[jsonresponse]]]==true;Unable to fetch data for jokes. Please, try again later.]
 $let[jsonresponse;$httpRequest[https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&safe-mode;GET;;;dead]]
@@ -18,9 +18,8 @@ code: `
 Setup: $getObjectProperty[api;setup]
 Delivery: $getObjectProperty[api;delivery]
 `
-},
-{
-name: "onepart",
+},{
+name: "single",
 type: "awaited",
 code: `
 $getObjectProperty[api;joke]
