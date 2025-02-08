@@ -1,7 +1,7 @@
 const config = require("../config.json");
 
 module.exports = {
-  "main": { // This is "table" name, tables can be managed by checking index.js under "tables:" option
+  "main": { // This is "table" name, tables can be managed by checking index.js under "tables:" line
   // Game variables
   trivia_type: "multiple",
   trivia_difficulty: "medium",
@@ -15,7 +15,7 @@ module.exports = {
   versionCodename: "Lighting",
   libraryversiondevcheck: "off",
   buildStatus: "Incomplete",
-  buildDate: "1738084410084",
+  buildDate: "1739058744069",
   buildBranch: "canary",
   buildRevision: "0",
   showbuildinfo: "on",
