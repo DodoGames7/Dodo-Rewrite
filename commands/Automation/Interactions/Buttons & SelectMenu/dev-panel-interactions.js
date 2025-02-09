@@ -12,7 +12,7 @@ $let[botinvitationmessage;$advancedReplace[$getGlobalVar[botinvitationmessage];o
 $interactionReply[
 $title[Bot Invitation Message]
 $description[When enabled, The bot will welcome the new servers it gets added to. By default, this is enabled in order to help the members know what's the bot's prefix is]
-$addField[Current setting(s);$get[botinvitationmessage]]
+$addField[Current Setup;$get[botinvitationmessage]]
 $color[Yellow]
 $addActionRow 
 $addButton[botinvitationmessagetoggle;Toggle;Secondary;🔄]
@@ -65,7 +65,7 @@ $let[currentchannel;$advancedReplace[$checkCondition[$getGlobalVar[errorchannel]
 $interactionReply[
 $title[Error Logging]
 $description[This option is dedicated to logging errors to the channel specified in case something went wrong on the bot!]
-$addField[Current setting(s);
+$addField[Current Setup;
 **Error logging:** $get[errorlogging]
 **Error logging channel:** $get[currentchannel]
 ]
@@ -227,7 +227,7 @@ $ephemeral
 $interactionReply[
 $title[Embed color]
 $description[This option allows you to change the current Embed color used across all the commands of the bot!]
-$addField[Current setting(s);$getGlobalVar[embedcolor]]
+$addField[Current Setup;$getGlobalVar[embedcolor]]
 $color[Yellow]
 $addActionRow
 $addButton[setnewembedcolor;Set Color;Secondary]
@@ -340,7 +340,7 @@ $title[Pre-release]
 $description[This option let's you decide on whether or not the current build should be marked as pre-release build. By default, it is commonly enabled for development builds.
 
 Disabling this option will cause all sorts of pre-release stuff to be absent such as the development warning on the console!]
-$addField[Current setting(s);$get[pre_release]]
+$addField[Current Setup;$get[pre_release]]
 $color[Yellow]
 $addActionRow
 $addButton[prereleasetoggle;Toggle;Secondary;🔄]
@@ -400,7 +400,7 @@ $let[currentchannel;$advancedReplace[$checkCondition[$getGlobalVar[startupchanne
 $interactionReply[
 $title[Startup]
 $description[This option is dedicated to sending messages that the bot is ready to the channel specified!]
-$addField[Current setting(s);
+$addField[Current Setup;
 **Startup:** $get[startup]
 **Startup channel:** $get[currentchannel]
 ]
@@ -563,7 +563,7 @@ $title[Show build info]
 $description[When enabled, a button labeled "Build Info" will show up in \`stats\` command. By default, this is enabled for Pre-release builds besides Beta ones.
 
 If you think this is sensitive information then press the "Toggle" button to disable it (if it was enabled by default).]
-$addField[Current setting(s);$get[showbuildinfo]]
+$addField[Current Setup;$get[showbuildinfo]]
 $color[Yellow]
 $addActionRow
 $addButton[showbuildinfotoggle;Toggle;Secondary;🔄]
@@ -644,17 +644,18 @@ $addTextInput[numberInput;Minimum requirement to enforce;Short;true;e.g, 50;$get
 $let[title;$getEmbeds[$channelID;$messageID;0;title;0]]
 $let[description;$getEmbeds[$channelID;$messageID;0;description;0]]
 $let[fieldname;$getEmbeds[$channelID;$messageID;0;fieldName;0]]
+$let[input;$callFunction[excludespecialchars;$input[numberInput]]]
 
-$onlyIf[$isInteger[$callFunction[excludespecialchars;$input[numberInput]]]==true;$interactionReply[Number must not be a Integer.
+$onlyIf[$isInteger[$get[input]]==true;$interactionReply[Number must not be a Integer.
 $ephemeral]
 ]
 
-$onlyIf[$isNumber[$callFunction[excludespecialchars;$input[numberInput]]]==true;$interactionReply[Please actually enter a number to proceed.
+$onlyIf[$isNumber[$get[input]]==true;$interactionReply[Please actually enter a number to proceed.
 $ephemeral]
 ]
 
 
-$setGlobalVar[servermemberrequirement;$input[numberInput]]
+$setGlobalVar[servermemberrequirement;$get[input]]
 
 $interactionUpdate[
 $title[$get[title]]
@@ -733,5 +734,45 @@ $ephemeral
     $interactionReply[Created a backup under your root directory!
     $ephemeral
     ]
+    `
+},{
+    type: "interactionCreate",
+    allowedInteractionTypes: ["button"],
+    code: `
+    $onlyIf[$customID==leaveaserverbutton;]
+
+    $showModal
+    $modal[leaveaservermodalprompt;Leave a server]
+    $addTextInput[numberInput;ID of the server to leave;Short;true;e.g, $randomGuildID;;0;100]
+
+    `
+},{
+    type: "interactionCreate",
+    allowedInteractionTypes: ["modal"],
+    code: `$onlyIf[$customID==leaveaservermodalprompt;]
+
+    $let[input;$callFunction[excludespecialchars;$input[numberInput]]]
+
+    $onlyIf[$isNumber[$get[input]]==true;$interactionReply[Please actually enter a number to proceed.
+    $ephemeral]
+    ]]
+
+    $onlyIf[$guildExists[$get[input]]==true;$interactionReply[This server does not seem to exist. Please enter a valid one to proceed.
+
+-# This error can also occur if the server is not cached.
+    $ephemeral]
+    ]]
+
+    $onlyIf[$checkContains[$guildIDs;$get[input]]==true;$interactionReply[I am not in the server you specified.
+
+    To see which servers i'm currently in, run \`$getGuildVar[prefix]serverlist\` to do so!
+    $ephemeral
+    ]]
+
+    $interactionReply[Successfully left the server "$guildName[$get[input]]"!
+    $ephemeral
+    ]
+    $!guildLeave[$get[input]]
+
     `
 }]

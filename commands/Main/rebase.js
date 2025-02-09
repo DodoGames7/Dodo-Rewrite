@@ -9,11 +9,11 @@ code: ` $userCooldown[rebasecmd;2s;Cooldown has been triggered! Please, wait!
 Time remaining: <t:$trunc[$divide[$sum[$getTimestamp;$getUserCooldownTime[rebasecmd]];1000]]:R>]
 
 $title[About Rebase]
-$description[Rebase is a special version of Dodo-Bot acting as a backup. It is based on $hyperlink[CupcakeX;https://github.com/dodoGames7/CupcakeX] codebase albeit being improved and having additions compared to the current build of it featuring new techniques and stuff.
+$description[Rebase is a special version of Dodo-Bot acting as a backup. It was originally made as Dodo-Bot v3 before it was later repurposed to be used as backup.
 
 As the name implies, it mostly acts as a emergency build in case if aoi.js suddenly died one day. It's also used for learning new stuff.]
 $color[$getGlobalVar[embedcolor]]
-$attachment[./handlers/assets/dodo-bot-logo.png;dodobot-logo.png]
+$attachment[./assets/dodo-bot-logo.png;dodobot-logo.png]
 $thumbnail[attachment://dodobot-logo.png]
 
 `

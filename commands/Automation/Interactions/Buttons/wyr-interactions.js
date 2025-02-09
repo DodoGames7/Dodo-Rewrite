@@ -15,18 +15,10 @@ $setMessageVar[wyr;$env[wyrdata];$messageID]
 
 $let[wyr1-votes;$env[wyrdata;upvotes]]
 $let[wyr2-votes;$env[wyrdata;downvotes]]
-$let[ops1;$getEmbeds[$channelID;$messageID;0;fieldValue;0]]
-$let[question1;$getEmbeds[$channelID;$messageID;0;fieldName;0]]
-$let[ops2;$getEmbeds[$channelID;$messageID;0;fieldValue;1]]
-$let[question2;$getEmbeds[$channelID;$messageID;0;fieldName;1]]
-
 
 
 $interactionUpdate[
-$title[Would you rather...]
-$addField[$get[question1];$get[ops1]]
-$addField[$get[question2];$get[ops2]]
-$color[$getGlobalVar[embedcolor]]
+$fetchEmbeds[$channelID;$messageID;0]
 $addActionRow
 $addButton[wyr-ops1;$get[wyr1-votes];Secondary;1️⃣]
 $addButton[wyr-ops2;$get[wyr2-votes];Secondary;2️⃣]
@@ -51,18 +43,10 @@ $setMessageVar[wyr;$env[wyrdata];$messageID]
 
 $let[wyr1-votes;$env[wyrdata;upvotes]]
 $let[wyr2-votes;$env[wyrdata;downvotes]]
-$let[ops1;$getEmbeds[$channelID;$messageID;0;fieldValue;0]]
-$let[question1;$getEmbeds[$channelID;$messageID;0;fieldName;0]]
-$let[ops2;$getEmbeds[$channelID;$messageID;0;fieldValue;1]]
-$let[question2;$getEmbeds[$channelID;$messageID;0;fieldName;1]]
-
 
 
 $interactionUpdate[
-$title[Would you rather...]
-$addField[$get[question1];$get[ops1]]
-$addField[$get[question2];$get[ops2]]
-$color[$getGlobalVar[embedcolor]]
+$fetchEmbeds[$channelID;$messageID;0]
 $addActionRow
 $addButton[wyr-ops1;$get[wyr1-votes];Secondary;1️⃣]
 $addButton[wyr-ops2;$get[wyr2-votes];Secondary;2️⃣]

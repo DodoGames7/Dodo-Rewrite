@@ -8,12 +8,14 @@ $ephemeral
 ]]
 
 
-$interactionUpdate[$title[Dodo-Bot Credits]
+$interactionUpdate[
+$title[Dodo-Bot Credits]
 $description[
 * $username[632607624742961153] - Developer of the bot
 * $username[431749535656837130] - Inspiration to improve some commands
 * $username[769525910164471821] - For some ideas
 * BotForge server - For a lot of help
+* $hyperlink[discordicon.com;https://discordicon.com/icons-editor] - For most of the icons used in commands
 ]
 $color[$getGlobalVar[embedcolor]]
 $addActionRow
@@ -31,7 +33,8 @@ $onlyIf[$advancedTextSplit[$customID;_;1]==$authorID;$interactionReply[You're no
 $ephemeral
 ]]
 
-$interactionUpdate[$title[Packages]
+$interactionUpdate[
+$title[Packages]
 $description[
 * **@tryforge/forgescript** - The entire project basically! Dodo-Bot is made in fs!
 * **@tryforge/forge.db** - For enabling variables in fs.

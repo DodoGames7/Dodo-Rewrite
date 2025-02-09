@@ -1,9 +1,9 @@
 module.exports = {
 name: "hangman",
 info: {
-        description: "Starts a game of Hangman (pass the flag `--settings` to open the settings).",
+        description: "Starts a game of Hangman (pass the flag `--themes` to open the settings).",
         perms: "`SendMessages`",
-        flags: ["`--settings`", "--themes (alias)"]
+        flags: ["`--themes`", "--settings (alias)"]
 },
 aliases: ["hangguy"],
 type: "messageCreate",
@@ -11,9 +11,9 @@ code: `$userCooldown[hangmancmd;3s;Cooldown has been triggered! Please, wait!
 Time remaining: <t:$trunc[$divide[$sum[$getTimestamp;$getUserCooldownTime[hangmancmd]];1000]]:R>]
 
 $if[$checkContains[$message;--settings;—settings;--themes;—themes]==true;
-$title[Hangman settings]
-$description[Welcome to Hangman's settings! Select a theme to use!]
-$addField[Current setting(s);
+$title[Hangman themes]
+$description[Welcome to Hangman's themes! Select a theme to use!]
+$addField[Current Setup;
 **Theme:** $toTitleCase[$getUserVar[hangman_theme]]
 ]
 $color[$getGlobalVar[embedcolor]]

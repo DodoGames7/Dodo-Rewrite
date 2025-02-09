@@ -49,7 +49,7 @@ $interactionReply[
 $title[Leveling Settings]
 $description[Welcome to Leveling settings! Select a option to change.
 ]
-$addField[Current setting(s);
+$addField[Current Setup;
 * **Level up channel:** $get[currentchannel]
 * **Level up message:** $get[levelingmessagefeature]
 * **Reset on Leave:** $get[levelingresetonleave]
@@ -80,7 +80,7 @@ $interactionUpdate[
 $title[Leveling Settings]
 $description[Welcome to Leveling settings! Select a option to change.
 ]
-$addField[Current setting(s);
+$addField[Current Setup;
 * **Level up channel:** $get[currentchannel]
 * **Level up message:** $get[levelingmessagefeature]
 * **Reset on Leave:** $get[levelingresetonleave]
@@ -210,7 +210,7 @@ $let[levelingmessagefeature;$advancedReplace[$getGuildVar[levelingmessagefeature
 $interactionUpdate[
 $title[Message]
 $description[Welcome to options under the \`Message\` category! Select any option to modify]
-$addField[Current setting(s);* **Level up message:** $get[levelingmessagefeature]]
+$addField[Current Setup;* **Level up message:** $get[levelingmessagefeature]]
 $color[$getGlobalVar[embedcolor]]
 $addActionRow
 $addButton[levelingsettingshome;Go Back;Secondary;↩️]
@@ -297,7 +297,7 @@ $let[levelingresetonleave;$advancedReplace[$getGuildVar[levelingresetonleave];of
 $interactionUpdate[
 $title[Reset on Leave]
 $description[This option let's you decide whether or not the user who leaves this server will have their level progress erased. By default, it is disabled but you can choose to enable it.]
-$addField[Current setting(s);
+$addField[Current Setup;
 $get[levelingresetonleave]
 ]
 $color[$getGlobalVar[embedcolor]]
@@ -437,7 +437,7 @@ $addButton[levelingexclusionpage;Go Back;Secondary;↩️]
 $addButton[levelingresetexcludedroles;Reset;Secondary]
 ]
 
-$interactionFollowUp[Current configuration has been reset!
+$interactionFollowUp[Current Setup has been reset!
 $ephemeral
 ]
 
@@ -522,7 +522,7 @@ $addButton[levelingexclusionpage;Go Back;Secondary;↩️]
 $addButton[levelingresetexcludedchannels;Reset;Secondary]
 ]
 
-$interactionFollowUp[Current configuration has been reset!
+$interactionFollowUp[Current Setup has been reset!
 $ephemeral
 ]
 
@@ -607,7 +607,7 @@ $addButton[levelingexclusionpage;Go Back;Secondary;↩️]
 $addButton[levelingresetexcludedcategories;Reset;Secondary]
 ]
 
-$interactionFollowUp[Current configuration has been reset!
+$interactionFollowUp[Current Setup has been reset!
 $ephemeral
 ]
 

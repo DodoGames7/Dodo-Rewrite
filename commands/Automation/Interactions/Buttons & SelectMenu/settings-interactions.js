@@ -14,7 +14,7 @@ $title[AutoReply ping]
 $description[This option let's the bot respond by just pinging. Doing so will return the current prefix set in this server.
 
 It is recommended to disable this if it's used for spamming.]
-$addField[Current setting(s);$get[autoreplyping]]
+$addField[Current Setup;$get[autoreplyping]]
 $color[$getGlobalVar[embedcolor]]
 $addActionRow
 $addStringSelectMenu[settingsmenu_$authorID;Select a category;false;1;1]
@@ -80,7 +80,7 @@ $title[Anonymous]
 $description[This option allows you to hide the Moderator name in Ban logs! This can be useful to avoid harassment for server staff.
 
 Due to security reasons, this option is only exclusive to Ban logs!]
-$addField[Current setting(s);$get[anonymous]]
+$addField[Current Setup;$get[anonymous]]
 $color[$getGlobalVar[embedcolor]]
 $addActionRow
 $addStringSelectMenu[settingsmenu_$authorID;Select a category;false;1;1]
@@ -146,7 +146,7 @@ $title[Include Bots]
 $description[This option allows you to decide on whether or not bots will be included in Message Logs.
 
 Disabling this will cause bots to be ignored.]
-$addField[Current setting(s);$get[includebots]]
+$addField[Current Setup;$get[includebots]]
 $color[$getGlobalVar[embedcolor]]
 $addActionRow
 $addStringSelectMenu[settingsmenu_$authorID;Select a category;false;1;1]

@@ -2,11 +2,13 @@ module.exports = [{
 type: "messageCreate",
 code: `
 $onlyIf[$getGuildVar[levelingsystem]==on;]
+
 $let[memberroles;$advancedReplace[$checkCondition[$memberRoles==];true;Nothing;false;$memberRoles]]
 $let[channelcategory;$advancedReplace[$checkCondition[$channelCategoryID==];true;Nothing;false;$channelCategoryID]]
 $onlyIf[$checkContains[$getGuildVar[levelingexcludedchannels];$channelID]==false;]
 $onlyIf[$checkContains[$getGuildVar[levelingexcludedcategories];$get[channelcategory]]==false;]
 $onlyIf[$checkContains[$get[memberroles];$getGuildVar[levelingexcludedroles]]==false;]
+
 $memberCooldown[autoxpgain;2s]
 $setMemberVar[xp;$sum[$getMemberVar[xp;$authorID];1];$authorID]
 

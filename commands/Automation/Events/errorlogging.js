@@ -1,4 +1,5 @@
 module.exports = [{
+name: "error logs",
 type: "error",
 code: `$onlyIf[$getGlobalVar[errorlogging]==on;]
 $onlyIf[$getGlobalVar[errorchannel]!=;]

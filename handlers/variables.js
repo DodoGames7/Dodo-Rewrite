@@ -2,19 +2,18 @@ const config = require("../config.json");
 
 module.exports = {
 // Main variables (don't touch unless you know what you're doing)
-version: "1.2.4",
-versionCodename: "Woody",
-libraryversiondevcheck: "on",
+version: "1.2.5",
+versionCodename: "Night sky",
+libraryversiondevcheck: "off",
+pre_release: "off",
 release_type: "Stable",
 DevReleaseTypeToSet: "Pre-release",
-pre_release: "off",
-buildNumber: "2354",
-buildType: "Official Stable",
+buildNumber: "2360",
 buildStatus: "Complete",
 buildBranch: "rebase",
-buildRevision: "1",
-buildDate: "1728519895532",
-showbuildinfo: "off",
+buildRevision: "0",
+buildDate: "1739061255405",
+showbuildinfo: "on",
 AllowBotMembers: config.AllowBotMembers,
 prefix: config.prefix,
 botinvitationmessage: "on",
@@ -25,12 +24,6 @@ errorchannel: "",
 servermemberrequirement: "0",
 embedcolor: config.Embedcolor,
 originalembedcolor: config.Embedcolor,
-// Game variables
-trivia_type: "multiple",
-trivia_difficulty: "medium",
-flood_difficulty: 13,
-wyr: {upvotes: 0, downvotes: 0},
-hangman_theme: "nature",
 // Feature variables
 suggestionchannel: "",
 msglogdeletechannel: "",
@@ -62,5 +55,11 @@ levelingexcludedcategories: "none",
 levelingexcludedroles: "none",
 autoreplyping: "off",
 anonymous: "off",
-includebots: "on"
+includebots: "on",
+// Game variables
+trivia_type: "multiple",
+trivia_difficulty: "medium",
+flood_difficulty: 13,
+wyr: {upvotes: 0, downvotes: 0},
+hangman_theme: "nature"
 }

@@ -7,7 +7,8 @@ $onlyIf[$advancedTextSplit[$customID;_;1]==$authorID;$interactionReply[You're no
 $ephemeral
 ]]
 
-$interactionUpdate[$title[Results..]
+$interactionUpdate[
+$title[Results..]
 $description[You choose Rock 🌑! I choose $randomText[Rock 🌑;Paper 📰;Scissors ✂️]]
 $color[$getGlobalVar[embedcolor]]
 $addActionRow
@@ -24,7 +25,8 @@ $onlyIf[$advancedTextSplit[$customID;_;1]==$authorID;$interactionReply[You're no
 $ephemeral
 ]]
 
-$interactionUpdate[$title[Results..]
+$interactionUpdate[
+$title[Results..]
 $description[You choose Paper 📰! I choose $randomText[Rock 🌑;Paper 📰;Scissors ✂️]]
 $color[$getGlobalVar[embedcolor]]
 $addActionRow
@@ -41,7 +43,8 @@ $onlyIf[$advancedTextSplit[$customID;_;1]==$authorID;$interactionReply[You're no
 $ephemeral
 ]]
 
-$interactionUpdate[$title[Results..]
+$interactionUpdate[
+$title[Results..]
 $description[You choose Scissors ✂️! I choose $randomText[Rock 🌑;Paper 📰;Scissors ✂️]]
 $color[$getGlobalVar[embedcolor]]
 $addActionRow

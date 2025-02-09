@@ -10,12 +10,16 @@ $ephemeral
 $interactionUpdate[
 $title[Changes]
 $description[
-* "Users" section in \`stats\` command has been updated to use separator for large numbers
-* Added a button in \`perms\` command dedicated to explaining why the command exists
-* Added 2 new image commands called \`invert\` and \`drip\`
+* Build info is now a flag as part of \`version\` command
+   * To access the info, run \`$getGuildVar[prefix]version --buildinfo\` to do so!
+* Support for returning banner link has been added to \`user\` command
+* Slightly updated \`userinfo\` design to use markdowns
+* Updated Github links to use the new username
+* Ported the uncompact mode for perms list for integration logs from 2.2.2
+* Bumped ForgeScript version to \`2.1.0\`
 ]
 $if[$getGlobalVar[pre_release]==on;
-$attachment[./handlers/assets/warning.png;warning.png]
+$attachment[./assets/warning.png;warning.png]
 $footer[Testing is recommended;attachment://warning.png]
 ]
 $color[$getGlobalVar[embedcolor]]
@@ -25,7 +29,7 @@ $addButton[versionchanges_$authorID;Changes;Secondary;;true]
 $addButton[versionbugfixes_$authorID;Bug Fixes;Secondary]
 $addButton[versionother_$authorID;Other;Secondary]
 $addActionRow
-$addButton[https://github.com/DodoGames7/Dodo-Bot/releases;Changelog History;Link;📜]
+$addButton[https://github.com/ddodogames/Dodo-Bot/releases;Changelog history;Link;📜]
 ]`
 },{
     type:"interactionCreate",
@@ -39,13 +43,10 @@ $ephemeral
 $interactionUpdate[
 $title[Bug Fixes]
 $description[
-* Spelling fixes to \`about\` command regarding first sentence
-* Fixed a button missing in \`perms\` command (Revision 1)
-* Added internal fix to the panel meant for bot owners (Revision 1)
-* Fixed a non-existent placeholder being mentioned in \`leveling\` when setting message
+* Fixed a problem in \`canary\` that would have half of the content out of it's place
 ]
 $if[$getGlobalVar[pre_release]==on;
-$attachment[./handlers/assets/warning.png;warning.png]
+$attachment[./assets/warning.png;warning.png]
 $footer[Testing is recommended;attachment://warning.png]
 ]
 $color[$getGlobalVar[embedcolor]]
@@ -55,7 +56,7 @@ $addButton[versionchanges_$authorID;Changes;Secondary]
 $addButton[versionbugfixes_$authorID;Bug Fixes;Secondary;;true]
 $addButton[versionother_$authorID;Other;Secondary]
 $addActionRow
-$addButton[https://github.com/DodoGames7/Dodo-Bot/releases;Changelog History;Link;📜]
+$addButton[https://github.com/ddodogames/Dodo-Bot/releases;Changelog history;Link;📜]
 ]`
 },{
     type:"interactionCreate",
@@ -69,14 +70,15 @@ $ephemeral
 $interactionUpdate[
 $title[Other]
 $description[
-* "Latency" section for \`ping\` has been renamed to simply say "Ping"
-* Slight wording changes to \`report\` command regarding first sentence
-* Replaced \`jokeoverhead\` with \`drip\` cmd (pop cat, you seriously need to have functional endpoints) (Revision 1)
-* (Pre-release only) The warning icon in \`version\` command has been refreshed
-* "Version History" button in this command has been renamed to "Changelog History"
+* \`version\` command will now display the Revision if there any
+* "Current setting(s)" seen in some places has been renamed to "Current Setup"
+* (Source Code) changed the placing for local assets used in the bot
+* (Source Code) Revision will now also appear on startup message (for consoles)
+* Prefix is no longer case sensitive
+* Other minor adjustments have been added and renamed "Gitbuilds" to "Canary" (including the command)
 ]
 $if[$getGlobalVar[pre_release]==on;
-$attachment[./handlers/assets/warning.png;warning.png]
+$attachment[./assets/warning.png;warning.png]
 $footer[Testing is recommended;attachment://warning.png]
 ]
 $color[$getGlobalVar[embedcolor]]
@@ -86,7 +88,7 @@ $addButton[versionchanges_$authorID;Changes;Secondary]
 $addButton[versionbugfixes_$authorID;Bug Fixes;Secondary]
 $addButton[versionother_$authorID;Other;Secondary;;true]
 $addActionRow
-$addButton[https://github.com/DodoGames7/Dodo-Bot/releases;Changelog History;Link;📜]
+$addButton[https://github.com/ddodogames/Dodo-Bot/releases;Changelog history;Link;📜]
 ]`
 },{
     type:"interactionCreate",
@@ -97,25 +99,25 @@ $onlyIf[$advancedTextSplit[$customID;_;1]==$authorID;$interactionReply[You're no
 $ephemeral
 ]]
 
-$let[releasedatetype;$advancedReplace[$checkCondition[$getGlobalVar[pre_release]==on];true;Build created on;false;Released on]]
+$let[releasedatetype;$advancedReplace[$checkCondition[$getGlobalVar[pre_release]==on];true;Last updated on;false;Released on]]
 
 $interactionUpdate[
 $title[Dodo-Bot Version]
     $description[
-* **Version**: $getGlobalVar[version]
+* **Version**: $getGlobalVar[version]$if[$getGlobalVar[buildRevision]!=0; (Revision $getGlobalVar[buildRevision])]
 * **Release type**: $getGlobalVar[release_type]
 * **$get[releasedatetype]**: <t:$trunc[$divide[$getGlobalVar[buildDate];1000]]:f>
     ]
 $if[$getGlobalVar[pre_release]==on;
-$attachment[./handlers/assets/warning.png;warning.png]
+$attachment[./assets/warning.png;warning.png]
 $footer[Testing is recommended;attachment://warning.png]
 ]
-    $color[$getGlobalVar[embedcolor]]
-    $addActionRow
-    $addButton[versionchanges_$authorID;Changes;Secondary]
-    $addButton[versionbugfixes_$authorID;Bug Fixes;Secondary]
-    $addButton[versionother_$authorID;Other;Secondary]
+$color[$getGlobalVar[embedcolor]]
 $addActionRow
-$addButton[https://github.com/DodoGames7/Dodo-Bot/releases;Changelog History;Link;📜]
+$addButton[versionchanges_$authorID;Changes;Secondary]
+$addButton[versionbugfixes_$authorID;Bug Fixes;Secondary]
+$addButton[versionother_$authorID;Other;Secondary]
+$addActionRow
+$addButton[https://github.com/ddodogames/Dodo-Bot/releases;Changelog history;Link;📜]
 ]`
 }]

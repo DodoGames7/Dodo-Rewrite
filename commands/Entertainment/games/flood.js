@@ -13,7 +13,7 @@ $let[difficulty;$advancedReplace[$getUserVar[flood_difficulty];18;Hard;13;Normal
 $if[$checkContains[$message;--settings;—settings]==true;
 $title[Flood settings]
 $description[Welcome to Flood's settings! Select a option to change!]
-$addField[Current setting(s);
+$addField[Current Setup;
 **Difficulty:** $get[difficulty]
 ]
 $color[$getGlobalVar[embedcolor]]

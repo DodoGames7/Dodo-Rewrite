@@ -12,7 +12,7 @@ $if[$checkContains[$message;--now;—now]==true;
 $clientDestroy;
 $title[Shutdown]
 $description[Do you really want to shutdown the bot? This will simply stop your bot from running. To turn on the bot, you need to go through your host to start it again.]
-$attachment[./handlers/assets/dangeroussign.png;dangeroussign.png]
+$attachment[./assets/dangeroussign.png;dangeroussign.png]
 $thumbnail[attachment://dangeroussign.png]
 $color[Red]
 $addActionRow

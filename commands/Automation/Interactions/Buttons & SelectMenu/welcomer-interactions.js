@@ -48,7 +48,7 @@ $interactionReply[
 $title[Welcomer Settings]
 $description[Welcome to Welcomer settings! Select a option to change.
 ]
-$addField[Current setting(s);
+$addField[Current Setup;
 * **Welcomer channel:** $get[currentchannel]
 * **Message type:** \`$toTitleCase[$getGuildVar[welcomertype]]\`
 ]
@@ -72,7 +72,7 @@ $interactionUpdate[
 $title[Welcomer Settings]
 $description[Welcome to Welcomer settings! Select a option to change.
 ]
-$addField[Current setting(s);
+$addField[Current Setup;
 * **Welcomer channel:** $get[currentchannel]
 * **Message type:** \`$toTitleCase[$getGuildVar[welcomertype]]\`
 ]
