@@ -10,13 +10,7 @@ $ephemeral
 $interactionUpdate[
 $title[Changes]
 $description[
-* Build info is now a flag as part of \`version\` command
-   * To access the info, run \`$getGuildVar[prefix]version --buildinfo\` to do so!
-* Support for returning banner link has been added to \`user\` command
-* Slightly updated \`userinfo\` design to use markdowns
-* Updated Github links to use the new username
-* Ported the uncompact mode for perms list for integration logs from 2.2.2
-* Bumped ForgeScript version to \`2.1.0\`
+* Bumped ForgeScript version to \`2.2.0\` (albeit Dev one)
 ]
 $if[$getGlobalVar[pre_release]==on;
 $attachment[./assets/warning.png;warning.png]
@@ -43,7 +37,7 @@ $ephemeral
 $interactionUpdate[
 $title[Bug Fixes]
 $description[
-* Fixed a problem in \`canary\` that would have half of the content out of it's place
+*No bug fixes have been added yet*
 ]
 $if[$getGlobalVar[pre_release]==on;
 $attachment[./assets/warning.png;warning.png]
@@ -70,12 +64,7 @@ $ephemeral
 $interactionUpdate[
 $title[Other]
 $description[
-* \`version\` command will now display the Revision if there any
-* "Current setting(s)" seen in some places has been renamed to "Current Setup"
-* (Source Code) changed the placing for local assets used in the bot
-* (Source Code) Revision will now also appear on startup message (for consoles)
-* Prefix is no longer case sensitive
-* Other minor adjustments have been added and renamed "Gitbuilds" to "Canary" (including the command)
+*No changes have been made yet*
 ]
 $if[$getGlobalVar[pre_release]==on;
 $attachment[./assets/warning.png;warning.png]

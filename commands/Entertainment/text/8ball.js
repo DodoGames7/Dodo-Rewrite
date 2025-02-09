@@ -9,7 +9,7 @@ code: `
 $userCooldown[8ballcmd;2s;Cooldown has been triggered! Please, wait!
 Time remaining: <t:$trunc[$divide[$sum[$getTimestamp;$getUserCooldownTime[8ballcmd]];1000]]:R>]
 
-$onlyIf[$message!=;Please enter a text.]
+$onlyIf[$message!=;Please provide a text.]
 $onlyIf[$charCount[$message]<=200;Your question can't be longer than 200 characters.]
 
 $title[8ball]

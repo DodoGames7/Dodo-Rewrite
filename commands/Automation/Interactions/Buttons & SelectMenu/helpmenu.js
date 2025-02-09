@@ -41,7 +41,7 @@ $ephemeral
 \`rps\`, \`tictactoe\`, \`findtheflag\`, \`matchpairs\`, \`findemoji\`, \`hangman\`, \`snake\`, \`c4\`, \`2048\`, \`minesweeper\`, \`trivia\`, \`coinflip\`, \`flood\`, \`wordle\`, \`gtp\`, \`wyr\`
  ]
    $addField[**Text**;
-\`howgamer\`, \`whoasked\`, \`8ball\`, \`say\`, \`reverse\`, \`randomtopic\`, \`joke\`, \`clap\`, \`mock\`, \`yesorno\`, \`lulcat\`, \`fact\`
+\`howgamer\`, \`whoasked\`, \`8ball\`, \`say\`, \`morse\`, \`reverse\`, \`randomtopic\`, \`joke\`, \`clap\`, \`mock\`, \`yesorno\`, \`lulcat\`, \`fact\`
 ]
     $addField[**Images**;
 \`gun\`, \`jail\`, \`nokia\`, \`ad\`, \`drip\`, \`invert\`, \`wanted\`, \`comment\`, \`whereiseveryone\`, \`clown\`
