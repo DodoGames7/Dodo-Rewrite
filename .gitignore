@@ -6,17 +6,26 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
+.pnpm-debug.log*
 
 # Code editors
 .idea/
 .vscode/
 .history/
 
+# Env configs
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+
 # Main stuff to ignore
 database/
 package-lock.json
 yarn.lock
-.env
-.env.test
 config.json
 node_modules/
+.yarn-integrity
+.node_repl_history

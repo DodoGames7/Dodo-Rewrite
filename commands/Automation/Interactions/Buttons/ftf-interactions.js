@@ -10,9 +10,7 @@ $ephemeral
 $if[$and[$randomNumber[1;100;false]>=38;$randomNumber[1;100;false]<89]==true;
 
 $interactionUpdate[
-$title[🚩 | Find the flag!]
-$description[There is a hidden flag somewhere around 1-3, where you think the flag is on?]
-$color[$getGlobalVar[embedcolor]]
+$fetchEmbeds[$channelID;$messageID;0]
 $addActionRow
 $addButton[ftf1_$authorID;;Success;🏳️;true]
 $addButton[ftf2_$authorID;;Secondary;2️⃣;true]
@@ -26,9 +24,7 @@ $color[DarkGreen]
 ]
 ;
 $interactionUpdate[
-$title[🚩 | Find the flag!]
-$description[There is a hidden flag somewhere around 1-3, where you think the flag is on?]
-$color[$getGlobalVar[embedcolor]]
+$fetchEmbeds[$channelID;$messageID;0]
 $addActionRow
 $addButton[ftf1_$authorID;;Danger;1️⃣;true]
 $addButton[ftf2_$authorID;;Secondary;2️⃣;true]
@@ -54,9 +50,7 @@ $ephemeral
 $if[$and[$randomNumber[1;100;false]>=38;$randomNumber[1;100;false]<89]==true;
 
 $interactionUpdate[
-$title[🚩 | Find the flag!]
-$description[There is a hidden flag somewhere around 1-3, where you think the flag is on?]
-$color[$getGlobalVar[embedcolor]]
+$fetchEmbeds[$channelID;$messageID;0]
 $addActionRow
 $addButton[ftf1_$authorID;;Secondary;1️⃣;true]
 $addButton[ftf2_$authorID;;Success;🏳️;true]
@@ -70,9 +64,7 @@ $color[DarkGreen]
 ]
 ;
 $interactionUpdate[
-$title[🚩 | Find the flag!]
-$description[There is a hidden flag somewhere around 1-3, where you think the flag is on?]
-$color[$getGlobalVar[embedcolor]]
+$fetchEmbeds[$channelID;$messageID;0]
 $addActionRow
 $addButton[ftf1_$authorID;;Secondary;1️⃣;true]
 $addButton[ftf2_$authorID;;Danger;2️⃣;true]
@@ -98,9 +90,7 @@ $ephemeral
 $if[$and[$randomNumber[1;100;false]>=38;$randomNumber[1;100;false]<89]==true;
 
 $interactionUpdate[
-$title[🚩 | Find the flag!]
-$description[There is a hidden flag somewhere around 1-3, where you think the flag is on?]
-$color[$getGlobalVar[embedcolor]]
+$fetchEmbeds[$channelID;$messageID;0]
 $addActionRow
 $addButton[ftf1_$authorID;;Secondary;1️⃣;true]
 $addButton[ftf2_$authorID;;Secondary;2️⃣;true]
@@ -114,9 +104,7 @@ $color[DarkGreen]
 ]
 ;
 $interactionUpdate[
-$title[🚩 | Find the flag!]
-$description[There is a hidden flag somewhere around 1-3, where you think the flag is on?]
-$color[$getGlobalVar[embedcolor]]
+$fetchEmbeds[$channelID;$messageID;0]
 $addActionRow
 $addButton[ftf1_$authorID;;Secondary;1️⃣;true]
 $addButton[ftf2_$authorID;;Secondary;2️⃣;true]

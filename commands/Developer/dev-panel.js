@@ -26,5 +26,6 @@ $addOption[Show build info;Whether or not to enable "Build Info" button in stats
 $addOption[Member requirement;How much members are required for new servers;memberrequirementoption;📋;false]
 $addActionRow
 $addButton[generatedatabasebackup_$authorID;Create Backup;Secondary]
+$addButton[leaveaserverbutton_$authorID;Leave a server;Secondary]
 `
 }

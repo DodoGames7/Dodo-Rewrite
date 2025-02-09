@@ -644,17 +644,18 @@ $addTextInput[numberInput;Minimum requirement to enforce;Short;true;e.g, 50;$get
 $let[title;$getEmbeds[$channelID;$messageID;0;title;0]]
 $let[description;$getEmbeds[$channelID;$messageID;0;description;0]]
 $let[fieldname;$getEmbeds[$channelID;$messageID;0;fieldName;0]]
+$let[input;$callFunction[excludespecialchars;$input[numberInput]]]
 
-$onlyIf[$isInteger[$callFunction[excludespecialchars;$input[numberInput]]]==true;$interactionReply[Number must not be a Integer.
+$onlyIf[$isInteger[$get[input]]==true;$interactionReply[Number must not be a Integer.
 $ephemeral]
 ]
 
-$onlyIf[$isNumber[$callFunction[excludespecialchars;$input[numberInput]]]==true;$interactionReply[Please actually enter a number to proceed.
+$onlyIf[$isNumber[$get[input]]==true;$interactionReply[Please actually enter a number to proceed.
 $ephemeral]
 ]
 
 
-$setGlobalVar[servermemberrequirement;$input[numberInput]]
+$setGlobalVar[servermemberrequirement;$get[input]]
 
 $interactionUpdate[
 $title[$get[title]]
@@ -733,5 +734,45 @@ $ephemeral
     $interactionReply[Created a backup under your root directory!
     $ephemeral
     ]
+    `
+},{
+    type: "interactionCreate",
+    allowedInteractionTypes: ["button"],
+    code: `
+    $onlyIf[$customID==leaveaserverbutton;]
+
+    $showModal
+    $modal[leaveaservermodalprompt;Leave a server]
+    $addTextInput[numberInput;ID of the server to leave;Short;true;e.g, $randomGuildID;;0;100]
+
+    `
+},{
+    type: "interactionCreate",
+    allowedInteractionTypes: ["modal"],
+    code: `$onlyIf[$customID==leaveaservermodalprompt;]
+
+    $let[input;$callFunction[excludespecialchars;$input[numberInput]]]
+
+    $onlyIf[$isNumber[$get[input]]==true;$interactionReply[Please actually enter a number to proceed.
+    $ephemeral]
+    ]]
+
+    $onlyIf[$guildExists[$get[input]]==true;$interactionReply[This server does not seem to exist. Please enter a valid one to proceed.
+
+-# This error can also occur if the server is not cached.
+    $ephemeral]
+    ]]
+
+    $onlyIf[$checkContains[$guildIDs;$get[input]]==true;$interactionReply[I am not in the server you specified.
+
+    To see which servers i'm currently in, run \`$getGuildVar[prefix]serverlist\` to do so!
+    $ephemeral
+    ]]
+
+    $interactionReply[Successfully left the server "$guildName[$get[input]]"!
+    $ephemeral
+    ]
+    $!guildLeave[$get[input]]
+
     `
 }]

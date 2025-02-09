@@ -17,6 +17,6 @@ $color[$getGlobalVar[embedcolor]]
 $addActionRow
 $addButton[https://github.com/ddodogames/Dodo-Bot;Source code;Link]
 ]
-;$guildLeave]
+;$!guildLeave]
 `
 }]
