@@ -10,7 +10,7 @@ module.exports = {
     $disableAllMentions
     $onlyIf[$message!=;Please provide a text.]
     $let[status;$httpRequest[https://api.popcat.xyz/texttomorse?text=$encodeURI[$message];get]]
-    $onlyIf[$get[status]==200;Unable to generate the result. Please, try again later.]
+    $onlyIf[$get[status]==200;Unable to generate the result. Please try again later.]
     $httpResult[morse]
     `
 }

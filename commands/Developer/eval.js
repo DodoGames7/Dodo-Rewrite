@@ -8,6 +8,6 @@ info: {
 aliases: ["e"],
 type: "messageCreate",
 code: `$onlyIf[$checkContains[$clientOwnerID[$getGlobalVar[AllowBotMembers]];$authorID]==true;]
-$onlyIf[$message!=;Please eval a code.]
+$onlyIf[$message!=;Please provide a code.]
 $eval[$message;true]`
 }
