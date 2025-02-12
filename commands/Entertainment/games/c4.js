@@ -1,7 +1,7 @@
 module.exports = {
 name: "connect4",
 info: {
-  description: "Start a connect4 match with your opponent.",
+  description: "Play connect4 with your opponent!",
   perms: ["`SendMessages`"]
 },
 aliases: ["c4", "connectfour"],

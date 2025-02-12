@@ -8,7 +8,7 @@ module.exports = {
   aliases: "e",
   code: `
 $eval[$message]
-$onlyIf[$message!=;You need to evaluate something.]
+$onlyIf[$message!=;You need to provide a code.]
 $onlyIf[$checkContains[$clientOwnerIDs[| ];$authorID]==true;]
   `
 }

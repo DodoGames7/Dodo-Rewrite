@@ -1,7 +1,7 @@
 module.exports = {
 name: "whoasked",
 info: {
-    description: "Searches for Askers (although mostly useless).",
+    description: "Searches for Askers (which never finds one).",
     perms: ["`SendMessages`"]
 },
 code: `Searching for Askers... (0%)

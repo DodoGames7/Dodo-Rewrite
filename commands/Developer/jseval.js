@@ -15,7 +15,7 @@ $else
 $djsEval[$message]
 $endif
 $let[content;$removeContains[$message;--return;—return]]
-$onlyIf[$message!=;You need to evaluate something.]
+$onlyIf[$message!=;You need to provide a code.]
 $onlyIf[$checkContains[$clientOwnerIDs[| ];$authorID]==true;]
     `
   }

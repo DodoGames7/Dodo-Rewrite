@@ -1,7 +1,7 @@
 module.exports = [{
 name: "rock-paper-scissors",
 info: {
-  description: "Start a rps match with your opponent (or play against yourself optionally).",
+  description: "Play rps with your opponent (or optionally play against yourself)!",
   perms: ["`SendMessages`"]
 },
 aliases: "rps",

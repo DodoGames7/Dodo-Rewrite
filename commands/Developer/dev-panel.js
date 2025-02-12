@@ -1,4 +1,4 @@
-module.exports = [{
+module.exports = {
   name: "dev-panel",
   info: {
     description: "Special settings dedicated to devs. Allows the user to change stuff!",
@@ -18,4 +18,4 @@ $cooldown[2s;Slow down! Don't spam the command!
 Time remaining: <t:$truncate[$divide[$sum[$getCooldownTime[2s;user;dev-panel;$authorID];$dateStamp];1000]]:R>]
 $onlyIf[$checkContains[$clientOwnerIDs[| ];$authorID]==true;]
   `
-  }]
+  }

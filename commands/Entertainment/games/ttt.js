@@ -1,7 +1,7 @@
 module.exports = {
 name: "tictactoe",
 info: {
-  description: "Start a tictactoe match with your opponent.",
+  description: "Play tictactoe with your opponent!",
   perms: ["`SendMessages`"]
 },
 aliases: "ttt",
